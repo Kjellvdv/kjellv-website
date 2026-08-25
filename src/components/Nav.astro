@@ -10,17 +10,17 @@ const { currentPath = '' } = Astro.props;
       Kjell Vandevyvere
     </a>
 
-    <div class="flex items-center gap-8">
+    <div class="flex items-center gap-7">
       <a
-        href="/blog"
+        href="/fractional-marketing"
         class={`text-sm font-body transition-colors relative ${
-          currentPath.startsWith('/blog')
+          currentPath.startsWith('/fractional-marketing')
             ? 'text-coral'
             : 'text-text-secondary hover:text-text-main'
         }`}
       >
-        Articles
-        {currentPath.startsWith('/blog') && (
+        Fractional marketing
+        {currentPath.startsWith('/fractional-marketing') && (
           <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
         )}
       </a>
@@ -34,6 +34,19 @@ const { currentPath = '' } = Astro.props;
       >
         Speaking
         {currentPath.startsWith('/speaking') && (
+          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
+        )}
+      </a>
+      <a
+        href="/blog"
+        class={`text-sm font-body transition-colors relative ${
+          currentPath.startsWith('/blog')
+            ? 'text-coral'
+            : 'text-text-secondary hover:text-text-main'
+        }`}
+      >
+        Articles
+        {currentPath.startsWith('/blog') && (
           <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
         )}
       </a>
