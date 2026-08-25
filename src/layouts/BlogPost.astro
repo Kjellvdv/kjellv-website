@@ -6,13 +6,23 @@ import Footer from '../components/Footer.astro';
 export interface Props {
   title: string;
   meta_description: string;
-  primary_keyword: string;
+  primary_keyword?: string;
   category: string;
   published_at?: Date;
+  source?: string;
   slug: string;
 }
 
-const { title, meta_description, primary_keyword, category, published_at, slug } = Astro.props;
+const { title, meta_description, primary_keyword, category, published_at, source, slug } = Astro.props;
+
+// Posts migrated in from a site that is being retired. Rendered as plain text,
+// never a link: those domains go away, so a link would rot.
+const sourceNames: Record<string, string> = {
+  topthreeguide: 'Top Three Guide',
+  thecopygalaxy: 'The Copy Galaxy',
+  coffeeandpens: 'Coffee & Pens',
+};
+const sourceName = source ? sourceNames[source] ?? source : null;
 
 const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://kjellv.com';
 const canonical = `${siteUrl}/blog/${slug}`;
@@ -86,6 +96,12 @@ const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-second
         {meta_description}
       </p>
 
+      {sourceName && (
+        <p class="mt-5 text-sm text-text-secondary font-body italic">
+          Originally published on {sourceName}.
+        </p>
+      )}
+
     </div>
   </div>
 
@@ -111,7 +127,7 @@ const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-second
         </div>
         <div>
           <p class="font-display font-500 text-text-main text-sm">Kjell Vandevyvere</p>
-          <p class="text-text-secondary font-body text-xs">Fractional GTM lead · Kjell Vandevyvere</p>
+          <p class="text-text-secondary font-body text-xs">Fractional marketing for B2B tech founders</p>
         </div>
       </div>
       <a href="/blog" class="text-sm text-text-secondary hover:text-coral transition-colors font-body">
