@@ -1,0 +1,144 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  meta_description: string;
+  primary_keyword: string;
+  category: string;
+  published_at?: Date;
+  slug: string;
+}
+
+const { title, meta_description, primary_keyword, category, published_at, slug } = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://veryklear.be';
+const canonical = `${siteUrl}/blog/${slug}`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: meta_description,
+  author: {
+    '@type': 'Person',
+    name: 'Kjell Vandevyvere',
+    url: 'https://veryklear.be',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Very Klear',
+    url: 'https://veryklear.be',
+  },
+  datePublished: published_at?.toISOString(),
+  keywords: primary_keyword,
+};
+
+const categoryColors: Record<string, string> = {
+  'Diagnose': 'bg-coral/10 text-coral border-coral/20',
+  'Build':    'bg-saffron/10 text-amber-700 border-amber-200',
+  'Grow':     'bg-sage text-emerald-800 border-emerald-100',
+  'Learn':    'bg-bg-secondary text-text-secondary border-divider',
+};
+
+const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-secondary border-divider';
+---
+
+<BaseLayout
+  title={`${title} — Very Klear`}
+  description={meta_description}
+  ogTitle={title}
+  ogDescription={meta_description}
+  ogType="article"
+  canonicalUrl={canonical}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <Nav currentPath="/blog" />
+
+  <div class="border-b border-divider bg-bg-primary">
+    <div class="max-w-3xl mx-auto px-6 pt-12 pb-10">
+
+      <div class="flex items-center gap-2 text-xs text-text-secondary font-body mb-8">
+        <a href="/blog" class="hover:text-coral transition-colors">Articles</a>
+        <span>·</span>
+        <a href={`/blog/category/${category.toLowerCase()}`} class="hover:text-coral transition-colors">{category}</a>
+      </div>
+
+      <div class="flex items-center gap-3 mb-5">
+        <span class={`text-xs font-body font-600 px-3 py-1 rounded-full border ${colorClass}`}>
+          {category}
+        </span>
+        {published_at && (
+          <time class="text-sm text-text-secondary font-body" datetime={published_at.toISOString()}>
+            {published_at.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+          </time>
+        )}
+      </div>
+
+      <h1 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-text-main mb-5">
+        {title}
+      </h1>
+
+      <p class="text-lg text-text-secondary font-body leading-relaxed max-w-2xl">
+        {meta_description}
+      </p>
+
+    </div>
+  </div>
+
+  <main class="max-w-3xl mx-auto px-6 py-14">
+    <article class="prose prose-lg max-w-none
+      prose-headings:font-display prose-headings:font-700 prose-headings:text-text-main prose-headings:tracking-tight
+      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+      prose-p:text-text-main prose-p:leading-relaxed prose-p:font-body
+      prose-a:text-coral prose-a:font-600 prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-text-main prose-strong:font-700
+      prose-li:text-text-main prose-li:font-body
+      prose-blockquote:border-l-coral prose-blockquote:border-l-4 prose-blockquote:pl-5 prose-blockquote:not-italic prose-blockquote:text-text-secondary
+      prose-hr:border-divider
+      prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:before:content-none prose-code:after:content-none">
+      <slot />
+    </article>
+
+    <div class="mt-16 pt-8 border-t border-divider flex flex-col sm:flex-row sm:items-center gap-6">
+      <div class="flex items-center gap-4 flex-1">
+        <div class="w-12 h-12 bg-coral/10 rounded-full flex items-center justify-center flex-shrink-0">
+          <span class="font-display font-500 text-coral text-sm">KV</span>
+        </div>
+        <div>
+          <p class="font-display font-500 text-text-main text-sm">Kjell Vandevyvere</p>
+          <p class="text-text-secondary font-body text-xs">Fractional GTM lead · Very Klear</p>
+        </div>
+      </div>
+      <a href="/blog" class="text-sm text-text-secondary hover:text-coral transition-colors font-body">
+        All articles
+      </a>
+    </div>
+
+    <div class="mt-12 bg-text-main rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row sm:items-center gap-6">
+      <div class="flex-1">
+        <p class="font-display font-500 text-white text-lg leading-snug mb-2">
+          Recognise what's described here?
+        </p>
+        <p class="font-body text-sm leading-relaxed" style="color: rgba(255,255,255,0.65);">
+          Book a call or reach out to grab a coffee.
+        </p>
+      </div>
+      <a
+        href="https://tidycal.com/kjellvandevyvere/discovery"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-shrink-0 bg-coral text-white font-body font-700 px-6 py-3 rounded-full hover:bg-coral/90 transition-colors text-sm"
+      >
+        Book a call
+      </a>
+    </div>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

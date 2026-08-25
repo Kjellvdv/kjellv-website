@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const lastUpdated = '23 April 2026';
+---
+
+<BaseLayout
+  title="Privacy policy — Very Klear"
+  description="How Very Klear handles data, what third-party services are used, and your rights under GDPR."
+>
+  <Nav />
+
+  <main class="max-w-3xl mx-auto px-6 py-14">
+    <h1 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-text-main mb-4">
+      Privacy policy
+    </h1>
+    <p class="text-sm text-text-secondary font-body mb-10">
+      Last updated: {lastUpdated}
+    </p>
+
+    <article class="prose prose-lg max-w-none
+      prose-headings:font-display prose-headings:font-700 prose-headings:text-text-main prose-headings:tracking-tight
+      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+      prose-p:text-text-main prose-p:leading-relaxed prose-p:font-body
+      prose-a:text-coral prose-a:font-600 prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-text-main prose-strong:font-700
+      prose-li:text-text-main prose-li:font-body
+      prose-hr:border-divider">
+
+      <p>
+        This website is operated by Very Klear, a Belgian company.
+        This page explains what data the site collects, what happens when you contact us, and what rights you have under the GDPR.
+      </p>
+      <p>
+        <strong>Data controller:</strong> Very Klear, Ligywijk 123, 8900 Belgium. VAT: BE1014759659. Contact: <a href="mailto:kjell@veryklear.be">kjell@veryklear.be</a>.
+      </p>
+
+      <h2>What this site collects</h2>
+      <p>
+        This website does not use analytics, tracking pixels, advertising networks, or any third-party behavioural trackers.
+        It does not store cookies of its own. No account system exists. You can read every page without leaving a trace beyond your hosting provider's standard server logs.
+      </p>
+      <p>
+        The only data I receive directly through this site is what you choose to send me: an email, a booking request, or a reply to a post.
+      </p>
+
+      <h2>When you contact me</h2>
+      <p>
+        If you send an email to <a href="mailto:kjell@veryklear.be">kjell@veryklear.be</a>, I receive your email address, your name if included, and whatever you wrote. I use that to reply and to keep context if we continue the conversation.
+      </p>
+      <p>
+        If you book a call via the TidyCal link, TidyCal collects the information you enter (name, email, and any notes) and passes it to me. See TidyCal's own privacy policy for how they handle that data on their end.
+      </p>
+      <p>
+        Legal basis: legitimate interest (responding to an inquiry you initiated) or consent (where you actively submit information). I do not use this data for marketing unless you explicitly opt in.
+      </p>
+
+      <h2>How long I keep it</h2>
+      <p>
+        Emails are kept as long as the conversation is useful or until you ask me to delete them. Booking records are kept for the duration of the engagement plus the period required by Belgian tax and accounting law (typically seven years). If you ask me to delete non-legally-required data, I will.
+      </p>
+
+      <h2>Third-party services</h2>
+      <p>
+        The site loads a small number of external resources. None of them are used for tracking:
+      </p>
+      <ul>
+        <li><strong>Google Fonts</strong> — fonts are served from <code>fonts.googleapis.com</code>. Google may log the IP address involved in the request. No cookies are set.</li>
+        <li><strong>TidyCal</strong> — used for scheduling calls. Only loaded if you click the booking link.</li>
+        <li><strong>Hosting provider</strong> — standard server logs (IP address, user agent, request path) are retained by the host for operational and security purposes.</li>
+      </ul>
+
+      <h2>Cookies</h2>
+      <p>
+        The site currently does not set any cookies of its own, and no consent banner is shown because none is required for strictly necessary technical functions that aren't used here either. If that changes, this page will be updated and a consent mechanism added before any tracking cookies are placed.
+      </p>
+
+      <h2>Your rights under GDPR</h2>
+      <p>
+        You have the right to:
+      </p>
+      <ul>
+        <li>Access the data I hold about you</li>
+        <li>Ask for it to be corrected</li>
+        <li>Ask for it to be deleted (where legal retention requirements don't apply)</li>
+        <li>Ask for a copy of it in a portable format</li>
+        <li>Object to how it's processed</li>
+        <li>Withdraw consent where consent was the basis of processing</li>
+      </ul>
+      <p>
+        To exercise any of these rights, email <a href="mailto:kjell@veryklear.be">kjell@veryklear.be</a>. I respond within 30 days.
+      </p>
+      <p>
+        If you are not satisfied with how I've handled your data, you can lodge a complaint with the Belgian Data Protection Authority (Autorité de protection des données / Gegevensbeschermingsautoriteit) at <a href="https://www.dataprotectionauthority.be" target="_blank" rel="noopener noreferrer">dataprotectionauthority.be</a>.
+      </p>
+
+      <h2>Data controller</h2>
+      <p>
+        Very Klear<br />
+        Ligywijk 123, 8900 Belgium<br />
+        VAT: BE1014759659<br />
+        Contact: <a href="mailto:kjell@veryklear.be">kjell@veryklear.be</a>
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If this policy changes in a way that affects how your data is handled, the change will be noted here and the "last updated" date will move. Older versions are not archived publicly, but I can share a prior version on request.
+      </p>
+
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>

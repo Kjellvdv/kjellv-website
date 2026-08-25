@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Page not found — Very Klear"
+  description="This page doesn't exist. Head back to the homepage or the articles."
+  noindex={true}
+>
+  <Nav />
+
+  <main class="max-w-3xl mx-auto px-6 py-24 text-center">
+    <p class="font-display font-600 text-coral text-sm tracking-widest uppercase mb-4">
+      404
+    </p>
+    <h1 class="font-display font-600 text-4xl sm:text-5xl leading-[1.1] text-text-main mb-5">
+      This page doesn't exist.
+    </h1>
+    <p class="text-lg text-text-secondary font-body leading-relaxed max-w-xl mx-auto mb-10">
+      It may have moved, or never existed in the first place. Two things you can do instead:
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a
+        href="/"
+        class="bg-text-main text-white font-body font-600 px-6 py-3 rounded-full hover:bg-text-main/90 transition-colors text-sm"
+      >
+        Go to the homepage
+      </a>
+      <a
+        href="/blog"
+        class="bg-bg-secondary text-text-main font-body font-600 px-6 py-3 rounded-full hover:bg-divider transition-colors text-sm"
+      >
+        Read the articles
+      </a>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

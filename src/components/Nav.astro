@@ -1,0 +1,47 @@
+---
+const { currentPath = '' } = Astro.props;
+---
+
+<header class="border-b border-divider bg-bg-primary sticky top-0 z-50">
+  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center hover:opacity-80 transition-opacity" aria-label="Very Klear home">
+      <img
+        src="/wordmark-transparent.png"
+        alt="Very Klear"
+        width="914"
+        height="346"
+        class="h-9 w-auto"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </a>
+
+    <div class="flex items-center gap-8">
+      <a
+        href="/blog"
+        class={`text-sm font-body transition-colors relative ${
+          currentPath.startsWith('/blog')
+            ? 'text-coral'
+            : 'text-text-secondary hover:text-text-main'
+        }`}
+      >
+        Articles
+        {currentPath.startsWith('/blog') && (
+          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
+        )}
+      </a>
+      <a
+        href="https://tidycal.com/kjellvandevyvere/discovery"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-text-main text-white text-sm font-body font-600 px-5 py-2 rounded-full hover:bg-text-main/90 transition-colors"
+      >
+        Book a call
+      </a>
+    </div>
+
+  </nav>
+</header>

@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import BlogCard from '../../components/BlogCard.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => data.status === 'published');
+const posts = allPosts.sort((a, b) => {
+  const dateA = a.data.published_at ?? new Date(0);
+  const dateB = b.data.published_at ?? new Date(0);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const categories = ['All', 'Diagnose', 'Build', 'Grow', 'Learn'] as const;
+---
+
+<BaseLayout
+  title="Articles — Very Klear"
+  description="Writing on B2B tech GTM, positioning, customer journeys, and growth. From Kjell Vandevyvere at Very Klear."
+>
+  <Nav currentPath="/blog" />
+
+  <main class="max-w-5xl mx-auto px-6 py-16">
+
+    <!-- Header -->
+    <div class="mb-12">
+      <h1 class="font-display font-600 text-3xl sm:text-4xl text-text-main mb-3">Articles</h1>
+      <p class="text-text-secondary font-body leading-relaxed max-w-lg">
+        On B2B tech GTM, positioning, customer journeys, and what actually moves the needle. No buzzwords. No frameworks for their own sake.
+      </p>
+    </div>
+
+    <!-- Category filter -->
+    <div class="flex flex-wrap gap-2 mb-10" id="category-filter">
+      {categories.map((cat) => (
+        <button
+          data-category={cat}
+          class={`category-btn text-sm font-body px-4 py-1.5 rounded border transition-colors cursor-pointer
+            ${cat === 'All'
+              ? 'bg-coral text-white border-coral'
+              : 'bg-white text-text-secondary border-divider hover:border-coral/40 hover:text-text-main'
+            }`}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+
+    <!-- Posts grid -->
+    {posts.length === 0 ? (
+      <div class="py-24 text-center">
+        <p class="text-text-secondary font-body">Articles coming soon.</p>
+      </div>
+    ) : (
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="posts-grid">
+        {posts.map((post) => (
+          <div data-post-category={post.data.category} class="post-item h-full">
+            <BlogCard
+              title={post.data.title}
+              slug={post.slug}
+              meta_description={post.data.meta_description}
+              category={post.data.category}
+              published_at={post.data.published_at}
+            />
+          </div>
+        ))}
+      </div>
+    )}
+
+    <!-- No results -->
+    <div id="no-results" class="py-16 text-center hidden">
+      <p class="text-text-secondary font-body">No articles in this category yet.</p>
+    </div>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.category-btn');
+  const items = document.querySelectorAll<HTMLElement>('.post-item');
+  const noResults = document.getElementById('no-results');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const selected = btn.dataset.category ?? 'All';
+
+      // Update button styles
+      buttons.forEach((b) => {
+        const isActive = b.dataset.category === selected;
+        b.classList.toggle('bg-coral', isActive);
+        b.classList.toggle('text-white', isActive);
+        b.classList.toggle('border-coral', isActive);
+        b.classList.toggle('bg-white', !isActive);
+        b.classList.toggle('text-text-secondary', !isActive);
+        b.classList.toggle('border-divider', !isActive);
+      });
+
+      // Filter posts
+      let visible = 0;
+      items.forEach((item) => {
+        const match = selected === 'All' || item.dataset.postCategory === selected;
+        item.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+
+      noResults?.classList.toggle('hidden', visible > 0);
+    });
+  });
+</script>

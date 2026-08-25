@@ -1,0 +1,93 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
+import BlogCard from '../../../components/BlogCard.astro';
+
+const categoryMap: Record<string, string> = {
+  'diagnose': 'Diagnose',
+  'build':    'Build',
+  'grow':     'Grow',
+  'learn':    'Learn',
+};
+
+export async function getStaticPaths() {
+  return ['diagnose', 'build', 'grow', 'learn'].map((cat) => ({
+    params: { category: cat },
+  }));
+}
+
+const { category } = Astro.params;
+const displayName = categoryMap[category] ?? category;
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.status === 'published' && data.category === displayName;
+});
+
+const posts = allPosts.sort((a, b) => {
+  const dateA = a.data.published_at ?? new Date(0);
+  const dateB = b.data.published_at ?? new Date(0);
+  return dateB.getTime() - dateA.getTime();
+});
+
+const descriptions: Record<string, string> = {
+  diagnose:
+    "How to find what's actually blocking growth — ICP, positioning, customer journey, competitive landscape. The work that has to happen before any tactic makes sense.",
+  build:
+    "Building the foundation: website copy, messaging, content infrastructure, email sequences, attribution. Not decks — the actual thing.",
+  grow:
+    "Getting the motion running. Publishing, testing, iterating, tightening the funnel. What compounding looks like when the foundation is right.",
+  learn:
+    "Real engagements, real results. What worked, what didn't, and what it taught me about how B2B tech growth actually works.",
+};
+---
+
+<BaseLayout
+  title={`${displayName} — Very Klear`}
+  description={descriptions[category] ?? `${displayName} articles from Very Klear.`}
+>
+  <Nav currentPath="/blog" />
+
+  <main class="max-w-5xl mx-auto px-6 py-16">
+
+    <div class="mb-8">
+      <a href="/blog" class="text-sm text-text-secondary hover:text-coral transition-colors font-body">
+        ← All articles
+      </a>
+    </div>
+
+    <div class="mb-14 max-w-xl">
+      <div class="inline-block bg-coral/10 text-coral text-xs font-body font-600 px-2.5 py-1 rounded mb-4 uppercase tracking-wider">
+        {displayName}
+      </div>
+      <h1 class="font-display font-600 text-3xl sm:text-4xl text-text-main mb-4 leading-tight">
+        {displayName}
+      </h1>
+      <p class="text-text-secondary font-body leading-relaxed">
+        {descriptions[category]}
+      </p>
+    </div>
+
+    {posts.length === 0 ? (
+      <div class="py-24 text-center">
+        <p class="text-text-secondary font-body">Articles coming soon.</p>
+      </div>
+    ) : (
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {posts.map((post) => (
+          <BlogCard
+            title={post.data.title}
+            slug={post.slug}
+            meta_description={post.data.meta_description}
+            category={post.data.category}
+            published_at={post.data.published_at}
+          />
+        ))}
+      </div>
+    )}
+
+  </main>
+
+  <Footer />
+</BaseLayout>
