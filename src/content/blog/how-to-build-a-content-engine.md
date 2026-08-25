@@ -2,7 +2,7 @@
 title: "How to build a content engine that runs on two hours a week"
 meta_description: "Most founders can't sustain a content strategy because it was built to run at full speed or not at all. Here's how to design one that survives real life."
 primary_keyword: "content engine for startups"
-category: "Grow"
+category: Marketing
 leaf_id: 10
 status: "published"
 published_at: 2026-02-25

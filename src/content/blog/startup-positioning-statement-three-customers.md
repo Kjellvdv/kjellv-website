@@ -2,7 +2,7 @@
 title: "How to write a startup positioning statement when you only have 3 customers"
 meta_description: "How to write a startup positioning statement with only 3 customers. A founder-friendly framework for sharp positioning before product-market fit."
 primary_keyword: "startup positioning statement"
-category: "Diagnose"
+category: Marketing
 leaf_id: 5
 status: "published"
 published_at: 2026-04-25

@@ -2,7 +2,7 @@
 title: "How to write a messaging guide your team can actually use"
 meta_description: "Most messaging guides collect dust because they're full of principles instead of sentences. Here's what to put in one that actually gets opened."
 primary_keyword: "B2B tech messaging guide"
-category: "Build"
+category: Marketing
 leaf_id: 13
 status: "published"
 published_at: 2026-04-01

@@ -2,7 +2,7 @@
 title: "Why your startup's content strategy isn't working"
 meta_description: "Most startup content strategies fail for the same reason: they start with a channel, not a customer. Here's what to fix first."
 primary_keyword: "startup content strategy"
-category: "Diagnose"
+category: Marketing
 leaf_id: 1
 status: "published"
 published_at: 2026-04-22

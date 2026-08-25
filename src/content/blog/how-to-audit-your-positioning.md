@@ -2,7 +2,7 @@
 title: "How to audit your positioning when something feels off"
 meta_description: "Traffic but no conversions. Demos but no closes. Often the problem isn't the product or the sales process — it's the positioning. Here's how to diagnose it."
 primary_keyword: "startup positioning audit"
-category: "Diagnose"
+category: Marketing
 leaf_id: 2
 status: "published"
 published_at: 2026-03-18

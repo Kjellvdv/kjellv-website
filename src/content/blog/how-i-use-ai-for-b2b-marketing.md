@@ -2,7 +2,7 @@
 title: "How I use AI for B2B marketing, and why most marketers are still on Level 1"
 meta_description: "AI for B2B marketing in 2026: 94% of marketers will use it. The differentiator isn't adoption, it's autonomy. Here's the ladder, and where to climb."
 primary_keyword: "AI for B2B marketing"
-category: Learn
+category: AI
 leaf_id: 31
 status: published
 published_at: 2026-05-04
@@ -54,7 +54,7 @@ I've built four advanced systems for my own marketing over the last two months.
 
 **Blog Pipeline.** Five agents in sequence: brief, research, write, review, interview. I ran it on article 4 ("the do-everything trap") on 24 April 2026. The research agent pulled the ONAH and Sophie story, my Sales Navigator confession, the Peter Thiel single-channel quote, April Dunford on positioning, the ~80% stat on pre-seed traction coming from one channel. The writer produced 1,650 words in one shot. The reviewer caught five craft issues I'd have missed. The interview agent asked me five sharp questions to fill gaps. I approved at every stage. (And yes: this very post you're reading came out of that pipeline. Meta enough. The full architecture is in [how to build a content engine](/blog/how-to-build-a-content-engine).)
 
-**GTM Dashboard.** Started life as a Mistral Le Chat agent for ICP, positioning and messaging. Mid-conversation, the chat suggested a connected flow: customer transcripts feed ICP, ICP feeds positioning, positioning feeds messaging. I took the design to Claude in plan mode and got a Flask app back instead of the cloud-and-Zapier sprawl I was about to commit to. In April, I added multi-brand support: Willow, ZYGO, Very Klear, etc. Assets are composable skills with examples per brand. (The messaging output follows the structure in [how to write a messaging guide](/blog/how-to-write-a-messaging-guide).)
+**GTM Dashboard.** Started life as a Mistral Le Chat agent for ICP, positioning and messaging. Mid-conversation, the chat suggested a connected flow: customer transcripts feed ICP, ICP feeds positioning, positioning feeds messaging. I took the design to Claude in plan mode and got a Flask app back instead of the cloud-and-Zapier sprawl I was about to commit to. In April, I added multi-brand support: Willow, ZYGO, Kjell Vandevyvere, etc. Assets are composable skills with examples per brand. (The messaging output follows the structure in [how to write a messaging guide](/blog/how-to-write-a-messaging-guide).)
 
 **Personal Marketing Assistant.** Built in 30 minutes on 2 April 2026. Chat UI with access to my Obsidian vault, calendar, client profiles, and the three systems above. Two weeks later, Claude's desktop app shipped features that did roughly what my custom build did, and made it redundant. I retired it. Lesson: build to learn, not to keep.
 

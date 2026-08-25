@@ -2,7 +2,7 @@
 title: "The 'do everything' trap: why multi-channel marketing kills early-stage B2B tech startups"
 meta_description: "Most startup marketing strategy mistakes come from running five channels at once with no positioning underneath. Here's how to pick one and prove it."
 primary_keyword: "startup marketing strategy mistakes"
-category: "Diagnose"
+category: Marketing
 leaf_id: 4
 status: "published"
 published_at: 2026-04-24

@@ -2,7 +2,7 @@
 title: "LinkedIn for B2B tech founders who don't want to become influencers"
 meta_description: "You don't need daily inspirational content to make LinkedIn work. Here's the version that builds pipeline without becoming a full-time job."
 primary_keyword: "LinkedIn strategy B2B tech founders"
-category: "Grow"
+category: Marketing
 leaf_id: 11
 status: "published"
 published_at: 2026-02-18

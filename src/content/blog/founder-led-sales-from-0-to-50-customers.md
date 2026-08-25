@@ -2,7 +2,7 @@
 title: "The founder-led sales playbook: from 0 to 50 customers without a sales team"
 meta_description: "Founder-led sales isn't a fallback while you can't afford a rep. It's a strategic advantage: if you do it deliberately. Here's the playbook."
 primary_keyword: "founder-led sales B2B tech"
-category: "Grow"
+category: Marketing
 leaf_id: 9
 status: "published"
 published_at: 2026-04-01

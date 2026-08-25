@@ -2,7 +2,7 @@
 title: "How to map your customer journey when you have no data yet"
 meta_description: "Most customer journey frameworks assume you have analytics and months of data. Pre-revenue, you have none of that. Here's how to map the journey anyway."
 primary_keyword: "customer journey map B2B tech"
-category: "Diagnose"
+category: Marketing
 leaf_id: 3
 status: "published"
 published_at: 2026-03-11

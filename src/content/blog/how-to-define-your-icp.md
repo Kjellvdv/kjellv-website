@@ -2,7 +2,7 @@
 title: "How to define your ICP when your best customers found you by accident"
 meta_description: "Most early-stage B2B tech founders don't define their ICP: their ICP finds them. Here's how to turn accidental customers into a deliberate target."
 primary_keyword: "how to define ICP startup"
-category: "Diagnose"
+category: Marketing
 leaf_id: 7
 status: "published"
 published_at: 2026-04-15

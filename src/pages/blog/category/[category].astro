@@ -6,14 +6,14 @@ import Footer from '../../../components/Footer.astro';
 import BlogCard from '../../../components/BlogCard.astro';
 
 const categoryMap: Record<string, string> = {
-  'diagnose': 'Diagnose',
-  'build':    'Build',
-  'grow':     'Grow',
-  'learn':    'Learn',
+  'marketing': 'Marketing',
+  'writing':   'Writing',
+  'personal':  'Personal',
+  'ai':        'AI',
 };
 
 export async function getStaticPaths() {
-  return ['diagnose', 'build', 'grow', 'learn'].map((cat) => ({
+  return ['marketing', 'writing', 'personal', 'ai'].map((cat) => ({
     params: { category: cat },
   }));
 }
@@ -32,20 +32,20 @@ const posts = allPosts.sort((a, b) => {
 });
 
 const descriptions: Record<string, string> = {
-  diagnose:
-    "How to find what's actually blocking growth — ICP, positioning, customer journey, competitive landscape. The work that has to happen before any tactic makes sense.",
-  build:
-    "Building the foundation: website copy, messaging, content infrastructure, email sequences, attribution. Not decks — the actual thing.",
-  grow:
-    "Getting the motion running. Publishing, testing, iterating, tightening the funnel. What compounding looks like when the foundation is right.",
-  learn:
-    "Real engagements, real results. What worked, what didn't, and what it taught me about how B2B tech growth actually works.",
+  marketing:
+    "Positioning, messaging, ICP, content, SEO, conversion. The work that decides whether anything else you do lands.",
+  writing:
+    "Writing as a craft: clarity, structure, and how to get words onto a page that people actually finish.",
+  personal:
+    "Notes on work, habits, and whatever I happen to be figuring out. Less strategy, more thinking out loud.",
+  ai:
+    "What AI actually changes in day-to-day marketing work, past the tool demos and the hype.",
 };
 ---
 
 <BaseLayout
-  title={`${displayName} — Very Klear`}
-  description={descriptions[category] ?? `${displayName} articles from Very Klear.`}
+  title={`${displayName} — Kjell Vandevyvere`}
+  description={descriptions[category] ?? `${displayName} articles from Kjell Vandevyvere.`}
 >
   <Nav currentPath="/blog" />
 
