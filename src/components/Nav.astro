@@ -6,17 +6,8 @@ const { currentPath = '' } = Astro.props;
   <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
     <!-- Logo -->
-    <a href="/" class="flex items-center hover:opacity-80 transition-opacity" aria-label="Very Klear home">
-      <img
-        src="/wordmark-transparent.png"
-        alt="Very Klear"
-        width="914"
-        height="346"
-        class="h-9 w-auto"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-      />
+    <a href="/" class="flex items-center hover:opacity-80 transition-opacity font-display font-600 text-lg text-text-main" aria-label="Kjell Vandevyvere home">
+      Kjell Vandevyvere
     </a>
 
     <div class="flex items-center gap-8">
@@ -30,6 +21,19 @@ const { currentPath = '' } = Astro.props;
       >
         Articles
         {currentPath.startsWith('/blog') && (
+          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
+        )}
+      </a>
+      <a
+        href="/speaking"
+        class={`text-sm font-body transition-colors relative ${
+          currentPath.startsWith('/speaking')
+            ? 'text-coral'
+            : 'text-text-secondary hover:text-text-main'
+        }`}
+      >
+        Speaking
+        {currentPath.startsWith('/speaking') && (
           <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
         )}
       </a>

@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const formats = [
+  {
+    title: 'Talks and workshops',
+    body: 'Conferences, company offsites, and meetups. A talk works as a 30 to 45 minute session with questions after. A workshop runs longer and ends with your team having done the thing rather than watched me do it.',
+  },
+  {
+    title: 'Guest lecturing',
+    body: 'Marketing, communication, and entrepreneurship programmes. Built around what students will actually meet in their first job, using live examples from current client work rather than case studies from a textbook.',
+  },
+  {
+    title: 'Hosting and moderation',
+    body: 'Panels, fireside chats, and on-stage interviews. I have run 35 of these as podcast episodes, which is mostly a matter of reading the room, keeping the guest comfortable, and asking the follow-up question everyone is waiting for.',
+  },
+];
+
+// Photos of Kjell presenting, hosting, or in front of a room.
+// Drop the files in `public/speaking/` and uncomment an entry per photo.
+// The section below renders nothing while this array is empty, so the page
+// stays shippable until real photos exist.
+const photos = [
+  // { src: '/speaking/example.jpg', alt: 'Kjell presenting to a client team' },
+];
+
+const photoGrid = {
+  1: 'grid gap-5',
+  2: 'grid sm:grid-cols-2 gap-5',
+  3: 'grid sm:grid-cols-2 lg:grid-cols-3 gap-5',
+}[Math.min(photos.length, 3)] ?? 'grid sm:grid-cols-2 lg:grid-cols-3 gap-5';
+
+const topics = [
+  {
+    eyebrow: 'AI and marketing',
+    title: 'Most marketers are still on Level 1',
+    body: 'Everyone adopted AI. Almost nobody moved past using it as a faster search engine. This is the ladder from prompting to delegating, what changes at each rung, and what a marketing team looks like once real parts of the job are handed off.',
+  },
+  {
+    eyebrow: 'Positioning',
+    title: 'Why your product sounds like everyone else',
+    body: 'Positioning gets treated as a copywriting problem and solved with better adjectives. It is a decision problem: who you are for, what you are an alternative to, and what you are willing to be worse at. Worked through with real before and after examples.',
+  },
+  {
+    eyebrow: 'Content',
+    title: 'A content engine a small team can actually sustain',
+    body: 'Why most content plans collapse in month three, and what the ones that survive have in common. Aimed at teams where marketing is one or two people and nobody has time for a process that needs babysitting.',
+  },
+];
+---
+
+<BaseLayout
+  title="Speaking and guest lecturing — Kjell Vandevyvere"
+  description="Talks, workshops, guest lectures, and moderation on AI and marketing, positioning, and building a content engine a small team can sustain. Host of Coffee & Pens and Impact Through Social Media."
+>
+  <Nav currentPath="/speaking" />
+
+  <main>
+
+    <!-- ─── HERO ─────────────────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 pt-16 pb-16">
+      <div class="max-w-3xl">
+        <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-text-main mb-6">
+          <span class="text-coral">Speaking</span> and guest lecturing.
+        </h1>
+        <p class="text-lg text-text-secondary font-body leading-relaxed mb-8 max-w-xl">
+          I talk about what AI actually changes in day-to-day marketing work. Most sessions on this stop at tool demos. The interesting part starts after that, where the work itself shifts: from prompting a chatbot to handing off real parts of the job.
+        </p>
+        <a
+          href="https://tidycal.com/kjellvandevyvere/discovery"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-text-main text-white font-body font-700 px-8 py-4 rounded-full hover:bg-text-main/90 transition-colors text-sm"
+        >
+          Check availability &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- ─── PHOTOS (renders only once `photos` has entries) ───────── -->
+    {photos.length > 0 && (
+      <section class="max-w-6xl mx-auto px-6 pb-16">
+        <div class={photoGrid}>
+          {photos.map((photo) => (
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              class="w-full aspect-[4/3] object-cover rounded-3xl"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- ─── FORMATS ───────────────────────────────────────────────── -->
+    <section class="border-y border-divider bg-bg-secondary py-14">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-5">
+          {formats.map((item) => (
+            <div class="bg-white rounded-3xl p-8 border border-divider">
+              <p class="font-display font-500 text-text-main text-lg leading-snug mb-3">
+                {item.title}
+              </p>
+              <p class="text-sm text-text-secondary font-body leading-relaxed">
+                {item.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TOPICS ────────────────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <div class="mb-12 max-w-2xl">
+        <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
+          What I talk about
+        </h2>
+        <p class="mt-4 text-text-secondary font-body leading-relaxed">
+          Three sessions I can give as they are, or reshape around what your audience is dealing with. Every one comes out of client work I'm doing now, so the examples stay current.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        {topics.map((item) => (
+          <div class="rounded-3xl p-7 border" style="background: rgba(215, 98, 98, 0.06); border-color: rgba(215, 98, 98, 0.3);">
+            <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-5">
+              {item.eyebrow}
+            </p>
+            <p class="font-display font-500 text-text-main text-lg leading-snug mb-3">
+              {item.title}
+            </p>
+            <p class="text-sm text-text-secondary font-body leading-relaxed">
+              {item.body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- ─── PODCASTS ──────────────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 pb-16">
+      <div class="bg-text-main rounded-3xl p-10 sm:p-14">
+        <div class="max-w-2xl mb-10">
+          <h2 class="font-display font-600 text-3xl sm:text-4xl text-white leading-snug mb-5">
+            Two podcasts, 35 conversations
+          </h2>
+          <p class="font-body leading-relaxed" style="color: rgba(255,255,255,0.75);">
+            Long before any of this was a service, I was doing it for the fun of it. Which is the useful part for an organiser: I'm comfortable on a stage with someone else's expertise in the room, and I know how to get the good answer out of a guest rather than the rehearsed one.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="rounded-2xl p-7" style="background: rgba(255,255,255,0.05);">
+            <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-4">
+              2021 &ndash; 2022
+            </p>
+            <p class="font-display font-500 text-white text-xl leading-snug mb-3">
+              Coffee &amp; Pens
+            </p>
+            <p class="font-body text-sm leading-relaxed mb-5" style="color: rgba(255,255,255,0.75);">
+              35 long-form interviews with authors about writing, publishing, and marketing a book. Guests included April Dunford on positioning, Rob Fitzpatrick on customer conversations, Arvid Kahl, Nicolas Cole, Michele Hansen, Ramli John, Steph Smith, and Andrew Warner.
+            </p>
+            <a
+              href="https://coffeeandpens.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-body font-600 text-coral hover:underline"
+            >
+              Listen to the archive &rarr;
+            </a>
+          </div>
+
+          <div class="rounded-2xl p-7" style="background: rgba(255,255,255,0.05);">
+            <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-4">
+              2025
+            </p>
+            <p class="font-display font-500 text-white text-xl leading-snug mb-3">
+              Impact Through Social Media
+            </p>
+            <p class="font-body text-sm leading-relaxed mb-5" style="color: rgba(255,255,255,0.75);">
+              Conversations with impact founders about how they actually use social media, as opposed to how the advice says they should. Running on Substack.
+            </p>
+            <a
+              href="https://itsmpodcast.substack.com/s/impact-through-social-media"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-body font-600 text-coral hover:underline"
+            >
+              Listen on Substack &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      TODO (still needs Kjell's input, deliberately not invented):
+      past speaking engagements and guest lectures (venue, date, audience),
+      recordings, organiser testimonials, languages offered (NL/EN), and
+      whether talks are paid or paid in pipeline.
+    -->
+
+    <!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+      <div
+        class="bg-coral rounded-3xl py-14 px-10 sm:px-14"
+        style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px;"
+      >
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div class="max-w-xl">
+            <h2 class="font-display font-500 text-white text-2xl sm:text-3xl leading-snug mb-2">
+              Got an event coming up?
+            </h2>
+            <p class="font-body" style="color: rgba(255,255,255,0.85);">
+              Tell me who's in the room and what you want them walking out with. I'll tell you straight if I'm the right person for it.
+            </p>
+          </div>
+          <a
+            href="https://tidycal.com/kjellvandevyvere/discovery"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-shrink-0 bg-white text-coral font-body font-700 px-7 py-3.5 rounded-full hover:bg-white/90 transition-colors text-sm"
+          >
+            Check availability &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
