@@ -14,7 +14,7 @@ export interface Props {
 
 const { title, meta_description, primary_keyword, category, published_at, slug } = Astro.props;
 
-const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://veryklear.be';
+const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://kjellv.com';
 const canonical = `${siteUrl}/blog/${slug}`;
 
 const jsonLd = {
@@ -25,12 +25,12 @@ const jsonLd = {
   author: {
     '@type': 'Person',
     name: 'Kjell Vandevyvere',
-    url: 'https://veryklear.be',
+    url: 'https://kjellv.com',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Very Klear',
-    url: 'https://veryklear.be',
+    name: 'Kjell Vandevyvere',
+    url: 'https://kjellv.com',
   },
   datePublished: published_at?.toISOString(),
   keywords: primary_keyword,
@@ -47,7 +47,7 @@ const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-second
 ---
 
 <BaseLayout
-  title={`${title} — Very Klear`}
+  title={`${title} — Kjell Vandevyvere`}
   description={meta_description}
   ogTitle={title}
   ogDescription={meta_description}
@@ -111,7 +111,7 @@ const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-second
         </div>
         <div>
           <p class="font-display font-500 text-text-main text-sm">Kjell Vandevyvere</p>
-          <p class="text-text-secondary font-body text-xs">Fractional GTM lead · Very Klear</p>
+          <p class="text-text-secondary font-body text-xs">Fractional GTM lead · Kjell Vandevyvere</p>
         </div>
       </div>
       <a href="/blog" class="text-sm text-text-secondary hover:text-coral transition-colors font-body">

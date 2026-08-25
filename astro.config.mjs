@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
 
 export default defineConfig({
-  site: 'https://veryklear.be',
+  site: 'https://kjellv.com',
   integrations: [
     tailwind({ applyBaseStyles: false }),
     sitemap(),

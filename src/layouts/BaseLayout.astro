@@ -13,7 +13,7 @@ export interface Props {
 
 const {
   title,
-  description = 'Very Klear is a fractional GTM lead for early-stage B2B tech. 3 to 6 month engagements that diagnose what\'s blocking growth and build the foundation to fix it.',
+  description = 'Kjell Vandevyvere is a fractional GTM lead for early-stage B2B tech. 3 to 6 month engagements that diagnose what\'s blocking growth and build the foundation to fix it.',
   ogTitle,
   ogDescription,
   ogType = 'website',
@@ -36,15 +36,12 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Preload critical assets -->
-    <link rel="preload" as="image" href="/wordmark-transparent.png" fetchpriority="high" />
-
     <!-- Open Graph -->
     <meta property="og:title" content={ogTitle ?? title} />
     <meta property="og:description" content={ogDescription ?? description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:site_name" content="Very Klear" />
+    <meta property="og:site_name" content="Kjell Vandevyvere" />
     <meta property="og:image" content={new URL('/wordmark-square.png', Astro.site).href} />
     <meta property="og:image:width" content="900" />
     <meta property="og:image:height" content="900" />
@@ -64,7 +61,7 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
     />
 
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="Very Klear Blog" href="/blog/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Kjell Vandevyvere Blog" href="/blog/rss.xml" />
 
     <style>
       html {

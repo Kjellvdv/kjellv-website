@@ -10,7 +10,7 @@ export async function GET(context) {
   });
 
   return rss({
-    title: 'Very Klear — Articles',
+    title: 'Kjell Vandevyvere — Articles',
     description: 'Writing on B2B tech GTM, positioning, customer journeys, and growth.',
     site: context.site,
     items: sorted.map((post) => ({

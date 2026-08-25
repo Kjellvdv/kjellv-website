@@ -1,4 +1,4 @@
-# Very Klear Website
+# Kjell Vandevyvere Website
 
 Astro + Tailwind CSS. Static output, deployed to SiteGround.
 
@@ -26,7 +26,7 @@ For automatic deploys, SiteGround supports Git deployment via their dashboard (D
 
 ## Adding blog posts
 
-The blog pipeline writes markdown files to `~/.claude/content-drafts/very-klear/`. Copy approved posts into `src/content/blog/` and rebuild.
+The blog pipeline writes markdown files to `~/.claude/content-drafts/kjellvandevyvere/`. Copy approved posts into `src/content/blog/` and rebuild.
 
 Each post needs this frontmatter:
 
