@@ -25,6 +25,19 @@ const { currentPath = '' } = Astro.props;
         )}
       </a>
       <a
+        href="/work"
+        class={`text-sm font-body transition-colors relative ${
+          currentPath.startsWith('/work')
+            ? 'text-coral'
+            : 'text-text-secondary hover:text-text-main'
+        }`}
+      >
+        Work
+        {currentPath.startsWith('/work') && (
+          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
+        )}
+      </a>
+      <a
         href="/speaking"
         class={`text-sm font-body transition-colors relative ${
           currentPath.startsWith('/speaking')

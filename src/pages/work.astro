@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+
+// Case entries. Written from publishable facts only: what the company does,
+// the role, and the work delivered. Anything commercially sensitive from the
+// brand vaults (revenue, internal blockers, their own customers by name) is
+// deliberately left out. Worth a client read before this goes live.
+const cases = [
+  {
+    name: 'Willow',
+    logo: '/logos/willow.svg',
+    logoClass: 'h-8',
+    sector: 'Professional services automation',
+    role: 'Marketing and sales enablement',
+    duration: '2+ years, ongoing',
+    what:
+      'Willow automates operations for professional services firms: scheduling, client communication, and the admin that piles up around both. The buyer is an operations lead at a firm of ten to fifty people.',
+    did: [
+      'Relaunched the website, migrating it off Webflow onto a faster stack',
+      'Built the customer case study engine, running at roughly one a month',
+      'Wrote the onboarding email sequence new customers land in',
+      'Worked on pricing strategy and the rate card behind it',
+      'Produced partner content and conference material',
+    ],
+  },
+  {
+    name: 'ZYGO',
+    logo: '/logos/zygo.png',
+    logoClass: 'h-7',
+    sector: 'Physical AI and robotics',
+    role: 'Marketing and growth lead',
+    duration: 'Ongoing',
+    what:
+      'ZYGO builds a software platform for physical AI agents: robots that take on the dull, dangerous and difficult work so hybrid teams can cover more ground. Deeptech, technical founders, and a category most buyers have not shopped for before.',
+    did: [
+      'Built the go-to-market motion from scratch, with no marketing function in place',
+      'Set up the CRM in Attio, with website forms routing straight into it',
+      'Put prospect detection and visitor tracking in place',
+      'Built the content model for the company plus both founders\' personal brands',
+      'Ran the investor visibility programme and the content behind it',
+      'Set up the recruiting and PR pipelines',
+    ],
+  },
+  {
+    name: 'SOFICO',
+    logo: null,
+    logoClass: '',
+    sector: 'Automotive finance and leasing software',
+    role: 'Contract marketing',
+    duration: 'Ongoing',
+    what:
+      'SOFICO makes contract management software for automotive finance and leasing: fleet, lease, and dealer operations on one platform. The buyers are operations and technology leaders at captive finance units and multi-market leasing companies.',
+    did: [
+      'Researched and wrote the state of AI report for the automotive industry',
+      'Developed the positioning narratives the wider team writes from',
+      'Wrote long-form technical content on migration and data quality',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Work — Kjell Vandevyvere"
+  description="Selected client work: Willow, ZYGO, SOFICO and Aspire. What each company does, what I was brought in for, and what actually got built."
+>
+  <Nav currentPath="/work" />
+
+  <main>
+
+    <!-- ─── HERO ─────────────────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 pt-24 pb-20">
+      <div class="max-w-3xl">
+        <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-text-main mb-6">
+          Selected <span class="text-coral">work</span>.
+        </h1>
+        <p class="text-lg text-text-secondary font-body leading-relaxed max-w-xl">
+          A few of the companies I work with, what they do, and what I was actually brought in to build. Most of it is early-stage B2B tech where the marketing function either didn't exist yet or had never been joined up.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── CASES ─────────────────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+      <div class="flex flex-col gap-6">
+        {cases.map((c) => (
+          <article class="bg-white rounded-3xl border border-divider shadow-soft hover:shadow-lift transition-shadow duration-200 overflow-hidden">
+            <div class="grid md:grid-cols-[280px_1fr]">
+
+              <!-- left rail -->
+              <div class="bg-bg-secondary dotfield p-8 sm:p-10 flex flex-col gap-6 border-b md:border-b-0 md:border-r border-divider">
+                <div class="min-h-[2rem] flex items-center">
+                  {c.logo ? (
+                    <img src={c.logo} alt={c.name} class={`${c.logoClass} w-auto object-contain`} loading="lazy" />
+                  ) : (
+                    <span class="font-display font-600 text-2xl tracking-tight text-text-main">{c.name}</span>
+                  )}
+                </div>
+                <dl class="space-y-4">
+                  <div>
+                    <dt class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-1">Sector</dt>
+                    <dd class="text-sm font-body text-text-main">{c.sector}</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-1">My role</dt>
+                    <dd class="text-sm font-body text-text-main">{c.role}</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-1">Length</dt>
+                    <dd class="text-sm font-body text-text-main">{c.duration}</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <!-- body -->
+              <div class="p-8 sm:p-10">
+                <p class="text-base font-body text-text-main leading-relaxed mb-8">
+                  {c.what}
+                </p>
+                <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-5">
+                  What I built
+                </p>
+                <ul class="space-y-3">
+                  {c.did.map((item) => (
+                    <li class="flex items-start gap-3 text-sm font-body text-text-secondary leading-relaxed">
+                      <span class="mt-2 w-1.5 h-1.5 rounded-full bg-saffron flex-shrink-0" aria-hidden="true"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!--
+      TODO: Aspire case. Kjell is briefing on this one; there are no Aspire
+      notes in the brand vaults, so nothing here is invented in the meantime.
+      Add an entry to the `cases` array above once the brief lands.
+    -->
+
+    <ContactCTA
+      heading="Recognise your own situation in one of these?"
+      body="Most of this work started with a founder who knew something was off but couldn't name which part. That's a good place to start a conversation."
+    />
+
+  </main>
+
+  <Footer />
+</BaseLayout>

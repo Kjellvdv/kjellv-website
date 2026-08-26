@@ -22,6 +22,13 @@ export default {
       borderRadius: {
         DEFAULT: '8px',
       },
+      // Layered shadows. Two stacked shadows (a tight contact shadow plus a
+      // wide soft one) read as real depth where a single blur reads as fog.
+      boxShadow: {
+        soft: '0 1px 2px rgba(43,43,43,0.04), 0 4px 14px -6px rgba(43,43,43,0.08)',
+        lift: '0 2px 4px rgba(43,43,43,0.05), 0 14px 32px -10px rgba(43,43,43,0.16)',
+        panel: '0 1px 3px rgba(43,43,43,0.05), 0 20px 50px -20px rgba(43,43,43,0.22)',
+      },
       typography: {
         DEFAULT: {
           css: {

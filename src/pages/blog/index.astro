@@ -22,7 +22,7 @@ const categories = ['All', 'Marketing', 'Writing', 'Personal', 'AI'] as const;
 >
   <Nav currentPath="/blog" />
 
-  <main class="max-w-5xl mx-auto px-6 py-16">
+  <main class="max-w-5xl mx-auto px-6 py-24">
 
     <!-- Header -->
     <div class="mb-12">
@@ -58,7 +58,7 @@ const categories = ['All', 'Marketing', 'Writing', 'Personal', 'AI'] as const;
         <p class="text-text-secondary font-body">Articles coming soon.</p>
       </div>
     ) : (
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="posts-grid">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="posts-grid">
         {posts.map((post) => (
           <div data-post-category={post.data.category} class="post-item h-full">
             <BlogCard

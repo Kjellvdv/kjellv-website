@@ -2,9 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ClientLogos from '../components/ClientLogos.astro';
 import ContactCTA from '../components/ContactCTA.astro';
+import ContactButtons from '../components/ContactButtons.astro';
 
-const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
 ---
 
 <BaseLayout
@@ -16,49 +17,23 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
   <main>
 
     <!-- ─── HERO ─────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pt-16 pb-20">
+    <section class="max-w-6xl mx-auto px-6 pt-24 pb-24">
       <div class="max-w-3xl">
         <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-text-main mb-6">
-          <span class="text-coral swash">Fractional marketing</span> for B2B tech founders.
+          <span class="text-coral">Fractional marketing</span> for B2B tech founders.
         </h1>
         <p class="text-lg text-text-secondary font-body leading-relaxed mb-8 max-w-xl">
           One person builds your positioning, website, and first content motion. Strategy and execution, no handoff.
         </p>
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-          <a
-            href="https://www.linkedin.com/in/kjellvandevyvere/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 bg-text-main text-white font-body font-700 px-8 py-4 rounded-full hover:bg-text-main/90 transition-colors text-sm"
-          >
-            Get in touch &rarr;
-          </a>
-          <a href="mailto:kjell@kjellv.com" class="text-sm text-text-secondary hover:text-text-main transition-colors font-body">
-            Or send an email &rarr;
-          </a>
-        </div>
+        <ContactButtons label="Want to talk it through?" />
       </div>
     </section>
 
-    <!-- ─── CLIENTS ───────────────────────────────────────────────── -->
-    <section class="border-y border-divider bg-bg-secondary dotfield py-10">
-      <div class="max-w-6xl mx-auto px-6">
-        <p class="text-xs text-text-secondary font-body uppercase tracking-widest mb-7 text-center">
-          Past and current work
-        </p>
-        <div class="grid grid-cols-3 sm:grid-cols-5 gap-2.5 max-w-3xl mx-auto">
-          {clients.map((client) => (
-            <div class="bg-white rounded-xl border border-divider px-2 py-3 flex items-center justify-center min-h-[52px]">
-              <span class="font-display font-500 text-text-main text-xs text-center leading-tight">{client}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ClientLogos />
 
     <!-- ─── THE ENGAGEMENT ────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 py-16">
-      <div class="mb-12 max-w-2xl">
+    <section class="max-w-6xl mx-auto px-6 py-24">
+      <div class="mb-14 max-w-2xl">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           Your first marketing function. Built end to end.
         </h2>
@@ -141,7 +116,7 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
       </div>
 
       <!-- Trigger moments -->
-      <div class="mt-5 bg-bg-secondary rounded-3xl p-8 border border-divider">
+      <div class="mt-5 bg-bg-secondary rounded-3xl p-9 border border-divider">
         <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-6">
           Most founders reach out after one of these
         </p>
@@ -162,8 +137,8 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
     </section>
 
     <!-- ─── HOW IT WORKS ──────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-16">
-      <div class="mb-12 max-w-2xl">
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+      <div class="mb-14 max-w-2xl">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           Strategy and execution from the same person. Not two separate hires.
         </h2>
@@ -172,8 +147,8 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-5">
-        <div class="bg-white rounded-3xl p-7 border border-divider">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-3xl p-8 border border-divider shadow-soft">
           <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-5">
             Strategy consultants
           </p>
@@ -185,7 +160,7 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
           </p>
         </div>
 
-        <div class="bg-white rounded-3xl p-7 border border-divider">
+        <div class="bg-white rounded-3xl p-8 border border-divider shadow-soft">
           <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-5">
             Freelance operators and agencies
           </p>
@@ -211,7 +186,7 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
       </div>
 
       <!-- GTM dashboard detail -->
-      <div class="mt-5 bg-text-main rounded-3xl p-8 sm:p-10">
+      <div class="mt-5 bg-text-main rounded-3xl p-9 sm:p-11 shadow-panel">
         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
           <div class="flex-shrink-0">
             <p class="font-display font-600 text-2xl text-coral leading-none">The GTM dashboard</p>
@@ -230,8 +205,8 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
     </section>
 
     <!-- ─── FAQ ───────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-16">
-      <div class="mb-12 max-w-2xl">
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+      <div class="mb-14 max-w-2xl">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           Common questions
         </h2>

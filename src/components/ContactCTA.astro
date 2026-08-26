@@ -1,4 +1,5 @@
 ---
+import ContactButtons from './ContactButtons.astro';
 // Shared closing CTA. No calendar booking: LinkedIn or email only.
 export interface Props {
   heading?: string;
@@ -13,7 +14,7 @@ const {
 
 <section class="max-w-6xl mx-auto px-6 pb-20">
   <div
-    class="relative overflow-hidden bg-coral rounded-3xl py-14 px-10 sm:px-14"
+    class="relative overflow-hidden bg-coral rounded-3xl py-16 px-10 sm:px-14 shadow-panel"
     style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px;"
   >
     <!-- saffron glow, keeps the panel from reading as a flat coral block -->
@@ -34,28 +35,7 @@ const {
         </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-        <a
-          href="https://www.linkedin.com/in/kjellvandevyvere/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 bg-white text-coral font-body font-700 px-7 py-3.5 rounded-full hover:bg-white/90 transition-colors text-sm"
-        >
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path>
-          </svg>
-          Connect on LinkedIn
-        </a>
-        <a
-          href="mailto:kjell@kjellv.com"
-          class="inline-flex items-center justify-center gap-2 font-body font-700 px-7 py-3.5 rounded-full transition-colors text-sm text-white border"
-          style="border-color: rgba(255,255,255,0.5);"
-          onmouseover="this.style.backgroundColor='rgba(255,255,255,0.12)'"
-          onmouseout="this.style.backgroundColor='transparent'"
-        >
-          Send an email
-        </a>
-      </div>
+      <ContactButtons tone="dark" class="flex-shrink-0" />
     </div>
   </div>
 </section>

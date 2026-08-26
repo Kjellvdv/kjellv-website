@@ -49,7 +49,7 @@ const descriptions: Record<string, string> = {
 >
   <Nav currentPath="/blog" />
 
-  <main class="max-w-5xl mx-auto px-6 py-16">
+  <main class="max-w-5xl mx-auto px-6 py-24">
 
     <div class="mb-8">
       <a href="/blog" class="text-sm text-text-secondary hover:text-coral transition-colors font-body">
@@ -74,7 +74,7 @@ const descriptions: Record<string, string> = {
         <p class="text-text-secondary font-body">Articles coming soon.</p>
       </div>
     ) : (
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => (
           <BlogCard
             title={post.data.title}

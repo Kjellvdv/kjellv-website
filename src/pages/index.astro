@@ -3,10 +3,10 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ClientLogos from '../components/ClientLogos.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import BlogCard from '../components/BlogCard.astro';
 
-const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
 
 const latestPosts = (await getCollection('blog', ({ data }) => data.status === 'published'))
   .sort((a, b) => {
@@ -47,15 +47,15 @@ const doing = [
   <main>
 
     <!-- ─── HERO ─────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pt-16 pb-14">
+    <section class="max-w-6xl mx-auto px-6 pt-24 pb-20">
       <div class="max-w-3xl">
         <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-text-main mb-6">
-          I build the first marketing function for <span class="text-coral swash">B2B tech founders</span>.
+          I build the first marketing function for <span class="text-coral">B2B tech founders</span>.
         </h1>
         <p class="text-lg text-text-secondary font-body leading-relaxed mb-8 max-w-xl">
           Ten years in B2B marketing, most of it at the messy early stage where nobody has decided what the product is for yet. I work as a fractional lead, I speak about AI and marketing, and I write about both.
         </p>
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <a
             href="/fractional-marketing"
             class="inline-flex items-center gap-2 bg-text-main text-white font-body font-700 px-8 py-4 rounded-full hover:bg-text-main/90 transition-colors text-sm"
@@ -69,30 +69,16 @@ const doing = [
       </div>
     </section>
 
-    <!-- ─── CLIENTS ───────────────────────────────────────────────── -->
-    <section class="border-y border-divider bg-bg-secondary dotfield py-10">
-      <div class="max-w-6xl mx-auto px-6">
-        <p class="text-xs text-text-secondary font-body uppercase tracking-widest mb-7 text-center">
-          Past and current work
-        </p>
-        <div class="grid grid-cols-3 sm:grid-cols-5 gap-2.5 max-w-3xl mx-auto">
-          {clients.map((client) => (
-            <div class="bg-white rounded-xl border border-divider px-2 py-3 flex items-center justify-center min-h-[52px]">
-              <span class="font-display font-500 text-text-main text-xs text-center leading-tight">{client}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ClientLogos />
 
 
     <!-- ─── WHAT I DO ─────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 py-16">
-      <div class="grid md:grid-cols-3 gap-5">
+    <section class="max-w-6xl mx-auto px-6 py-24">
+      <div class="grid md:grid-cols-3 gap-6">
         {doing.map((item) => (
           <a
             href={item.href}
-            class="group flex flex-col bg-white rounded-3xl p-7 border border-divider hover:border-coral/40 hover:shadow-sm transition-all"
+            class="group flex flex-col bg-white rounded-3xl p-8 border border-divider shadow-soft hover:border-coral/40 hover:shadow-sm transition-all"
           >
             <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-5">
               {item.label}
@@ -109,15 +95,15 @@ const doing = [
     </section>
 
     <!-- ─── TESTIMONIALS ──────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-16">
+    <section class="max-w-6xl mx-auto px-6 pb-24">
       <div class="mb-12">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           From people I've worked with
         </h2>
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div class="bg-bg-secondary rounded-3xl p-8 border border-divider">
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-bg-secondary rounded-3xl p-9 border border-divider">
           <p class="font-body text-text-main text-base leading-relaxed mb-8">
             "Instead of just meeting my requirements, he went above and beyond &mdash; challenging my thinking, sharpening it, and guiding me on best practices. His work always exceeded my expectations. I could be at peace about not having to edit anything before publishing."
           </p>
@@ -132,7 +118,7 @@ const doing = [
           </div>
         </div>
 
-        <div class="bg-bg-secondary rounded-3xl p-8 border border-divider">
+        <div class="bg-bg-secondary rounded-3xl p-9 border border-divider">
           <p class="font-body text-text-main text-base leading-relaxed mb-8">
             "Kjell is extremely efficient, low-ego, and very much 'get it done' rather than 9-to-5. What makes him stand out is the real impact he brought to sales. On behalf of the entire sales team at Willow, I can confidently say he is one of those rare marketers who genuinely drives sales results."
           </p>
@@ -150,7 +136,7 @@ const doing = [
     </section>
 
     <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-16">
+    <section class="max-w-6xl mx-auto px-6 pb-24">
       <div class="rounded-3xl p-10 sm:p-14 bg-bg-secondary">
         <div class="grid md:grid-cols-[1fr_280px] lg:grid-cols-[1fr_320px] gap-10 lg:gap-14 items-end">
           <div class="max-w-2xl">
@@ -168,7 +154,7 @@ const doing = [
                 That's the practice I've built around both. I take on a small number of engagements at a time, close enough to the work to actually know what's going on.
               </p>
             </div>
-            <div class="mt-8 flex items-center gap-5">
+            <div class="mt-8 flex items-center gap-6">
               <a
                 href="https://linkedin.com/in/kjellvandevyvere"
                 target="_blank"
@@ -197,7 +183,7 @@ const doing = [
     </section>
 
     <!-- ─── LATEST WRITING ────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-16">
+    <section class="max-w-6xl mx-auto px-6 pb-24">
       <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
         <div class="max-w-2xl">
           <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
@@ -209,7 +195,7 @@ const doing = [
         </a>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-5">
+      <div class="grid md:grid-cols-2 gap-6">
         {latestPosts.map((post) => (
           <BlogCard
             title={post.data.title}

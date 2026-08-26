@@ -1,0 +1,53 @@
+---
+// A call to action followed by two icon buttons: email and LinkedIn.
+// `tone` switches between light backgrounds (default) and dark panels.
+export interface Props {
+  label?: string;
+  tone?: 'light' | 'dark';
+  class?: string;
+}
+
+const { label, tone = 'light', class: extra = '' } = Astro.props;
+
+const base =
+  'inline-flex items-center gap-2.5 font-body font-600 text-sm px-6 py-3.5 rounded-full transition-all duration-200';
+
+const styles = {
+  light: {
+    label: 'text-text-secondary',
+    primary: `${base} bg-text-main text-white hover:bg-coral shadow-soft hover:shadow-lift hover:-translate-y-0.5`,
+    secondary: `${base} bg-white text-text-main border border-divider hover:border-coral/50 hover:text-coral shadow-soft hover:shadow-lift hover:-translate-y-0.5`,
+  },
+  dark: {
+    label: 'text-white/70',
+    primary: `${base} bg-white text-coral hover:bg-white/90`,
+    secondary: `${base} text-white border border-white/40 hover:bg-white/10`,
+  },
+}[tone];
+---
+
+<div class={extra}>
+  {label && (
+    <p class={`font-body text-sm mb-4 ${styles.label}`}>{label}</p>
+  )}
+  <div class="flex flex-wrap items-center gap-3">
+    <a href="mailto:kjell@kjellv.com" class={styles.primary}>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+      </svg>
+      Email me
+    </a>
+    <a
+      href="https://www.linkedin.com/in/kjellvandevyvere/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class={styles.secondary}
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path>
+      </svg>
+      LinkedIn
+    </a>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import ContactCTA from '../components/ContactCTA.astro';
+import ContactButtons from '../components/ContactButtons.astro';
 
 const formats = [
   {
@@ -28,10 +29,10 @@ const photos = [
 ];
 
 const photoGrid = {
-  1: 'grid gap-5',
-  2: 'grid sm:grid-cols-2 gap-5',
-  3: 'grid sm:grid-cols-2 lg:grid-cols-3 gap-5',
-}[Math.min(photos.length, 3)] ?? 'grid sm:grid-cols-2 lg:grid-cols-3 gap-5';
+  1: 'grid gap-6',
+  2: 'grid sm:grid-cols-2 gap-6',
+  3: 'grid sm:grid-cols-2 lg:grid-cols-3 gap-6',
+}[Math.min(photos.length, 3)] ?? 'grid sm:grid-cols-2 lg:grid-cols-3 gap-6';
 
 const topics = [
   {
@@ -61,33 +62,21 @@ const topics = [
   <main>
 
     <!-- ─── HERO ─────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pt-16 pb-16">
+    <section class="max-w-6xl mx-auto px-6 pt-24 pb-20">
       <div class="max-w-3xl">
         <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-text-main mb-6">
-          <span class="text-coral swash">Speaking</span> and guest lecturing.
+          <span class="text-coral">Speaking</span> and guest lecturing.
         </h1>
         <p class="text-lg text-text-secondary font-body leading-relaxed mb-8 max-w-xl">
           I talk about what AI actually changes in day-to-day marketing work. Most sessions on this stop at tool demos. The interesting part starts after that, where the work itself shifts: from prompting a chatbot to handing off real parts of the job.
         </p>
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-          <a
-            href="https://www.linkedin.com/in/kjellvandevyvere/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 bg-text-main text-white font-body font-700 px-8 py-4 rounded-full hover:bg-text-main/90 transition-colors text-sm"
-          >
-            Get in touch &rarr;
-          </a>
-          <a href="mailto:kjell@kjellv.com" class="text-sm text-text-secondary hover:text-text-main transition-colors font-body">
-            Or send an email &rarr;
-          </a>
-        </div>
+        <ContactButtons label="Got an event coming up?" />
       </div>
     </section>
 
     <!-- ─── PHOTOS (renders only once `photos` has entries) ───────── -->
     {photos.length > 0 && (
-      <section class="max-w-6xl mx-auto px-6 pb-16">
+      <section class="max-w-6xl mx-auto px-6 pb-24">
         <div class={photoGrid}>
           {photos.map((photo) => (
             <img
@@ -104,9 +93,9 @@ const topics = [
     <!-- ─── FORMATS ───────────────────────────────────────────────── -->
     <section class="border-y border-divider bg-bg-secondary dotfield py-14">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-5">
+        <div class="grid md:grid-cols-3 gap-6">
           {formats.map((item) => (
-            <div class="bg-white rounded-3xl p-8 border border-divider">
+            <div class="bg-white rounded-3xl p-8 border border-divider shadow-soft">
               <p class="font-display font-500 text-text-main text-lg leading-snug mb-3">
                 {item.title}
               </p>
@@ -120,8 +109,8 @@ const topics = [
     </section>
 
     <!-- ─── TOPICS ────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 py-16">
-      <div class="mb-12 max-w-2xl">
+    <section class="max-w-6xl mx-auto px-6 py-24">
+      <div class="mb-14 max-w-2xl">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           What I talk about
         </h2>
@@ -130,7 +119,7 @@ const topics = [
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-5">
+      <div class="grid md:grid-cols-3 gap-6">
         {topics.map((item) => (
           <div class="rounded-3xl p-7 border" style="background: rgba(215, 98, 98, 0.06); border-color: rgba(215, 98, 98, 0.3);">
             <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-5">
@@ -148,8 +137,8 @@ const topics = [
     </section>
 
     <!-- ─── PODCASTS ──────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-16">
-      <div class="bg-text-main rounded-3xl p-10 sm:p-14">
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+      <div class="bg-text-main rounded-3xl p-10 sm:p-14 shadow-panel">
         <div class="max-w-2xl mb-10">
           <h2 class="font-display font-600 text-3xl sm:text-4xl text-white leading-snug mb-5">
             Two podcasts, 35 conversations
@@ -159,7 +148,7 @@ const topics = [
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-5">
+        <div class="grid md:grid-cols-2 gap-6">
           <div class="rounded-2xl p-7" style="background: rgba(255,255,255,0.05);">
             <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-4">
               2021 &ndash; 2022

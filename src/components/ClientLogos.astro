@@ -1,0 +1,35 @@
+---
+// Client logo band. Anything without a `src` falls back to a styled wordmark,
+// so the row stays presentable until a real file exists for it.
+// Files live in public/logos/.
+const clients = [
+  { name: 'Willow', src: '/logos/willow.svg', h: 'h-7' },
+  { name: 'SOFICO', src: null, h: 'h-7' },
+  { name: 'Aspire', src: '/logos/aspire.svg', h: 'h-6' },
+  { name: 'ZYGO', src: '/logos/zygo.png', h: 'h-6' },
+];
+---
+
+<section class="border-y border-divider bg-bg-secondary dotfield py-14">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="text-xs text-text-secondary font-body uppercase tracking-widest mb-9 text-center">
+      Past and current work
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 max-w-3xl mx-auto">
+      {clients.map((c) =>
+        c.src ? (
+          <img
+            src={c.src}
+            alt={c.name}
+            class={`${c.h} w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-200`}
+            loading="lazy"
+          />
+        ) : (
+          <span class="font-display font-600 text-xl tracking-tight text-text-main opacity-60 hover:opacity-100 transition-opacity duration-200">
+            {c.name}
+          </span>
+        )
+      )}
+    </div>
+  </div>
+</section>

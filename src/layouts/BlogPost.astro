@@ -2,6 +2,8 @@
 import BaseLayout from './BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { styleFor } from '../data/categories';
+import ContactButtons from '../components/ContactButtons.astro';
 
 export interface Props {
   title: string;
@@ -46,14 +48,8 @@ const jsonLd = {
   keywords: primary_keyword,
 };
 
-const categoryColors: Record<string, string> = {
-  'Diagnose': 'bg-coral/10 text-coral border-coral/20',
-  'Build':    'bg-saffron/10 text-amber-700 border-amber-200',
-  'Grow':     'bg-sage text-emerald-800 border-emerald-100',
-  'Learn':    'bg-bg-secondary text-text-secondary border-divider',
-};
-
-const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-secondary border-divider';
+const catStyle = styleFor(category);
+const colorClass = catStyle.badge;
 ---
 
 <BaseLayout
@@ -68,8 +64,9 @@ const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-second
 
   <Nav currentPath="/blog" />
 
-  <div class="border-b border-divider bg-bg-primary">
-    <div class="max-w-3xl mx-auto px-6 pt-12 pb-10">
+  <div class="relative border-b border-divider bg-bg-primary overflow-hidden">
+    <span class="absolute inset-x-0 top-0 h-1" style={`background:${catStyle.hex}`} aria-hidden="true"></span>
+    <div class="max-w-3xl mx-auto px-6 pt-14 pb-12">
 
       <div class="flex items-center gap-2 text-xs text-text-secondary font-body mb-8">
         <a href="/blog" class="hover:text-coral transition-colors">Articles</a>
@@ -135,7 +132,7 @@ const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-second
       </a>
     </div>
 
-    <div class="mt-12 bg-text-main rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row sm:items-center gap-6">
+    <div class="mt-16 bg-text-main rounded-3xl p-9 sm:p-11 shadow-panel flex flex-col sm:flex-row sm:items-center gap-6">
       <div class="flex-1">
         <p class="font-display font-500 text-white text-lg leading-snug mb-2">
           Recognise what's described here?
@@ -144,25 +141,7 @@ const colorClass = categoryColors[category] ?? 'bg-bg-secondary text-text-second
           Drop me a line on LinkedIn or by email.
         </p>
       </div>
-      <div class="flex flex-shrink-0 gap-3">
-        <a
-          href="https://www.linkedin.com/in/kjellvandevyvere/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="bg-coral text-white font-body font-700 px-6 py-3 rounded-full hover:bg-coral/90 transition-colors text-sm"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="mailto:kjell@kjellv.com"
-          class="font-body font-700 px-6 py-3 rounded-full transition-colors text-sm text-white border"
-          style="border-color: rgba(255,255,255,0.3);"
-          onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'"
-          onmouseout="this.style.backgroundColor='transparent'"
-        >
-          Email
-        </a>
-      </div>
+      <ContactButtons tone="dark" class="flex-shrink-0" />
     </div>
 
   </main>
