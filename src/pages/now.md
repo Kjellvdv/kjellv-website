@@ -18,6 +18,8 @@ Next to this, I’ve bought a new domain for a new project that might actually b
 
 Finally, I’ve developed an online boardgame names [Hexking](http://hexking.vercel.app). Give it a go. Drop me a message on [LinkedIn](https://www.linkedin.com/in/kjellvandevyvere/) if you have feedback!
 
+<span id="background"></span>
+
 ## What’s Kjell’s background?
 
 Born and raised in Belgium, matured all over the globe. I’ve lived in Spain, the UK, Bolivia and Peru. I also spent a brief period in Uganda.

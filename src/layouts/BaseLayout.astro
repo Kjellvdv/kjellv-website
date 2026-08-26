@@ -73,6 +73,11 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
       }
 
 
+      /* Sticky nav is 4rem, so anchored targets need clearance. */
+      :where(h1, h2, h3, h4, span)[id] {
+        scroll-margin-top: 5.5rem;
+      }
+
       /* Faint dot field for section backgrounds that would otherwise read flat. */
       .dotfield {
         background-image: radial-gradient(circle, rgba(43, 43, 43, 0.08) 1px, transparent 1px);
