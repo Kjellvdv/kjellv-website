@@ -1,7 +1,7 @@
 ---
 title: "Fantastic Formulas to Make Copywriting a Tiny Tad easier"
 meta_description: "Copywriting formulas are not dead. They are very much alive. Both beginners and experts can benefit from them to save time and craft better messages. Learn…"
-category: Marketing
+category: Writing
 status: published
 published_at: 2023-06-23
 ---

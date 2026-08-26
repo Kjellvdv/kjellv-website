@@ -1,7 +1,7 @@
 ---
 title: "Copywriting techniques that make web copy work harder"
 meta_description: "Positive framing, power words, headline formulas and the two words to delete from your mission. The copywriting techniques I keep using, with examples."
-category: Marketing
+category: Writing
 source: thecopygalaxy
 status: published
 published_at: 2026-08-25

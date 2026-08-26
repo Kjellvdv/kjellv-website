@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ContactCTA from '../components/ContactCTA.astro';
 
 const formats = [
   {
@@ -63,19 +64,24 @@ const topics = [
     <section class="max-w-6xl mx-auto px-6 pt-16 pb-16">
       <div class="max-w-3xl">
         <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-text-main mb-6">
-          <span class="text-coral">Speaking</span> and guest lecturing.
+          <span class="text-coral swash">Speaking</span> and guest lecturing.
         </h1>
         <p class="text-lg text-text-secondary font-body leading-relaxed mb-8 max-w-xl">
           I talk about what AI actually changes in day-to-day marketing work. Most sessions on this stop at tool demos. The interesting part starts after that, where the work itself shifts: from prompting a chatbot to handing off real parts of the job.
         </p>
-        <a
-          href="https://tidycal.com/kjellvandevyvere/discovery"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 bg-text-main text-white font-body font-700 px-8 py-4 rounded-full hover:bg-text-main/90 transition-colors text-sm"
-        >
-          Check availability &rarr;
-        </a>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+          <a
+            href="https://www.linkedin.com/in/kjellvandevyvere/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-text-main text-white font-body font-700 px-8 py-4 rounded-full hover:bg-text-main/90 transition-colors text-sm"
+          >
+            Get in touch &rarr;
+          </a>
+          <a href="mailto:kjell@kjellv.com" class="text-sm text-text-secondary hover:text-text-main transition-colors font-body">
+            Or send an email &rarr;
+          </a>
+        </div>
       </div>
     </section>
 
@@ -96,7 +102,7 @@ const topics = [
     )}
 
     <!-- ─── FORMATS ───────────────────────────────────────────────── -->
-    <section class="border-y border-divider bg-bg-secondary py-14">
+    <section class="border-y border-divider bg-bg-secondary dotfield py-14">
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-3 gap-5">
           {formats.map((item) => (
@@ -204,32 +210,7 @@ const topics = [
       whether talks are paid or paid in pipeline.
     -->
 
-    <!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-20">
-      <div
-        class="bg-coral rounded-3xl py-14 px-10 sm:px-14"
-        style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px;"
-      >
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div class="max-w-xl">
-            <h2 class="font-display font-500 text-white text-2xl sm:text-3xl leading-snug mb-2">
-              Got an event coming up?
-            </h2>
-            <p class="font-body" style="color: rgba(255,255,255,0.85);">
-              Tell me who's in the room and what you want them walking out with. I'll tell you straight if I'm the right person for it.
-            </p>
-          </div>
-          <a
-            href="https://tidycal.com/kjellvandevyvere/discovery"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-shrink-0 bg-white text-coral font-body font-700 px-7 py-3.5 rounded-full hover:bg-white/90 transition-colors text-sm"
-          >
-            Check availability &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
+    <ContactCTA />
 
   </main>
 

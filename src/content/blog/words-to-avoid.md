@@ -1,7 +1,7 @@
 ---
 title: "Which Words Should You Cut from Your Writing?"
 meta_description: "An overview of words to avoid when you write an essay. Deleting these words adds reduces the fluff and adds a lot of clarity."
-category: Marketing
+category: Writing
 status: published
 published_at: 2021-04-01
 ---

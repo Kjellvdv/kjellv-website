@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ContactCTA from '../components/ContactCTA.astro';
 
 const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
 ---
@@ -18,26 +19,29 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
     <section class="max-w-6xl mx-auto px-6 pt-16 pb-20">
       <div class="max-w-3xl">
         <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-text-main mb-6">
-          <span class="text-coral">Fractional marketing</span> for B2B tech founders.
+          <span class="text-coral swash">Fractional marketing</span> for B2B tech founders.
         </h1>
         <p class="text-lg text-text-secondary font-body leading-relaxed mb-8 max-w-xl">
           One person builds your positioning, website, and first content motion. Strategy and execution, no handoff.
         </p>
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
           <a
-            href="https://tidycal.com/kjellvandevyvere/discovery"
+            href="https://www.linkedin.com/in/kjellvandevyvere/"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 bg-text-main text-white font-body font-700 px-8 py-4 rounded-full hover:bg-text-main/90 transition-colors text-sm"
           >
-            Book a call &rarr;
+            Get in touch &rarr;
+          </a>
+          <a href="mailto:kjell@kjellv.com" class="text-sm text-text-secondary hover:text-text-main transition-colors font-body">
+            Or send an email &rarr;
           </a>
         </div>
       </div>
     </section>
 
     <!-- ─── CLIENTS ───────────────────────────────────────────────── -->
-    <section class="border-y border-divider bg-bg-secondary py-10">
+    <section class="border-y border-divider bg-bg-secondary dotfield py-10">
       <div class="max-w-6xl mx-auto px-6">
         <p class="text-xs text-text-secondary font-body uppercase tracking-widest mb-7 text-center">
           Past and current work
@@ -131,7 +135,7 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
 
         <div class="mt-8 pt-6 border-t" style="border-color: rgba(215, 98, 98, 0.2);">
           <p class="text-sm font-body text-text-secondary leading-relaxed">
-            <strong class="text-text-main font-600">Scope decides the engagement.</strong> Some founders need a positioning sprint and a website. Others want the full foundation plus ongoing execution. We figure that out on the call.
+            <strong class="text-text-main font-600">Scope decides the engagement.</strong> Some founders need a positioning sprint and a website. Others want the full foundation plus ongoing execution. We work that out before anything starts.
           </p>
         </div>
       </div>
@@ -241,7 +245,7 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
           },
           {
             q: 'What does it cost?',
-            a: 'Pricing depends on scope. We go through what needs building on the discovery call. You get a clear proposal before anything starts.',
+            a: 'Pricing depends on scope. We go through what needs building first, then you get a clear proposal before anything starts.',
           },
           {
             q: 'I\'m past the foundation stage. Do you also work with scale-ups?',
@@ -273,35 +277,7 @@ const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
       </div>
     </section>
 
-    <!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-20">
-      <div
-        class="bg-coral rounded-3xl py-14 px-10 sm:px-14"
-        style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px;"
-      >
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div class="max-w-xl">
-            <h2 class="font-display font-500 text-white text-2xl sm:text-3xl leading-snug mb-2">
-              Let's figure out if there's a fit.
-            </h2>
-            <p class="font-body mb-3" style="color: rgba(255,255,255,0.85);">
-              We'll talk through what you're working on, what's not clicking, and where I might add value.
-            </p>
-            <p class="font-body text-sm" style="color: rgba(255,255,255,0.6);">
-              Book a call or reach out to grab a coffee.
-            </p>
-          </div>
-          <a
-            href="https://tidycal.com/kjellvandevyvere/discovery"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-shrink-0 bg-white text-coral font-body font-700 px-7 py-3.5 rounded-full hover:bg-white/90 transition-colors text-sm"
-          >
-            Book a call &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
+    <ContactCTA />
 
   </main>
 

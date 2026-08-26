@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import ContactCTA from '../components/ContactCTA.astro';
 import BlogCard from '../components/BlogCard.astro';
 
 const clients = ['Willow', 'SOFICO', 'Aspire App', 'ZYGO', 'Valued'];
@@ -49,7 +50,7 @@ const doing = [
     <section class="max-w-6xl mx-auto px-6 pt-16 pb-14">
       <div class="max-w-3xl">
         <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-text-main mb-6">
-          I build the first marketing function for <span class="text-coral">B2B tech founders</span>.
+          I build the first marketing function for <span class="text-coral swash">B2B tech founders</span>.
         </h1>
         <p class="text-lg text-text-secondary font-body leading-relaxed mb-8 max-w-xl">
           Ten years in B2B marketing, most of it at the messy early stage where nobody has decided what the product is for yet. I work as a fractional lead, I speak about AI and marketing, and I write about both.
@@ -69,7 +70,7 @@ const doing = [
     </section>
 
     <!-- ─── CLIENTS ───────────────────────────────────────────────── -->
-    <section class="border-y border-divider bg-bg-secondary py-10">
+    <section class="border-y border-divider bg-bg-secondary dotfield py-10">
       <div class="max-w-6xl mx-auto px-6">
         <p class="text-xs text-text-secondary font-body uppercase tracking-widest mb-7 text-center">
           Past and current work
@@ -221,35 +222,7 @@ const doing = [
       </div>
     </section>
 
-    <!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-20">
-      <div
-        class="bg-coral rounded-3xl py-14 px-10 sm:px-14"
-        style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px;"
-      >
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div class="max-w-xl">
-            <h2 class="font-display font-500 text-white text-2xl sm:text-3xl leading-snug mb-2">
-              Let's figure out if there's a fit.
-            </h2>
-            <p class="font-body mb-3" style="color: rgba(255,255,255,0.85);">
-              We'll talk through what you're working on, what's not clicking, and where I might add value.
-            </p>
-            <p class="font-body text-sm" style="color: rgba(255,255,255,0.6);">
-              Book a call or reach out to grab a coffee.
-            </p>
-          </div>
-          <a
-            href="https://tidycal.com/kjellvandevyvere/discovery"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-shrink-0 bg-white text-coral font-body font-700 px-7 py-3.5 rounded-full hover:bg-white/90 transition-colors text-sm"
-          >
-            Book a call &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
+    <ContactCTA />
 
   </main>
 

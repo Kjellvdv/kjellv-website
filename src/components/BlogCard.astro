@@ -1,4 +1,6 @@
 ---
+import { styleFor } from '../data/categories';
+
 export interface Props {
   title: string;
   slug: string;
@@ -8,21 +10,21 @@ export interface Props {
 }
 
 const { title, slug, meta_description, category, published_at } = Astro.props;
-
-const categoryColors: Record<string, string> = {
-  'Marketing': 'bg-coral/10 text-coral',
-  'Writing':   'bg-saffron/10 text-amber-700',
-  'AI':        'bg-text-main/10 text-text-main',
-  'Personal':  'bg-bg-secondary text-text-secondary',
-};
+const s = styleFor(category);
 ---
 
 <a
   href={`/blog/${slug}`}
-  class="group flex flex-col h-full bg-white rounded p-6 border border-divider hover:border-coral/40 hover:shadow-sm transition-all"
+  class={`group relative flex flex-col h-full bg-white rounded-2xl p-6 pt-7 border border-divider ${s.border} hover:shadow-[0_8px_24px_-12px_rgba(43,43,43,0.18)] hover:-translate-y-0.5 transition-all duration-200 overflow-hidden`}
 >
+  <!-- category accent, grows across the card edge on hover -->
+  <span
+    class={`absolute top-0 left-0 h-[3px] w-12 ${s.bar} rounded-b transition-all duration-300 group-hover:w-full`}
+    aria-hidden="true"
+  ></span>
+
   <div class="flex items-center gap-3 mb-3">
-    <span class={`text-xs font-body font-600 px-2.5 py-1 rounded ${categoryColors[category] ?? 'bg-bg-secondary text-text-secondary'}`}>
+    <span class={`text-xs font-body font-600 px-2.5 py-1 rounded-full ${s.badge}`}>
       {category}
     </span>
     {published_at && (
@@ -31,9 +33,11 @@ const categoryColors: Record<string, string> = {
       </time>
     )}
   </div>
-  <h2 class="font-display font-500 text-lg text-text-main leading-snug mb-2 group-hover:text-coral transition-colors">
-    {title}
+
+  <h2 class="font-display font-500 text-lg text-text-main leading-snug mb-2 transition-colors" style={`--hover:${s.hex}`}>
+    <span class="group-hover:text-[var(--hover)]">{title}</span>
   </h2>
+
   <p class="text-sm text-text-secondary font-body leading-relaxed line-clamp-3">
     {meta_description}
   </p>

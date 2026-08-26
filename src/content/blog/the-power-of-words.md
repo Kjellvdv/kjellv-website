@@ -1,7 +1,7 @@
 ---
 title: "The Power of Words"
 meta_description: "Words are powerful. They are more than a symbolic representation of objects or abstract things. Words can make you smile; words can make you love. Words can…"
-category: Marketing
+category: Writing
 status: published
 published_at: 2021-03-29
 ---

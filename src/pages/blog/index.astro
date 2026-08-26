@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import BlogCard from '../../components/BlogCard.astro';
+import { styleFor } from '../../data/categories';
 
 const allPosts = await getCollection('blog', ({ data }) => data.status === 'published');
 const posts = allPosts.sort((a, b) => {
@@ -33,18 +34,22 @@ const categories = ['All', 'Marketing', 'Writing', 'Personal', 'AI'] as const;
 
     <!-- Category filter -->
     <div class="flex flex-wrap gap-2 mb-10" id="category-filter">
-      {categories.map((cat) => (
-        <button
-          data-category={cat}
-          class={`category-btn text-sm font-body px-4 py-1.5 rounded border transition-colors cursor-pointer
-            ${cat === 'All'
-              ? 'bg-coral text-white border-coral'
-              : 'bg-white text-text-secondary border-divider hover:border-coral/40 hover:text-text-main'
-            }`}
-        >
-          {cat}
-        </button>
-      ))}
+      {categories.map((cat) => {
+        const s = cat === 'All' ? null : styleFor(cat);
+        return (
+          <button
+            data-category={cat}
+            data-active-class={s ? s.active : 'bg-text-main text-white border-text-main'}
+            class={`category-btn text-sm font-body px-4 py-1.5 rounded-full border transition-all cursor-pointer
+              ${cat === 'All'
+                ? 'bg-text-main text-white border-text-main'
+                : `bg-white text-text-secondary border-divider ${s.border} hover:text-text-main`
+              }`}
+          >
+            {cat}
+          </button>
+        );
+      })}
     </div>
 
     <!-- Posts grid -->
@@ -87,15 +92,14 @@ const categories = ['All', 'Marketing', 'Writing', 'Personal', 'AI'] as const;
     btn.addEventListener('click', () => {
       const selected = btn.dataset.category ?? 'All';
 
-      // Update button styles
+      // Update button styles. Each button carries its own category accent in
+      // data-active-class, so the active pill matches the category colour.
+      const inactive = ['bg-white', 'text-text-secondary', 'border-divider'];
       buttons.forEach((b) => {
         const isActive = b.dataset.category === selected;
-        b.classList.toggle('bg-coral', isActive);
-        b.classList.toggle('text-white', isActive);
-        b.classList.toggle('border-coral', isActive);
-        b.classList.toggle('bg-white', !isActive);
-        b.classList.toggle('text-text-secondary', !isActive);
-        b.classList.toggle('border-divider', !isActive);
+        const active = (b.dataset.activeClass ?? 'bg-text-main text-white border-text-main').split(' ');
+        active.forEach((c) => b.classList.toggle(c, isActive));
+        inactive.forEach((c) => b.classList.toggle(c, !isActive));
       });
 
       // Filter posts
