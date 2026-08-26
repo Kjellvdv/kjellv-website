@@ -64,6 +64,19 @@ const { currentPath = '' } = Astro.props;
         )}
       </a>
       <a
+        href="/now"
+        class={`text-sm font-body transition-colors relative ${
+          currentPath.startsWith('/now')
+            ? 'text-coral'
+            : 'text-text-secondary hover:text-text-main'
+        }`}
+      >
+        About
+        {currentPath.startsWith('/now') && (
+          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
+        )}
+      </a>
+      <a
         href="https://www.linkedin.com/in/kjellvandevyvere/"
         target="_blank"
         rel="noopener noreferrer"
