@@ -8,7 +8,9 @@ export default {
       colors: {
         coral: '#d76262',
         saffron: '#f59e0b',
-        sage: '#edf4f0',
+        sage: '#8a9b76',
+        // Darker sage for text and filled pills; raw sage fails AA at small sizes.
+        'sage-deep': '#5a6b46',
         'text-main': '#2b2b2b',
         'text-secondary': '#6b6763',
         'bg-primary': '#f7f5f2',

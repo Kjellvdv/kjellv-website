@@ -31,11 +31,11 @@ export const CATEGORY_STYLES: Record<string, CategoryStyle> = {
     hex: '#f59e0b',
   },
   Personal: {
-    badge: 'bg-emerald-600/10 text-emerald-700',
-    bar: 'bg-emerald-600',
-    active: 'bg-emerald-600 text-white border-emerald-600',
-    border: 'hover:border-emerald-600/40',
-    hex: '#059669',
+    badge: 'bg-sage/20 text-sage-deep',
+    bar: 'bg-sage',
+    active: 'bg-sage-deep text-white border-sage-deep',
+    border: 'hover:border-sage/50',
+    hex: '#8a9b76',
   },
   AI: {
     badge: 'bg-text-main/10 text-text-main',
