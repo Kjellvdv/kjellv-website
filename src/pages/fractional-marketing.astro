@@ -43,7 +43,7 @@ import ContactButtons from '../components/ContactButtons.astro';
       </div>
 
       <!-- Single offer card -->
-      <div class="rounded-3xl p-8 sm:p-10 border" style="background: rgba(215, 98, 98, 0.06); border-color: rgba(215, 98, 98, 0.3);">
+      <div class="bg-white rounded-3xl border border-divider shadow-soft p-8 sm:p-10">
         <div class="grid md:grid-cols-2 gap-10">
           <!-- What gets built -->
           <div>
@@ -108,7 +108,7 @@ import ContactButtons from '../components/ContactButtons.astro';
           </div>
         </div>
 
-        <div class="mt-8 pt-6 border-t" style="border-color: rgba(215, 98, 98, 0.2);">
+        <div class="mt-8 pt-6 border-t" style="border-color: #d6d1cb;">
           <p class="text-sm font-body text-text-secondary leading-relaxed">
             <strong class="text-text-main font-600">Scope decides the engagement.</strong> Some founders need a positioning sprint and a website. Others want the full foundation plus ongoing execution. We work that out before anything starts.
           </p>
@@ -116,7 +116,7 @@ import ContactButtons from '../components/ContactButtons.astro';
       </div>
 
       <!-- Trigger moments -->
-      <div class="mt-5 bg-bg-secondary rounded-3xl p-9 border border-divider">
+      <div class="mt-5 bg-white rounded-3xl border border-divider shadow-soft p-9">
         <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-6">
           Most founders reach out after one of these
         </p>
@@ -172,7 +172,7 @@ import ContactButtons from '../components/ContactButtons.astro';
           </p>
         </div>
 
-        <div class="rounded-3xl p-7 border" style="background: rgba(215, 98, 98, 0.06); border-color: rgba(215, 98, 98, 0.3);">
+        <div class="bg-white rounded-3xl border border-divider shadow-soft p-8">
           <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-5">
             Working with me
           </p>
@@ -186,17 +186,17 @@ import ContactButtons from '../components/ContactButtons.astro';
       </div>
 
       <!-- GTM dashboard detail -->
-      <div class="mt-5 bg-text-main rounded-3xl p-9 sm:p-11 shadow-panel">
+      <div class="mt-5 bg-white rounded-3xl border border-divider shadow-soft p-9 sm:p-11">
         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
           <div class="flex-shrink-0">
             <p class="font-display font-600 text-2xl text-coral leading-none">The GTM dashboard</p>
-            <p class="font-body text-xs mt-1.5 uppercase tracking-widest" style="color: rgba(255,255,255,0.3);">The system behind the work</p>
+            <p class="font-body text-xs mt-1.5 uppercase tracking-widest text-text-secondary">The system behind the work</p>
           </div>
-          <div class="sm:border-l sm:pl-6" style="border-color: rgba(255,255,255,0.1);">
-            <p class="font-body text-sm leading-relaxed mb-4" style="color: rgba(255,255,255,0.75);">
+          <div class="sm:border-l sm:pl-6 border-divider">
+            <p class="font-body text-sm leading-relaxed mb-4 text-text-secondary">
               Every engagement runs through a GTM dashboard built for this specific problem. ICP on one tab. Market and alternatives on the next. Messaging derives from both. Copy derives from messaging. The website, the LinkedIn posts, the sales deck, and the email sequences all tell the same story because they all trace back to the same source of truth.
             </p>
-            <p class="font-body text-sm leading-relaxed" style="color: rgba(255,255,255,0.75);">
+            <p class="font-body text-sm leading-relaxed text-text-secondary">
               It's the discipline most teams wish they had. Without it, "on-brand" is a matter of taste. With it, it's a checkable property.
             </p>
           </div>
@@ -239,7 +239,7 @@ import ContactButtons from '../components/ContactButtons.astro';
             a: 'An agency gives you a team that needs briefing. A freelancer gives you execution without strategic context. I give you one person who does both, working directly with you on what to build and then building it.',
           },
         ].map((item) => (
-          <details class="group bg-bg-secondary rounded-2xl border border-divider overflow-hidden">
+          <details class="group bg-white rounded-2xl border border-divider shadow-soft overflow-hidden">
             <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
               <span class="font-display font-500 text-text-main text-base">{item.q}</span>
               <span class="text-coral font-display font-600 text-xl group-open:rotate-45 transition-transform flex-shrink-0">+</span>
