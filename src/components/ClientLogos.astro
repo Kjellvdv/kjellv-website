@@ -1,7 +1,8 @@
 ---
-// Client logo band. Anything without a `src` falls back to a styled wordmark,
-// so the row stays presentable until a real file exists for it.
-// Files live in public/logos/.
+// Client logo band. Files live in public/logos/.
+// Every client has a real logo now. If one is ever added without a file,
+// give it a wordmark image rather than reintroducing a text fallback: a lone
+// text entry in a row of logos looks like a bug.
 const clients = [
   { name: 'Willow', src: '/logos/willow.png', h: 'h-7' },
   { name: 'Will', src: '/logos/will.svg', h: 'h-7' },
@@ -17,20 +18,14 @@ const clients = [
       Past and current work
     </p>
     <div class="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 max-w-3xl mx-auto">
-      {clients.map((c) =>
-        c.src ? (
-          <img
-            src={c.src}
-            alt={c.name}
-            class={`${c.h} w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-200`}
-            loading="lazy"
-          />
-        ) : (
-          <span class="font-display font-600 text-xl tracking-tight text-text-main opacity-60 hover:opacity-100 transition-opacity duration-200">
-            {c.name}
-          </span>
-        )
-      )}
+      {clients.map((c) => (
+        <img
+          src={c.src}
+          alt={c.name}
+          class={`${c.h} w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-200`}
+          loading="lazy"
+        />
+      ))}
     </div>
   </div>
 </section>
