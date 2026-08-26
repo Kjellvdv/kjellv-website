@@ -7,7 +7,7 @@ published_at: 2021-11-12
 ---
 The more you learn about the writing craft, the harder it seems.
 
-Back in kindergarten and the early days of primary school, you learnt how to hold a pencil, how to make the graphite stain the paper and produce signs. These signs are called letters and numbers. After some practice, you learnt how to make a sequence of a couple of letters: {{ subscriber.first\_name }}. You learnt to write your name.
+Back in kindergarten and the early days of primary school, you learnt how to hold a pencil, how to make the graphite stain the paper and produce signs. These signs are called letters and numbers. After some practice, you learnt how to make a sequence of a couple of letters. You learnt to write your name.
 
 And that’s how you spent the rest of your childhood: you knew how to write. You could produce text on paper or on computers. You could create something of your own that could be read by others for many years to come. (I’m confident that what some young people write in school nowadays, may even outlive them.)
 

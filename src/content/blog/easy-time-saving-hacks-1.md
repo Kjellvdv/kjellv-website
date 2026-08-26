@@ -9,7 +9,7 @@ published_at: 2020-07-27
 ---
 Hi reader,
 
-We’re trying out something different. This is a short format of just **three easy time-saving hacks**. Have a look at the hacks and let us know below what you think about them!
+We’re trying out something different. This is a short format of just **three easy time-saving hacks**.
 
 ## **3 easy time-saving hacks**
 
@@ -47,4 +47,3 @@ Sometimes voice notes stack up as well. We might send 5 in a row. By the time I
 
 There are many ways to become more productive. These 3 time-saving hacks are just a tip of the iceberg. Stay tuned for future advice.
 
-**Did you find these useful? Do you have any time-saving hacks of your own?** Let us know in the comments. Let’s start a conversation!

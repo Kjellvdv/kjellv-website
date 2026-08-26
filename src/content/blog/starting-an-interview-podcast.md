@@ -287,6 +287,6 @@ Find relevant communities, but hang around and share ideas before you start prom
 That’s about all I could remember to share.  
 If you’re about to start your own podcast or have one already, I wish you all the best.
 
-And if you have any doubts that weren’t covered here, feel free to reach out in the comments, on [Twitter](https://twitter.com/Kjellvdv) or via [email](mailto:kjell@kjellv.com).
+And if you have any doubts that weren’t covered here, feel free to reach out on [Twitter](https://twitter.com/Kjellvdv) or via [email](mailto:kjell@kjellv.com).
 
 (Photo by [Cedrik Wesche](https://unsplash.com/@cedrikwesche?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/podcast?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText))

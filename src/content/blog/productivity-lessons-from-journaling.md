@@ -61,4 +61,3 @@ Everything leads back to focus. Audit your time and where you’re wasting it. 
 - Narrow down social media use to avoid motivation-loss.
 - Narrow tasks to one or two per day to find more focus and deliver better results.
 
-What are your favourite productivity lessons? Share in the comments!

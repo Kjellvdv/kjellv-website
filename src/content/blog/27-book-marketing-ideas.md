@@ -426,6 +426,6 @@ But you should also explore other options. Apple Books is less competitive, [Gum
 
 ---
 
-Whatever stage your at, I hope you’ve found these tips useful. If you have anything else to add, please leave a comment.
+Whatever stage your at, I hope you’ve found these tips useful.
 
 *(Photo by [Dollar Gill](https://unsplash.com/@dollargill?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/book-fair?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText))*
