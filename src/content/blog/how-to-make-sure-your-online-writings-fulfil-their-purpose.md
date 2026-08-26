@@ -72,8 +72,3 @@ That can be information, a free solution, a product or a service.
 
 By aiming your content at the right person and making sure it aligns with their intent, you can’t go wrong.
 
-## Want More?
-
-Download the free 7Q Writing Framework on Gumroad
-
-[Grab Your Copy](https://gum.co/7Q)

@@ -235,4 +235,4 @@ Copy edits
 
 Now, the only thing left to do is start.
 
-If you still feel some insecurities, follow me on Twitter [@kjellvdv](http://twitter.com/kjellvdv), join my daily email list The Unrestricted and download the free [7Q Writing Framework](http://gum.co/7Q).
+If you still feel some insecurities, follow me on Twitter [@kjellvdv](http://twitter.com/kjellvdv).
