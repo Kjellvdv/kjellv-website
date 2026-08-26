@@ -44,4 +44,10 @@
   RewriteRule ^creating\-a\-landing\-page/?$ /blog/creating-a-landing-page [R=301,L]
   RewriteRule ^why\-people\-write/?$ /blog/why-people-write [R=301,L]
   RewriteRule ^writing\-advice\-guides/?$ /blog/writing-advice-guides [R=301,L]
+  RewriteRule ^write\-this\-not\-that\-joshua\-lisec/?$ /blog/write-this-not-that-joshua-lisec [R=301,L]
+  RewriteRule ^the\-best\-way\-to\-say\-it\-joshua\-lisec/?$ /blog/the-best-way-to-say-it-joshua-lisec [R=301,L]
+  # /now keeps its URL. /vibe-coding was an empty stub linking to the subdomain.
+  RewriteRule ^vibe\-coding/?$ https://vibing.kjellv.com/ [R=301,L]
+
+  # /now keeps its WordPress URL, so it needs no redirect.
 </IfModule>
