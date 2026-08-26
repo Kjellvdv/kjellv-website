@@ -64,8 +64,20 @@ const colorClass = catStyle.badge;
 
   <Nav currentPath="/blog" />
 
+  <div
+    class="fixed inset-x-0 z-40 h-1"
+    style={`top:4rem; background:${catStyle.hex}22`}
+    aria-hidden="true"
+  >
+    <div
+      id="read-progress"
+      class="h-full w-full origin-left"
+      style={`background:${catStyle.hex}; transform:scaleX(0)`}
+    >
+    </div>
+  </div>
+
   <div class="relative border-b border-divider overflow-hidden">
-    <span class="absolute inset-x-0 top-0 h-1" style={`background:${catStyle.hex}`} aria-hidden="true"></span>
     <div class="max-w-3xl mx-auto px-6 pt-14 pb-12">
 
       <div class="flex items-center gap-2 text-xs text-text-secondary font-body mb-8">
@@ -141,3 +153,32 @@ const colorClass = catStyle.badge;
 
   <Footer />
 </BaseLayout>
+
+<script>
+  const bar = document.getElementById('read-progress');
+  const article = document.querySelector('main article');
+
+  if (bar && article) {
+    let ticking = false;
+
+    const update = () => {
+      ticking = false;
+      const start = article.offsetTop;
+      const span = article.offsetHeight - window.innerHeight * 0.5;
+      // Very short posts never scroll enough to fill: show them as complete.
+      const progress = span <= 0 ? 1 : (window.scrollY - start + window.innerHeight * 0.5) / span;
+      bar.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  }
+</script>
