@@ -13,7 +13,7 @@ export interface Props {
 
 const {
   title,
-  description = 'Kjell Vandevyvere is a fractional GTM lead for early-stage B2B tech. 3 to 6 month engagements that diagnose what\'s blocking growth and build the foundation to fix it.',
+  description = 'Fractional marketing for B2B tech companies. Positioning, website and content, built by one person who understands the product.',
   ogTitle,
   ogDescription,
   ogType = 'website',
@@ -42,15 +42,15 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Kjell Vandevyvere" />
-    <meta property="og:image" content={new URL('/wordmark-square.png', Astro.site).href} />
-    <meta property="og:image:width" content="900" />
-    <meta property="og:image:height" content="900" />
+    <meta property="og:image" content={new URL('/og-image.png', Astro.site).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={ogTitle ?? title} />
     <meta name="twitter:description" content={ogDescription ?? description} />
-    <meta name="twitter:image" content={new URL('/wordmark-square.png', Astro.site).href} />
+    <meta name="twitter:image" content={new URL('/og-image.png', Astro.site).href} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
