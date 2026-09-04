@@ -44,6 +44,23 @@ const cases = [
     ],
   },
   {
+    name: 'Aspire',
+    logo: '/logos/aspire.svg',
+    logoClass: 'h-6',
+    sector: 'Fintech',
+    role: 'Content lead',
+    what:
+      'Aspire builds business finance for startups. The brief was a blog section aimed squarely at founders: how to set up a company in Singapore, and the financial decisions and terminology that follow once you have.',
+    did: [
+      'Built the content strategy: four pillars, anchored on in-depth blog pieces with shorter term-by-term explainers underneath',
+      'Set up the glossary and the writing guide the whole team worked from',
+      'Led five writers, two internal and three external',
+      'Edited everything against the brand strategy and the writing guide before it shipped',
+      'Published to Webflow and worked with the designers on the visuals',
+      'Turned the blog content into social',
+    ],
+  },
+  {
     name: 'SOFICO',
     logo: '/logos/sofico.png',
     logoClass: 'h-7',
@@ -107,10 +124,12 @@ const cases = [
                     <dt class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-1">My role</dt>
                     <dd class="text-sm font-body text-text-main">{c.role}</dd>
                   </div>
-                  <div>
-                    <dt class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-1">Length</dt>
-                    <dd class="text-sm font-body text-text-main">{c.duration}</dd>
-                  </div>
+                  {c.duration && (
+                    <div>
+                      <dt class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-1">Length</dt>
+                      <dd class="text-sm font-body text-text-main">{c.duration}</dd>
+                    </div>
+                  )}
                 </dl>
               </div>
 
@@ -139,10 +158,11 @@ const cases = [
     </section>
 
     <!--
-      TODO: Aspire and Will cases. Kjell is briefing on both. Neither has
-      notes in the brand vaults (Will is a separate product from Willow, at
-      heywill.ai), so nothing is invented for them in the meantime. Add an
-      entry to the `cases` array above once each brief lands.
+      TODO: Will case (heywill.ai, a separate product from Willow). No notes
+      in the brand vaults and no brief yet, so nothing is invented for it. Add
+      an entry to the `cases` array above once Kjell briefs it.
+      Also outstanding: Aspire's engagement dates, so its Length row is
+      omitted rather than guessed.
     -->
 
     <ContactCTA
