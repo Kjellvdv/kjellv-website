@@ -4,7 +4,7 @@ meta_description: "Great copy only works if people can find it and act on it. Bu
 category: Marketing
 source: thecopygalaxy
 status: published
-published_at: 2026-08-25
+published_at: 2026-06-11
 ---
 
 I write the copy, not the CSS. For years that felt like a clean division of labour: I'd hand over the words, a designer would make them look good, and the page would do its job. Then I spent a few months pulling apart SaaS and fintech homepages for my swipe file. The pages that converted didn't have better sentences than the ones that didn't. They had sentences a visitor could find, read, and act on without thinking about it.

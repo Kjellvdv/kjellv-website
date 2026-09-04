@@ -4,7 +4,7 @@ meta_description: "Social proof, ratings, testimonials, risk reduction, objectio
 category: Marketing
 source: thecopygalaxy
 status: published
-published_at: 2026-08-25
+published_at: 2026-07-16
 ---
 
 Someone lands on your page knowing nothing about you, and within thirty seconds they've decided whether you're worth their money. They make that call on almost nothing: a headline, a few logos, a price, whatever else sits above the fold. So every element up there is either building your case or taking up room that could.

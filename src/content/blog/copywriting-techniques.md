@@ -4,7 +4,7 @@ meta_description: "Positive framing, power words, headline formulas and the two 
 category: Writing
 source: thecopygalaxy
 status: published
-published_at: 2026-08-25
+published_at: 2026-09-02
 ---
 
 Most website copy is fine. It's grammatical, it's on-message, and it does nothing. What separates fine copy from copy that moves someone is a handful of small techniques applied consistently. These are the ones I keep coming back to.
