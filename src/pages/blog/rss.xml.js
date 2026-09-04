@@ -11,13 +11,13 @@ export async function GET(context) {
 
   return rss({
     title: 'Kjell Vandevyvere — Articles',
-    description: 'Writing on B2B tech GTM, positioning, customer journeys, and growth.',
+    description: 'Marketing, positioning, the craft of writing, what AI actually changes about the work, and the occasional personal detour.',
     site: context.site,
     items: sorted.map((post) => ({
       title: post.data.title,
       pubDate: post.data.published_at,
       description: post.data.meta_description,
-      link: `/blog/${post.data.slug}/`,
+      link: `/blog/${post.slug}/`,
     })),
     customData: `<language>en-gb</language>`,
   });
