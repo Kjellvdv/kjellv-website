@@ -69,63 +69,69 @@ import ContactButtons from '../components/ContactButtons.astro';
         </p>
       </div>
 
-      <div class="bg-white rounded-3xl border border-divider shadow-soft p-8 sm:p-10">
-        <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-6">What gets built</p>
-        <ul class="grid sm:grid-cols-2 gap-x-12 gap-y-8">
-          {[
-            { title: 'Positioning and messaging', body: 'ICP, value proposition, and the story your buyer needs before they engage.' },
-            { title: 'A website that converts', body: 'Copy and structure built around the positioning, not a redesign exercise.' },
-            { title: 'A content motion you can sustain', body: 'The channel that matches your buyer, set up or rebuilt, and running before I leave.' },
-            { title: 'Tooling and specialists', body: 'CRM, analytics and automation for your stage, plus who to hire next.' },
-          ].map((item) => (
-            <li>
-              <p class="font-display font-600 text-lg text-text-main leading-snug mb-1.5">{item.title}</p>
-              <p class="text-sm font-body text-text-secondary leading-relaxed">{item.body}</p>
-            </li>
-          ))}
-        </ul>
+      <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-6">What gets built</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+        {[
+          { title: 'Positioning and messaging', body: 'ICP, value proposition, and the story your buyer needs before they engage.' },
+          { title: 'A website that converts', body: 'Copy and structure built around the positioning, not a redesign exercise.' },
+          { title: 'A content motion you can sustain', body: 'The channel that matches your buyer, set up or rebuilt, and running before I leave.' },
+          { title: 'Tooling and specialists', body: 'CRM, analytics and automation for your stage, plus who to hire next.' },
+        ].map((item) => (
+          <div class="bg-white rounded-3xl border border-divider shadow-soft p-7 flex flex-col">
+            <p class="font-display font-600 text-lg text-text-main leading-snug mb-2">{item.title}</p>
+            <p class="text-sm font-body text-text-secondary leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
 
-        <!-- Fit is a state, not an event: two lines, deliberately lighter than the list above -->
-        <div class="mt-9 pt-7 border-t border-divider grid sm:grid-cols-2 gap-x-10 gap-y-5">
-          <div>
-            <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-2">Built for</p>
-            <p class="text-sm font-body text-text-main leading-relaxed">
-              B2B tech: fintech, deeptech, HRtech, SaaS, infra. Product is live, even if revenue or customers are still early.
-            </p>
-          </div>
-          <div>
-            <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-2">Not for</p>
-            <p class="text-sm font-body text-text-secondary leading-relaxed">
-              Companies that already have a marketing lead or team. B2C, e-commerce and agencies. Anything pre-product.
-            </p>
-          </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="rounded-3xl border p-7 sm:p-8" style="background: rgba(138, 155, 118, 0.08); border-color: rgba(138, 155, 118, 0.35);">
+          <p class="text-xs font-body font-600 uppercase tracking-wider text-sage-deep mb-3">Built for</p>
+          <p class="text-sm font-body text-text-main leading-relaxed">
+            B2B tech: fintech, deeptech, HRtech, SaaS and infra. The product is live, even if revenue or customers are still early. And it's technical enough that the marketing falls apart when whoever writes it doesn't understand what's being sold.
+          </p>
         </div>
-
-        <div class="mt-7 pt-6 border-t border-divider">
-          <p class="text-sm font-body text-text-secondary leading-relaxed">
-            <strong class="text-text-main font-600">Scope decides the engagement.</strong> Some companies need a positioning sprint and a website. Others want the full foundation plus ongoing execution. We work that out before anything starts.
+        <div class="rounded-3xl border p-7 sm:p-8" style="background: rgba(215, 98, 98, 0.07); border-color: rgba(215, 98, 98, 0.3);">
+          <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-3">Not for</p>
+          <p class="text-sm font-body text-text-main leading-relaxed">
+            Companies that already have a marketing lead, because this role is the owner rather than an extra pair of hands. B2C, e-commerce and agencies, where the buying decision works differently. And anything pre-product, where there is nothing to position yet.
           </p>
         </div>
       </div>
 
-      <!-- The mechanism that keeps the four pieces saying the same thing.
-           Sits with the offer because it answers the diagnosis above it. -->
-      <div class="mt-6 bg-white rounded-3xl border border-divider shadow-soft p-9 sm:p-11">
-        <div class="flex flex-col sm:flex-row sm:items-start gap-6">
-          <div class="flex-shrink-0">
-            <p class="font-display font-600 text-2xl text-coral leading-none">The GTM dashboard</p>
-            <p class="font-body text-xs mt-1.5 uppercase tracking-widest text-text-secondary">How it stays consistent</p>
-          </div>
-          <div class="sm:border-l sm:pl-6 border-divider">
-            <p class="font-body text-sm leading-relaxed mb-4 text-text-secondary">
-              Every engagement runs through a GTM dashboard. ICP on one tab. Market and alternatives on the next. Messaging derives from both, and copy derives from messaging. The website, the LinkedIn posts, the sales deck and the email sequences all tell the same story because they trace back to the same source of truth.
-            </p>
-            <p class="font-body text-sm leading-relaxed text-text-secondary">
-              That's what stops the next piece being argued out from scratch, and it's what lets someone else pick the work up without you checking every line.
-            </p>
-          </div>
-        </div>
+      <p class="mt-6 text-sm font-body text-text-secondary leading-relaxed">
+        <strong class="text-text-main font-600">Scope decides the engagement.</strong> Some companies need a positioning sprint and a website. Others want the full foundation plus ongoing execution. We work that out before anything starts.
+      </p>
+
+    </section>
+
+    <!-- ─── THE GTM DASHBOARD ─────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+      <div class="mb-14">
+        <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
+          The GTM dashboard keeps it all saying the same thing.
+        </h2>
+        <p class="mt-4 text-text-secondary font-body leading-relaxed">
+          Marketing drifts when the thinking behind it lives in someone's head. So every engagement runs through a dashboard I built for this, where each brand gets its own structured vault instead of a folder of documents nobody opens twice.
+        </p>
       </div>
+
+      <div class="grid md:grid-cols-3 gap-5 mb-6">
+        {[
+          { step: 'The layers', body: 'ICP, market and alternatives, messaging, products, voice and brand each live as their own file. Customer transcripts feed the ICP, the ICP feeds positioning, and positioning feeds messaging, so nothing downstream gets invented.' },
+          { step: 'The output', body: 'Website copy, LinkedIn posts, the sales deck and email sequences all derive from those files. They tell the same story because they trace back to the same source, not because someone remembered to check.' },
+          { step: 'What it changes', body: 'The next piece stops being argued out from scratch, and someone else can pick the work up without you reading every line. On-brand becomes a checkable property rather than a matter of taste.' },
+        ].map((item) => (
+          <div class="bg-white rounded-3xl border border-divider shadow-soft p-7">
+            <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-3">{item.step}</p>
+            <p class="text-sm font-body text-text-secondary leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-sm font-body text-text-secondary leading-relaxed">
+        It started as a chat agent for ICP and positioning, and became a proper app once the pieces needed to connect. More on how it works, and the rest of the AI systems behind this, in <a href="/blog/how-i-use-ai-for-b2b-marketing" class="text-coral font-600 hover:underline">how I use AI for B2B marketing</a>. The messaging it produces follows the structure in <a href="/blog/how-to-write-a-messaging-guide" class="text-coral font-600 hover:underline">how to write a messaging guide</a>.
+      </p>
     </section>
 
     <!-- ─── HOW IT WORKS ──────────────────────────────────────────── -->
@@ -139,7 +145,7 @@ import ContactButtons from '../components/ContactButtons.astro';
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
         <div class="bg-white rounded-3xl p-8 border border-divider shadow-soft">
           <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-5">
             Strategy consultants
@@ -163,8 +169,10 @@ import ContactButtons from '../components/ContactButtons.astro';
             Execute tactics without strategic context. Content ships, emails ship, ads ship. Nobody checks whether the positioning underneath holds up, so the signals don't compound.
           </p>
         </div>
+      </div>
 
-        <div class="bg-white rounded-3xl border border-divider shadow-soft p-8">
+      <div>
+        <div class="rounded-3xl border p-8 sm:p-10" style="background: rgba(215, 98, 98, 0.07); border-color: rgba(215, 98, 98, 0.3);">
           <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-5">
             Working with me
           </p>
@@ -200,10 +208,6 @@ import ContactButtons from '../components/ContactButtons.astro';
           {
             q: 'Do you work with non-tech companies?',
             a: 'I focus on B2B tech. The frameworks transfer to other categories, but the depth I bring is specific to technical products and technical buyers.',
-          },
-          {
-            q: 'How is this different from hiring an agency or a freelancer?',
-            a: 'An agency gives you a team that needs briefing, on a contract that assumes a fixed shape of work. A freelancer gives you execution without strategic context. I give you one person who does both, working directly with you on what to build and then building it, and the scope flexes as what you need changes rather than staying whatever we agreed in month one.',
           },
         ].map((item) => (
           <details class="group bg-white rounded-2xl border border-divider shadow-soft overflow-hidden">
