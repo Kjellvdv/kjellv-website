@@ -75,7 +75,7 @@ import ContactButtons from '../components/ContactButtons.astro';
           { title: 'Positioning and messaging', body: 'ICP, value proposition, and the story your buyer needs before they engage.' },
           { title: 'A website that converts', body: 'Copy and structure built around the positioning, not a redesign exercise.' },
           { title: 'A content motion you can sustain', body: 'The channel that matches your buyer, set up or rebuilt, and running before I leave.' },
-          { title: 'Tooling and specialists', body: 'CRM, analytics and automation for your stage, plus who to hire next.' },
+          { title: 'Tools and setup', body: 'CRM, analytics and automation for your stage, wired together so the workflows and connectors actually run.' },
         ].map((item) => (
           <div class="bg-white rounded-3xl border border-divider shadow-soft p-7 flex flex-col">
             <p class="font-display font-600 text-lg text-text-main leading-snug mb-2">{item.title}</p>
@@ -86,16 +86,34 @@ import ContactButtons from '../components/ContactButtons.astro';
 
       <div class="grid md:grid-cols-2 gap-5">
         <div class="rounded-3xl border p-7 sm:p-8" style="background: rgba(138, 155, 118, 0.08); border-color: rgba(138, 155, 118, 0.35);">
-          <p class="text-xs font-body font-600 uppercase tracking-wider text-sage-deep mb-3">Built for</p>
-          <p class="text-sm font-body text-text-main leading-relaxed">
-            B2B tech: fintech, deeptech, HRtech, SaaS and infra. The product is live, even if revenue or customers are still early. And it's technical enough that the marketing falls apart when whoever writes it doesn't understand what's being sold.
-          </p>
+          <p class="text-xs font-body font-600 uppercase tracking-wider text-sage-deep mb-4">Built for</p>
+          <ul class="space-y-3">
+            {[
+              'B2B tech: fintech, deeptech, HRtech, SaaS and infra',
+              'A product that is live, even if revenue or customers are still early',
+              'Something technical enough that the marketing falls apart when whoever writes it doesn\'t understand what is being sold',
+            ].map((item) => (
+              <li class="flex items-start gap-2.5 text-sm font-body text-text-main leading-relaxed">
+                <span class="text-sage-deep mt-0.5 flex-shrink-0 font-600">&#10003;</span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
         <div class="rounded-3xl border p-7 sm:p-8" style="background: rgba(215, 98, 98, 0.07); border-color: rgba(215, 98, 98, 0.3);">
-          <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-3">Not for</p>
-          <p class="text-sm font-body text-text-main leading-relaxed">
-            Companies that already have a marketing lead, because this role is the owner rather than an extra pair of hands. B2C, e-commerce and agencies, where the buying decision works differently. And anything pre-product, where there is nothing to position yet.
-          </p>
+          <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-4">Not for</p>
+          <ul class="space-y-3">
+            {[
+              'Companies with a marketing lead already, since this role is the owner rather than an extra pair of hands',
+              'B2C, e-commerce and agencies, where the buying decision works differently',
+              'Anything pre-product, where there is nothing to position yet',
+            ].map((item) => (
+              <li class="flex items-start gap-2.5 text-sm font-body text-text-main leading-relaxed">
+                <span class="text-coral mt-0.5 flex-shrink-0 font-600">&times;</span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
