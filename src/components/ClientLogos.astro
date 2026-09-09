@@ -3,12 +3,14 @@
 // Every client has a real logo now. If one is ever added without a file,
 // give it a wordmark image rather than reintroducing a text fallback: a lone
 // text entry in a row of logos looks like a bug.
+// `href` points at that client's case on /work. Will has no case written yet,
+// so it renders unlinked rather than dropping the reader at the top of the page.
 const clients = [
-  { name: 'Willow', src: '/logos/willow.png', h: 'h-7' },
-  { name: 'Will', src: '/logos/will.svg', h: 'h-7' },
-  { name: 'SOFICO', src: '/logos/sofico.png', h: 'h-7' },
-  { name: 'Aspire', src: '/logos/aspire.svg', h: 'h-6' },
-  { name: 'ZYGO', src: '/logos/zygo.png', h: 'h-6' },
+  { name: 'Willow', src: '/logos/willow.png', h: 'h-7', href: '/work#willow' },
+  { name: 'Will',   src: '/logos/will.svg',   h: 'h-7', href: null },
+  { name: 'SOFICO', src: '/logos/sofico.png', h: 'h-7', href: '/work#sofico' },
+  { name: 'Aspire', src: '/logos/aspire.svg', h: 'h-6', href: '/work#aspire' },
+  { name: 'ZYGO',   src: '/logos/zygo.png',   h: 'h-6', href: '/work#zygo' },
 ];
 ---
 
@@ -18,14 +20,25 @@ const clients = [
       Past and current work
     </p>
     <div class="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 max-w-3xl mx-auto">
-      {clients.map((c) => (
-        <img
-          src={c.src}
-          alt={c.name}
-          class={`${c.h} w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-200`}
-          loading="lazy"
-        />
-      ))}
+      {clients.map((c) =>
+        c.href ? (
+          <a href={c.href} aria-label={`${c.name} case study`} class="block">
+            <img
+              src={c.src}
+              alt={c.name}
+              class={`${c.h} w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-200`}
+              loading="lazy"
+            />
+          </a>
+        ) : (
+          <img
+            src={c.src}
+            alt={c.name}
+            class={`${c.h} w-auto object-contain opacity-60`}
+            loading="lazy"
+          />
+        )
+      )}
     </div>
   </div>
 </section>
