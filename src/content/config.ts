@@ -43,13 +43,13 @@ const cases = defineCollection({
       quote: z.object({ text: z.string(), name: z.string(), role: z.string() }).optional(),
 
       status: z.enum(['draft', 'published']).default('draft'),
-      // The date the client signed off. Who signed off goes in the vault
-      // notes, not here, because this repo is public.
-      client_approval: z.coerce.date().optional(),
+      // No approval date here: any sign-off is recorded in the vault notes,
+      // not in this public repo. The "last updated" month on the case page
+      // comes from `updated` in src/data/cases.ts.
       published_at: z.coerce.date().optional(),
     })
-    .refine((d) => d.status !== 'published' || (d.client_approval && d.published_at), {
-      message: 'A published case study needs client_approval and published_at. Nothing goes live before the client signs off.',
+    .refine((d) => d.status !== 'published' || d.published_at, {
+      message: 'A published case study needs published_at.',
     }),
 });
 

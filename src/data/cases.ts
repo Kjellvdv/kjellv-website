@@ -17,6 +17,9 @@ export interface ClientCase {
   sector: string;
   role: string;
   duration: string;
+  // Month the case was last updated, as YYYY-MM. Shown as "Last updated"
+  // on the full case page.
+  updated: string;
   what: string;
   did: string[];
 }
@@ -30,6 +33,7 @@ export const cases: ClientCase[] = [
     sector: 'AI social media for professional services',
     role: 'Marketing lead and customer success',
     duration: '2+ years, ongoing',
+    updated: '2026-09',
     what:
       'Willow is an AI social media platform for professional-services firms: a platform, posts built from a profile of the business, and a dedicated coach, published across LinkedIn, Instagram, Facebook and X. The buyer is the firm owner or managing partner.',
     did: [
@@ -49,6 +53,7 @@ export const cases: ClientCase[] = [
     sector: 'Physical AI and robotics',
     role: 'Marketing and growth lead',
     duration: 'Ongoing',
+    updated: '2026-09',
     what:
       'ZYGO builds a software platform for physical AI agents: robots that take on the dull, dangerous and difficult work so hybrid teams can cover more ground. Deeptech, technical founders, and a category most buyers have not shopped for before.',
     did: [
@@ -66,6 +71,7 @@ export const cases: ClientCase[] = [
     sector: 'AI social media tooling',
     role: 'Product marketing and launch',
     duration: '2025, ongoing',
+    updated: '2026-07',
     what:
       'Will is Willow\'s AI agent for LinkedIn, and it runs entirely through WhatsApp. Send a voice note or a few bullets and it comes back with a post in your own voice, having read your last fifty to learn how you write. No dashboard, no new app to open. Over 1,400 people have signed up so far.',
     did: [
@@ -86,6 +92,7 @@ export const cases: ClientCase[] = [
     sector: 'Fintech',
     role: 'Copy editor, on retainer',
     duration: '3 months, late 2021 to early 2022',
+    updated: '2022-02',
     what:
       'Aspire builds business finance for startups. The brief was the Founder Academy, a blog aimed squarely at founders: how to set up a company in Singapore, and the financial decisions and terminology that follow once you have.',
     did: [
@@ -105,6 +112,7 @@ export const cases: ClientCase[] = [
     sector: 'Automotive finance and leasing software',
     role: 'Contract marketing',
     duration: 'Ongoing',
+    updated: '2026-08',
     what:
       'SOFICO makes contract management software for automotive finance and leasing: fleet, lease, and dealer operations on one platform. The buyers are operations and technology leaders at captive finance units and multi-market leasing companies.',
     did: [

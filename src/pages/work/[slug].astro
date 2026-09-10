@@ -21,6 +21,10 @@ const isDraft = status !== 'published';
 const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://kjellv.com';
 const canonical = `${siteUrl}/work/${client.slug}`;
 
+// cases.ts stores the month as YYYY-MM; show it as "February 2022".
+const updated = new Date(`${client.updated}-01T00:00:00Z`);
+const updatedLabel = updated.toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -29,12 +33,14 @@ const jsonLd = {
   about: { '@type': 'Organization', name: client.name },
   author: { '@type': 'Person', name: 'Kjell Vandevyvere', url: 'https://kjellv.com' },
   datePublished: published_at?.toISOString(),
+  dateModified: updated.toISOString(),
 };
 
 const facts = [
   { label: 'Sector', value: client.sector },
   { label: 'My role', value: client.role },
   { label: 'Length', value: client.duration },
+  { label: 'Last updated', value: updatedLabel },
 ];
 ---
 
@@ -78,7 +84,7 @@ const facts = [
           {summary}
         </p>
 
-        <dl class="mt-10 grid sm:grid-cols-3 gap-6">
+        <dl class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
           {facts.map((f) => (
             <div>
               <dt class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-1">{f.label}</dt>
