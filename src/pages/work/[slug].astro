@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import { cases, caseStudies } from '../../data/cases';
+
+export async function getStaticPaths() {
+  const studies = await caseStudies();
+  return [...studies.values()].map(({ slug, entry }) => ({
+    params: { slug },
+    props: { entry, client: cases.find((c) => c.slug === slug)! },
+  }));
+}
+
+const { entry, client } = Astro.props;
+const { Content } = await entry.render();
+const { title, summary, numbers, quote, status, published_at } = entry.data;
+const isDraft = status !== 'published';
+
+const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://kjellv.com';
+const canonical = `${siteUrl}/work/${client.slug}`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: summary,
+  about: { '@type': 'Organization', name: client.name },
+  author: { '@type': 'Person', name: 'Kjell Vandevyvere', url: 'https://kjellv.com' },
+  datePublished: published_at?.toISOString(),
+};
+
+const facts = [
+  { label: 'Sector', value: client.sector },
+  { label: 'My role', value: client.role },
+  { label: 'Length', value: client.duration },
+];
+---
+
+<BaseLayout
+  title={`${title} — Kjell Vandevyvere`}
+  description={summary}
+  ogTitle={title}
+  ogDescription={summary}
+  ogType="article"
+  canonicalUrl={canonical}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <Nav currentPath="/work" />
+
+  <main>
+
+    {isDraft && (
+      <div class="border-b border-divider bg-saffron/15">
+        <p class="max-w-3xl mx-auto px-6 py-3 text-sm font-body text-text-main">
+          <strong class="font-600">Draft.</strong> This page only exists on the local dev server, and it stays that way until the client signs off.
+        </p>
+      </div>
+    )}
+
+    <!-- ─── HEADER ────────────────────────────────────────────────── -->
+    <section class="border-b border-divider">
+      <div class="max-w-3xl mx-auto px-6 pt-14 pb-12">
+        <div class="flex items-center gap-2 text-xs text-text-secondary font-body mb-10">
+          <a href="/work" class="hover:text-coral transition-colors">Work</a>
+          <span>·</span>
+          <a href={`/work#${client.slug}`} class="hover:text-coral transition-colors">{client.name}</a>
+        </div>
+
+        <img src={client.logo} alt={client.name} class={`${client.logoClass} w-auto object-contain mb-8`} />
+
+        <h1 class="font-display font-600 text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-text-main mb-5">
+          {title}
+        </h1>
+        <p class="text-lg text-text-secondary font-body leading-relaxed max-w-2xl">
+          {summary}
+        </p>
+
+        <dl class="mt-10 grid sm:grid-cols-3 gap-6">
+          {facts.map((f) => (
+            <div>
+              <dt class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-1">{f.label}</dt>
+              <dd class="text-sm font-body text-text-main">{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 py-14">
+
+      <!-- ─── NUMBERS ─────────────────────────────────────────────── -->
+      {numbers && numbers.length > 0 && (
+        <div class={`grid gap-4 mb-14 ${numbers.length === 1 ? '' : numbers.length === 2 ? 'sm:grid-cols-2' : 'sm:grid-cols-3'}`}>
+          {numbers.map((n) => (
+            <div class="bg-white rounded-3xl border border-divider shadow-soft p-6">
+              <p class="font-display font-600 text-3xl text-coral leading-none mb-2">{n.value}</p>
+              <p class="text-sm font-body text-text-secondary leading-snug">{n.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <!-- ─── THE CASE ────────────────────────────────────────────── -->
+      <article class="prose prose-lg max-w-none
+        prose-headings:font-display prose-headings:font-700 prose-headings:text-text-main prose-headings:tracking-tight
+        prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+        prose-p:text-text-main prose-p:leading-relaxed prose-p:font-body
+        prose-a:text-coral prose-a:font-600 prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-text-main prose-strong:font-700
+        prose-li:text-text-main prose-li:font-body
+        prose-blockquote:border-l-coral prose-blockquote:border-l-4 prose-blockquote:pl-5 prose-blockquote:not-italic prose-blockquote:text-text-secondary
+        prose-hr:border-divider">
+        <Content />
+      </article>
+
+      {quote && (
+        <figure class="mt-14 bg-white rounded-3xl border border-divider shadow-soft p-8 sm:p-10">
+          <blockquote class="font-display font-500 text-xl sm:text-2xl text-text-main leading-snug mb-6">
+            "{quote.text}"
+          </blockquote>
+          <figcaption class="text-sm font-body text-text-secondary">
+            <span class="text-text-main font-600">{quote.name}</span>, {quote.role}
+          </figcaption>
+        </figure>
+      )}
+
+      <div class="mt-16 pt-8 border-t border-divider flex items-center justify-between gap-6 text-sm font-body">
+        <a href={`/work#${client.slug}`} class="text-text-secondary hover:text-coral transition-colors">
+          &larr; The {client.name} summary
+        </a>
+        <a href="/work" class="text-text-secondary hover:text-coral transition-colors">
+          All work
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <ContactCTA heading="Recognise your own situation in this one?" />
+
+  <Footer />
+</BaseLayout>

@@ -3,100 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import ContactCTA from '../components/ContactCTA.astro';
+import { cases, caseStudies } from '../data/cases';
 
-// Case entries. Written from publishable facts only: what the company does,
-// the role, and the work delivered. Anything commercially sensitive from the
-// brand vaults (revenue, internal blockers, their own customers by name) is
-// deliberately left out. Worth a client read before this goes live.
-const cases = [
-  {
-    name: 'Willow',
-    logo: '/logos/willow.png',
-    logoClass: 'h-7',
-    sector: 'Professional services automation',
-    role: 'Marketing lead and customer success',
-    duration: '2+ years, ongoing',
-    what:
-      'Willow automates operations for professional services firms: scheduling, client communication, and the admin that piles up around both. The buyer is an operations lead at a firm of ten to fifty people.',
-    did: [
-      'Run the social media programme',
-      'Relaunched the website: migrated off Webflow, rebuilt with Claude, and shipped it without an SEO hit',
-      'Built the customer case study engine: weekly at the start, closer to monthly now',
-      'Wrote the onboarding email sequence new customers land in',
-      'Worked on pricing strategy and the rate card behind it',
-      'Produced partner content and conference material',
-    ],
-  },
-  {
-    name: 'ZYGO',
-    logo: '/logos/zygo.png',
-    logoClass: 'h-7',
-    sector: 'Physical AI and robotics',
-    role: 'Marketing and growth lead',
-    duration: 'Ongoing',
-    what:
-      'ZYGO builds a software platform for physical AI agents: robots that take on the dull, dangerous and difficult work so hybrid teams can cover more ground. Deeptech, technical founders, and a category most buyers have not shopped for before.',
-    did: [
-      'Built the go-to-market motion from scratch, with no marketing function in place',
-      'Set up the CRM in Attio, with website forms routing straight into it',
-      'Put prospect detection and visitor tracking in place',
-      'Built the content model for the company plus both founders\' personal brands',
-    ],
-  },
-  {
-    name: 'Will',
-    logo: '/logos/will.svg',
-    logoClass: 'h-7',
-    sector: 'AI social media tooling',
-    role: 'Product marketing and launch',
-    duration: '2025, ongoing',
-    what:
-      'Will is Willow\'s AI agent for LinkedIn, and it runs entirely through WhatsApp. Send a voice note or a few bullets and it comes back with a post in your own voice, having read your last fifty to learn how you write. No dashboard, no new app to open. Over 1,400 people have signed up so far.',
-    did: [
-      'Coordinated the Product Hunt launch, which landed just outside the top ten without picking up a feature',
-      'Ran the LinkedIn ad programme, testing creatives, ICPs and USPs against each other rather than one variable at a time',
-      'Built sign-up tracking for a product that lives entirely inside WhatsApp',
-      'Worked on UX and onboarding for an app with no interface beyond the conversation',
-      'Made the YouTube explainers, and brought in a videographer for the more entertaining end of it',
-      'Ran website branding and messaging with a Webflow designer on the homepage, then built the rest of the site and the blog setup myself',
-      'Promoted Will at events, including its first public outing at SuperNova in Antwerp',
-    ],
-  },
-  {
-    name: 'Aspire',
-    logo: '/logos/aspire.svg',
-    logoClass: 'h-6',
-    sector: 'Fintech',
-    role: 'Content lead',
-    duration: '3 months, late 2022',
-    what:
-      'Aspire builds business finance for startups. The brief was a blog section aimed squarely at founders: how to set up a company in Singapore, and the financial decisions and terminology that follow once you have.',
-    did: [
-      'Built the content strategy: four pillars, anchored on in-depth blog pieces with shorter term-by-term explainers underneath',
-      'Set up the glossary and the writing guide the whole team worked from',
-      'Led five writers, two internal and three external',
-      'Edited everything against the brand strategy and the writing guide before it shipped',
-      'Published to Webflow and worked with the designers on the visuals',
-      'Turned the blog content into social',
-    ],
-  },
-  {
-    name: 'SOFICO',
-    logo: '/logos/sofico.png',
-    logoClass: 'h-7',
-    sector: 'Automotive finance and leasing software',
-    role: 'Contract marketing',
-    duration: 'Ongoing',
-    what:
-      'SOFICO makes contract management software for automotive finance and leasing: fleet, lease, and dealer operations on one platform. The buyers are operations and technology leaders at captive finance units and multi-market leasing companies.',
-    did: [
-      'Researched and wrote the state of AI report for the automotive industry',
-      'Developed the positioning narratives, then write the content off them myself',
-      'Landing pages, blogs, newsletters and case studies',
-      'Long-form technical content on migration and data quality',
-    ],
-  },
-];
+// The card data lives in src/data/cases.ts, shared with the full case pages.
+// A card only links through once its full case study is published (or, on the
+// dev server, drafted).
+const studies = await caseStudies();
 ---
 
 <BaseLayout
@@ -122,8 +34,10 @@ const cases = [
     <!-- ─── CASES ─────────────────────────────────────────────────── -->
     <section class="max-w-6xl mx-auto px-6 pb-24">
       <div class="flex flex-col gap-6">
-        {cases.map((c) => (
-          <article id={c.name.toLowerCase()} class="scroll-mt-28 bg-white rounded-3xl border border-divider shadow-soft hover:shadow-lift transition-shadow duration-200 overflow-hidden">
+        {cases.map((c) => {
+          const study = studies.get(c.slug);
+          return (
+          <article id={c.slug} class="scroll-mt-28 bg-white rounded-3xl border border-divider shadow-soft hover:shadow-lift transition-shadow duration-200 overflow-hidden">
             <div class="grid md:grid-cols-[280px_1fr]">
 
               <!-- left rail -->
@@ -169,11 +83,23 @@ const cases = [
                     </li>
                   ))}
                 </ul>
+                {study && (
+                  <a
+                    href={`/work/${c.slug}`}
+                    class="mt-8 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-divider text-sm font-body font-600 text-text-main hover:border-coral hover:text-coral transition-colors"
+                  >
+                    Read the full case study <span aria-hidden="true">&rarr;</span>
+                    {study.entry.data.status !== 'published' && (
+                      <span class="ml-1 text-xs font-500 px-2 py-0.5 rounded-full bg-saffron/20">draft</span>
+                    )}
+                  </a>
+                )}
               </div>
 
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
     </section>
 

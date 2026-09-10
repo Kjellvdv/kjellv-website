@@ -25,3 +25,7 @@ very-klear-website/
 .claude/launch.json
 .claude/settings.local.json
 .claude/worktrees/
+
+# Case study drafts. The repo is public, so a committed draft would be a
+# published draft. See src/content/cases/_README.md.
+src/content/cases/drafts/
