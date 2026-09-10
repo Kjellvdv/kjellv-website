@@ -84,14 +84,14 @@ export const cases: ClientCase[] = [
     logo: '/logos/aspire.svg',
     logoClass: 'h-6',
     sector: 'Fintech',
-    role: 'Content lead',
-    duration: '3 months, late 2022',
+    role: 'Copy editor, on retainer',
+    duration: '3 months, late 2021 to early 2022',
     what:
-      'Aspire builds business finance for startups. The brief was a blog section aimed squarely at founders: how to set up a company in Singapore, and the financial decisions and terminology that follow once you have.',
+      'Aspire builds business finance for startups. The brief was the Founder Academy, a blog aimed squarely at founders: how to set up a company in Singapore, and the financial decisions and terminology that follow once you have.',
     did: [
       'Built the content strategy: four pillars, anchored on in-depth blog pieces with shorter term-by-term explainers underneath',
       'Set up the glossary and the writing guide the whole team worked from',
-      'Led five writers, two internal and three external',
+      'Led four writers, and brought in a fifth for one important pillar piece',
       'Edited everything against the brand strategy and the writing guide before it shipped',
       'Published to Webflow and worked with the designers on the visuals',
       'Turned the blog content into social',
