@@ -27,11 +27,11 @@ export const cases: ClientCase[] = [
     name: 'Willow',
     logo: '/logos/willow.png',
     logoClass: 'h-7',
-    sector: 'Professional services automation',
+    sector: 'AI social media for professional services',
     role: 'Marketing lead and customer success',
     duration: '2+ years, ongoing',
     what:
-      'Willow automates operations for professional services firms: scheduling, client communication, and the admin that piles up around both. The buyer is an operations lead at a firm of ten to fifty people.',
+      'Willow is an AI social media platform for professional-services firms: a platform, posts built from a profile of the business, and a dedicated coach, published across LinkedIn, Instagram, Facebook and X. The buyer is the firm owner or managing partner.',
     did: [
       'Run the social media programme',
       'Relaunched the website: migrated off Webflow, rebuilt with Claude, and shipped it without an SEO hit',
