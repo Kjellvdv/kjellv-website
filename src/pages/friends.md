@@ -4,6 +4,14 @@ title: "Friends"
 description: "People I like and whose work is worth your time. Some I've worked with, some taught me something about writing or marketing, and a few are both."
 ---
 
+<style>
+  /* A thin rule between people instead of bullets. Lives here, not in
+     Page.astro, so /now keeps its normal lists. */
+  .prose ul { list-style: none; padding-inline-start: 0; }
+  .prose ul > li { margin: 0; padding: 1.25rem 0; }
+  .prose ul > li + li { border-top: 1px solid #d6d1cb; }
+</style>
+
 - [Alex Bustamante](https://www.linkedin.com/in/alex-bustamante/) is an Englishman I met in Bolivia, where we taught at the same school for a while. He does a lot of work on men's mental health, and he's one of the wisest people I know to talk things through with.
 - [Ali Sahlolbei](https://www.linkedin.com/in/alisahlolbei/) works with me at Willow and has the best work ethic I've ever seen. He never seems to sleep, and he's somehow on top of more things at once than seems possible.
 - [Amer Sikira](https://www.linkedin.com/in/amer-sikira-460a96154/) builds websites for startups and SaaS founders. We once tried to launch a website agency together, Poppy Websites. It never took off and we went our separate ways again, but we've stayed in touch. He's also the kind of reader every writer hopes for: he once messaged me to complain that he'd lost a whole evening to my blog.
