@@ -45,7 +45,9 @@ export default defineConfig({
 
   integrations: [
     tailwind({ applyBaseStyles: false }),
-    sitemap(),
+    // Case studies are noindexed (Kjell, 2026-09-11): reachable from /work,
+    // kept out of search. /work itself stays in the sitemap.
+    sitemap({ filter: (page) => !/^\/work\/[^/]+\/?$/.test(new URL(page).pathname) }),
   ],
   markdown: {
     rehypePlugins: [
