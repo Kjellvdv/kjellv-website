@@ -9,7 +9,7 @@ published_at: 2021-04-01
 
 Create more value with fewer words.
 
-Write with [clarity](/blog/write-with-clarity). Review your drafts and cut without mercy. Boil down your ideas to the minimum and delete words that don’t add meaning.
+Write with [clarity](/blog/write-with-clarity/). Review your drafts and cut without mercy. Boil down your ideas to the minimum and delete words that don’t add meaning.
 
 Here’s an overview of those words:
 

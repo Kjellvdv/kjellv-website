@@ -66,4 +66,4 @@ Under two hours of actual writing time. The rest of the week, if you're shipping
 
 For the piece to be worth publishing, it needs to be useful, not perfect. "Good enough and out the door" beats "not ready yet" every time at this stage.
 
-For how this content engine connects to founder-led outreach, see [the founder-led sales playbook](/blog/founder-led-sales-from-0-to-50-customers). And for the LinkedIn piece of the system, [LinkedIn for B2B tech founders who don't want to become influencers](/blog/linkedin-for-b2b-saas-founders) has the specifics.
+For how this content engine connects to founder-led outreach, see [the founder-led sales playbook](/blog/founder-led-sales-from-0-to-50-customers/). And for the LinkedIn piece of the system, [LinkedIn for B2B tech founders who don't want to become influencers](/blog/linkedin-for-b2b-saas-founders/) has the specifics.

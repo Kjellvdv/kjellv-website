@@ -54,7 +54,7 @@ After launch, LinkedIn ads took over the job of finding new users. I ran them as
 
 Over 1,400 people have started a free trial of Will since launch. That's a real audience for a product nobody had heard of at the start of 2025, but I wouldn't call the launch a success.
 
-Will's bigger return was on the product side. What we learned from building and running an AI agent that lives inside a chat went into the development of Willow Create, which launched in June 2026. (That part of the story sits in the [Willow case](/work#willow).)
+Will's bigger return was on the product side. What we learned from building and running an AI agent that lives inside a chat went into the development of Willow Create, which launched in June 2026. (That part of the story sits in the [Willow case](/work/#willow).)
 
 ## What I'd do differently: give early users a way back in
 

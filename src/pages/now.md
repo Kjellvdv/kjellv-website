@@ -30,7 +30,7 @@ In 2020 and most of 2021, I did some odd writing gigs. But I mainly focused on b
 
 Somehow it was a loss of time and somehow it wasn’t. I learned lots. And I made many friends and connections I still benefit from.
 
-Then in October 2021, I moved back to Belgium and finally made the call. I became a full-time freelancer. You can read more about my story [here](/blog/short-bio).
+Then in October 2021, I moved back to Belgium and finally made the call. I became a full-time freelancer. You can read more about my story [here](/blog/short-bio/).
 
 ## Archive
 
@@ -157,7 +157,7 @@ Overall, I’ll be much busier than I used to be, so things might be slower. On 
 
 #### Monthly challenges
 
-This month I’ve been eating exclusive veggie meals and it’s been great. To be honest, I’m not even missing meat for lunch. Next month, I’m going on a long hike with some friends. In prep for that, I’m thinking about doing daily walks of at least 5km in April. And I’ve got other challenges lined up until November. I might take December off. [Check out my veggie recipes](/blog/veggie-challenge) :D.
+This month I’ve been eating exclusive veggie meals and it’s been great. To be honest, I’m not even missing meat for lunch. Next month, I’m going on a long hike with some friends. In prep for that, I’m thinking about doing daily walks of at least 5km in April. And I’ve got other challenges lined up until November. I might take December off. [Check out my veggie recipes](/blog/veggie-challenge/) :D.
 
 ### 1 March 2024
 
@@ -175,7 +175,7 @@ So I’m writing this as a little reminder to myself (and other freelancers). Ke
 
 In other news, I didn’t drink alcohol last month. (In all honesty, I didn’t drink from the 2nd until the 28th — I cheated on the first and last day of the month). Contrary to what most people say after doing a challenge like this, I didn’t experience any chances. Maybe it’s because I don’t drink much anyway. Maybe it’s because the baby gave us a few very difficult nights this month.
 
-This month, I’ll be doing a [veggie challenge](/blog/veggie-challenge). I’m going to start on the second of the month again because we still have homemade hamburgers in the fridge. I wonder if this is going to have some sort of impact on me.
+This month, I’ll be doing a [veggie challenge](/blog/veggie-challenge/). I’m going to start on the second of the month again because we still have homemade hamburgers in the fridge. I wonder if this is going to have some sort of impact on me.
 
 Finally, there’s something funny about these challenges. I decided on my own to do these challenges but coincidentally, there was a national sober challenge last month and there is a national veggie challenge this month. Next month, I might quit coffee or added sugar. I wonder if there’s going to be a challenge about that too.
 
@@ -302,6 +302,6 @@ In terms of numbers, this is what 2024 looks like so far:
 
 In other news, I didn’t drink alcohol last month. (In all honesty, I didn’t drink from the 2nd until the 28th — I cheated on the first and last day of the month). Contrary to what most people say after doing a challenge like this, I didn’t experience any chances. Maybe it’s because I don’t drink much anyway. Maybe it’s because the baby gave us a few very difficult nights this month.
 
-This month, I’ll be doing a [veggie challenge](/blog/veggie-challenge). I’m going to start on the second of the month again because we still have homemade hamburgers in the fridge. I wonder if this is going to have some sort of impact on me.
+This month, I’ll be doing a [veggie challenge](/blog/veggie-challenge/). I’m going to start on the second of the month again because we still have homemade hamburgers in the fridge. I wonder if this is going to have some sort of impact on me.
 
 Finally, there’s something funny about these challenges. I decided on my own to do these challenges but coincidentally, there was a national sober challenge last month and there is a national veggie challenge this month. Next month, I might quit coffee or added sugar. I wonder if there’s going to be a challenge about that too.

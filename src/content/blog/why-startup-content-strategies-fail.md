@@ -202,7 +202,7 @@ You may not have the budget to hire in-house writers and editors, but you don’
 
 So when you’re looking for the right people, make sure they understand SEO. But don’t just base your decision on years of experience. Judge their portfolio and accomplishments instead.
 
-And above all, hire an [editor](/blog/how-to-review) as well.
+And above all, hire an [editor](/blog/how-to-review/) as well.
 
 ## Startup content strategies summed up
 

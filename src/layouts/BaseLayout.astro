@@ -21,7 +21,12 @@ const {
   noindex = false,
 } = Astro.props;
 
-const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
+// GitHub Pages serves every page as a directory index, so /blog/x answers with
+// a 301 to /blog/x/. Astro hands static routes the slashed pathname and dynamic
+// ones the unslashed form, so normalise here: the canonical has to name the URL
+// that actually answers 200, or every page declares a canonical that redirects.
+const path = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const canonical = canonicalUrl ?? new URL(path, Astro.site).href;
 ---
 
 <!DOCTYPE html>

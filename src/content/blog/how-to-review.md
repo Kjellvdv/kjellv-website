@@ -23,7 +23,7 @@ Add visual language, examples, stats and images to make your point. Go from abst
 
 ## **Line review**
 
-Read again. Line by line. Which words and phrases can you delete without changing the meaning? How can you say the same thing in fewer words to [improve clarity](/blog/write-with-clarity)?
+Read again. Line by line. Which words and phrases can you delete without changing the meaning? How can you say the same thing in fewer words to [improve clarity](/blog/write-with-clarity/)?
 
 ### Use these rules to review your sentences:
 
@@ -33,7 +33,7 @@ Read again. Line by line. Which words and phrases can you delete without changin
 - Keep it nice and short. More full stops; fewer commas. More whitespace; fewer long paragraphs.
 - Cut the words that don’t add value.
 
-### These are several [words to avoid](/blog/words-to-avoid):
+### These are several [words to avoid](/blog/words-to-avoid/):
 
 - Adverbs. Express what you mean with a stronger verb instead. Be critical about your use of “actually”, “really” and “basically”. Avoid “very”. There are better alternatives.
 - Opinions: Words like “personally”, “to me”, “in my opinion” and “honestly” are superfluous. It’s obvious that it’s your opinion when you’re writing. And I would hope for you to always be honest.

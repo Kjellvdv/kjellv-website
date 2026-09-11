@@ -24,7 +24,7 @@ This sounds obvious until you realise how many early founders are doing outreach
 
 Before you send anything, define the 50-person list. Fifty specific companies or people who match the tightest version of your ICP.
 
-For B2B tech at early stage, that typically means: specific industry, specific company size, specific role, and: most importantly: a reason to believe they have the problem you solve right now. That last part is the one most people skip. Timing matters more than fit. If your ICP isn't defined yet, [here's how to get there](/blog/how-to-define-your-icp) before you spend a week on a list that won't convert.
+For B2B tech at early stage, that typically means: specific industry, specific company size, specific role, and: most importantly: a reason to believe they have the problem you solve right now. That last part is the one most people skip. Timing matters more than fit. If your ICP isn't defined yet, [here's how to get there](/blog/how-to-define-your-icp/) before you spend a week on a list that won't convert.
 
 ## The outreach that actually works
 
@@ -71,4 +71,4 @@ You're ready to hand off founder-led sales when you can write down: who the righ
 
 The goal of the first 50 customers isn't just 50 customers. It's learning what a repeatable sale looks like. That's the asset. The customers are almost a byproduct.
 
-Paul Graham's [Do Things That Don't Scale](http://paulgraham.com/ds.html) is the clearest argument for why founder-led sales is the right move at this stage—not just a necessary evil. And once you've got the sales motion working, [building a content engine](/blog/how-to-build-a-content-engine) alongside it is how you stop relying entirely on outbound to fill the pipeline.
+Paul Graham's [Do Things That Don't Scale](http://paulgraham.com/ds.html) is the clearest argument for why founder-led sales is the right move at this stage—not just a necessary evil. And once you've got the sales motion working, [building a content engine](/blog/how-to-build-a-content-engine/) alongside it is how you stop relying entirely on outbound to fill the pipeline.

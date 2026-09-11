@@ -20,7 +20,7 @@ The question isn't "how do we find more customers." It's "what made these specif
 
 ## The interview you should already be having
 
-Before you write a targeting framework or fill out an ICP template, talk to your best customers. Don't just send a survey. An actual conversation: 30 minutes, recorded. These conversations also give you the raw material for [mapping your customer journey](/blog/how-to-map-your-customer-journey) — the same trigger moments and objection language you'll use everywhere else.
+Before you write a targeting framework or fill out an ICP template, talk to your best customers. Don't just send a survey. An actual conversation: 30 minutes, recorded. These conversations also give you the raw material for [mapping your customer journey](/blog/how-to-map-your-customer-journey/) — the same trigger moments and objection language you'll use everywhere else.
 
 Ask them three things:
 
@@ -62,4 +62,4 @@ If they say yes, you have an ICP. If they say "kind of, but...": that "but" is t
 
 And if you'd rather not wait to talk to customers: look at the ones you already have. The pattern is already there. You just haven't looked at it yet.
 
-Once the ICP is clear, [auditing your positioning](/blog/how-to-audit-your-positioning) is the next step — because a tight ICP without matching positioning still won't convert. From there, [a messaging guide](/blog/how-to-write-a-messaging-guide) is what turns the positioning into sentences your team can actually use. And if you're wondering how a [content strategy fits on top](/blog/why-your-startup-content-strategy-isnt-working), that's where it starts making sense.
+Once the ICP is clear, [auditing your positioning](/blog/how-to-audit-your-positioning/) is the next step — because a tight ICP without matching positioning still won't convert. From there, [a messaging guide](/blog/how-to-write-a-messaging-guide/) is what turns the positioning into sentences your team can actually use. And if you're wondering how a [content strategy fits on top](/blog/why-your-startup-content-strategy-isnt-working/), that's where it starts making sense.

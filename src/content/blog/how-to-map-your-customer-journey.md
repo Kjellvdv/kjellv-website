@@ -52,7 +52,7 @@ Two ways out:
 
 Before you write a single piece of awareness content, decide which path you're on. The content doesn't change much. The strategic stakes do.
 
-Getting your [ICP](/blog/how-to-define-your-icp) right is what makes this stage work. If you don't know exactly who you're trying to reach, the problem-naming content misses entirely.
+Getting your [ICP](/blog/how-to-define-your-icp/) right is what makes this stage work. If you don't know exactly who you're trying to reach, the problem-naming content misses entirely.
 
 ## The evaluation stage
 
@@ -73,4 +73,4 @@ The gaps in the last column are your content roadmap. They're also your sales pr
 
 The map doesn't need to be perfect. It needs to be specific enough that someone on your team could read it and know what to build next. That's the standard.
 
-Once you've mapped the journey, [auditing your positioning](/blog/how-to-audit-your-positioning) against the right competitive context for each stage becomes much cleaner.
+Once you've mapped the journey, [auditing your positioning](/blog/how-to-audit-your-positioning/) against the right competitive context for each stage becomes much cleaner.

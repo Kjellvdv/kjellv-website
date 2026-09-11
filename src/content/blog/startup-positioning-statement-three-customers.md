@@ -128,7 +128,7 @@ Signs it's working: calls get shorter and more qualified. Cold reply rate goes u
 
 Let's get specific about what "we'll do positioning later" actually costs.
 
-[Cold email benchmarks for 2025](https://levelupleads.io/blog/cold-email-benchmarks-2025-key-stats-every-marketer-should-know/) sit at 3.8 to 4.0 percent reply rates, around 306 emails per B2B lead. With sharp positioning, those numbers improve. With generic positioning, you compete on volume and someone with a bigger SDR team wins. So you send more, get fewer replies, blame the channel, try a new one. Channel sprawl is what positioning failure looks like in your calendar. (I wrote about that in [the do-everything trap](/blog/do-everything-trap-multi-channel-marketing). Sophie features there too, on the channel side of the same story.)
+[Cold email benchmarks for 2025](https://levelupleads.io/blog/cold-email-benchmarks-2025-key-stats-every-marketer-should-know/) sit at 3.8 to 4.0 percent reply rates, around 306 emails per B2B lead. With sharp positioning, those numbers improve. With generic positioning, you compete on volume and someone with a bigger SDR team wins. So you send more, get fewer replies, blame the channel, try a new one. Channel sprawl is what positioning failure looks like in your calendar. (I wrote about that in [the do-everything trap](/blog/do-everything-trap-multi-channel-marketing/). Sophie features there too, on the channel side of the same story.)
 
 Stack that against [pre-seed burn of $20-50k a month and 18-24 months of runway](https://learn.icanpitch.com/blog/burn-rate-benchmarks-by-industry-stage/). Three months of generic positioning is 60 to 150 grand. Three months you also can't test claims or generate data.
 
@@ -140,7 +140,7 @@ You will rewrite this. That's not a flaw. That's the design.
 
 At n=10, you'll see which patterns held and which were artifacts of your first three. The position gets edited, not replaced, and the edits are cheap because your downstream artefacts show you exactly what to update.
 
-Once you've shipped the first version, audit it: pull the ICP doc, the homepage, the cold email, the sales script, check they tell the same story. (I wrote a [step-by-step audit method](/blog/how-to-audit-your-positioning) you can run in an afternoon.) Then translate the position into the [messaging framework](/blog/how-to-write-a-messaging-guide) that feeds the rest of GTM. And if the [ICP step](/blog/how-to-define-your-icp) still feels mushy, do that first. The waterfall: the top fixes the bottom.
+Once you've shipped the first version, audit it: pull the ICP doc, the homepage, the cold email, the sales script, check they tell the same story. (I wrote a [step-by-step audit method](/blog/how-to-audit-your-positioning/) you can run in an afternoon.) Then translate the position into the [messaging framework](/blog/how-to-write-a-messaging-guide/) that feeds the rest of GTM. And if the [ICP step](/blog/how-to-define-your-icp/) still feels mushy, do that first. The waterfall: the top fixes the bottom.
 
 The point of writing it at three isn't that you'll be right. It's that you'll be specific. Specific is testable. Generic is just expensive.
 
