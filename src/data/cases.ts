@@ -52,7 +52,7 @@ export const cases: ClientCase[] = [
     logoClass: 'h-7',
     sector: 'Physical AI and robotics',
     role: 'Marketing and growth lead',
-    duration: 'Ongoing',
+    duration: 'Ongoing since February 2026',
     updated: '2026-09',
     what:
       'ZYGO builds a software platform for physical AI agents: robots that take on the dull, dangerous and difficult work so hybrid teams can cover more ground. Deeptech, technical founders, and a category most buyers have not shopped for before.',
