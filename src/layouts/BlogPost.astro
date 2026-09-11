@@ -27,7 +27,7 @@ const sourceNames: Record<string, string> = {
 const sourceName = source ? sourceNames[source] ?? source : null;
 
 const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://kjellv.com';
-const canonical = `${siteUrl}/blog/${slug}`;
+const canonical = `${siteUrl}/blog/${slug}/`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -81,9 +81,9 @@ const colorClass = catStyle.badge;
     <div class="max-w-3xl mx-auto px-6 pt-14 pb-12">
 
       <div class="flex items-center gap-2 text-xs text-text-secondary font-body mb-8">
-        <a href="/blog" class="hover:text-coral transition-colors">Articles</a>
+        <a href="/blog/" class="hover:text-coral transition-colors">Articles</a>
         <span>·</span>
-        <a href={`/blog/category/${category.toLowerCase()}`} class="hover:text-coral transition-colors">{category}</a>
+        <a href={`/blog/category/${category.toLowerCase()}/`} class="hover:text-coral transition-colors">{category}</a>
       </div>
 
       <div class="flex items-center gap-3 mb-5">
@@ -139,7 +139,7 @@ const colorClass = catStyle.badge;
           <p class="text-text-secondary font-body text-xs">Fractional marketing for B2B tech companies</p>
         </div>
       </div>
-      <a href="/blog" class="text-sm text-text-secondary hover:text-coral transition-colors font-body">
+      <a href="/blog/" class="text-sm text-text-secondary hover:text-coral transition-colors font-body">
         All articles
       </a>
     </div>

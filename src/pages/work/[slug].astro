@@ -19,7 +19,7 @@ const { title, summary, numbers, quote, status, published_at } = entry.data;
 const isDraft = status !== 'published';
 
 const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://kjellv.com';
-const canonical = `${siteUrl}/work/${client.slug}`;
+const canonical = `${siteUrl}/work/${client.slug}/`;
 
 // cases.ts stores the month as YYYY-MM; show it as "February 2022".
 const updated = new Date(`${client.updated}-01T00:00:00Z`);
@@ -71,9 +71,9 @@ const facts = [
     <section class="border-b border-divider">
       <div class="max-w-3xl mx-auto px-6 pt-14 pb-12">
         <div class="flex items-center gap-2 text-xs text-text-secondary font-body mb-10">
-          <a href="/work" class="hover:text-coral transition-colors">Work</a>
+          <a href="/work/" class="hover:text-coral transition-colors">Work</a>
           <span>·</span>
-          <a href={`/work#${client.slug}`} class="hover:text-coral transition-colors">{client.name}</a>
+          <a href={`/work/#${client.slug}`} class="hover:text-coral transition-colors">{client.name}</a>
         </div>
 
         <img src={client.logo} alt={client.name} class={`${client.logoClass} w-auto object-contain mb-8`} />
@@ -136,10 +136,10 @@ const facts = [
       )}
 
       <div class="mt-16 pt-8 border-t border-divider flex items-center justify-between gap-6 text-sm font-body">
-        <a href={`/work#${client.slug}`} class="text-text-secondary hover:text-coral transition-colors">
+        <a href={`/work/#${client.slug}`} class="text-text-secondary hover:text-coral transition-colors">
           &larr; The {client.name} summary
         </a>
-        <a href="/work" class="text-text-secondary hover:text-coral transition-colors">
+        <a href="/work/" class="text-text-secondary hover:text-coral transition-colors">
           All work
         </a>
       </div>

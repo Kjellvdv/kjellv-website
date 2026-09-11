@@ -24,7 +24,7 @@ The channel wasn't the problem. The missing foundation was.
 
 Three things have to be true before content does anything useful.
 
-You need a specific ICP. Not "B2B tech companies with 10 to 200 employees." Something narrow enough that when the right person reads your content, they think: *that's written for me.* [Here's a practical way to define that ICP](/blog/how-to-define-your-icp) before you write anything.
+You need a specific ICP. Not "B2B tech companies with 10 to 200 employees." Something narrow enough that when the right person reads your content, they think: *that's written for me.* [Here's a practical way to define that ICP](/blog/how-to-define-your-icp/) before you write anything.
 
 But knowing your ICP isn't the hard part. Most founders can tell you who their ICP is. The hard part is actually writing for them. What I see more often than unclear ICP is a clear ICP with content written a level above it: expert-to-expert language when the buyer isn't the expert. A founder writes about "optimization techniques" for an audience who doesn't think about their problem in those words. The post looks smart. It just doesn't land with anyone who might buy.
 

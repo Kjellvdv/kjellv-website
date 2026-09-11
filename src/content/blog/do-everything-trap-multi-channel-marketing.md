@@ -87,7 +87,7 @@ If your week looks anything like the one we described before, here's the honest 
 - **Stop** cold-emailing at 40 a week. [Industry benchmarks](https://playbook.amplifyscales.com/p/signal-based-gtm-what-it-is-and-how) put cold outbound reply rates around 1%. If volume is the only lever and you can't pull it hard, the channel is wrong for now.
 - **Stop** going to every startup event. Pick the one where your actual buyer shows up and commit to a real presence there. Skip the rest.
 - **Stop** buying tools to feel productive. (I just did this. Don't do what I did.)
-- **Start** the positioning work you've been avoiding. [Audit what you have](/blog/how-to-audit-your-positioning) against the test: would a buyer in your ICP read this and think "that's for me"? If not, fix the sentence before you touch another channel.
+- **Start** the positioning work you've been avoiding. [Audit what you have](/blog/how-to-audit-your-positioning/) against the test: would a buyer in your ICP read this and think "that's for me"? If not, fix the sentence before you touch another channel.
 - **Start** treating one channel as a 12-week commitment with weekly measurement.
 - **Start** saying no to the other channels.
 

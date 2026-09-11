@@ -39,6 +39,6 @@ Once everything is organised, I start **refining** the text.
 
 Voilà. I’m done writing a blog post for the day. The **first draft is finished**.
 
-I come back later to [edit and review](/blog/how-to-review).
+I come back later to [edit and review](/blog/how-to-review/).
 
 Photo by [Olena Sergienko](https://unsplash.com/@olenkasergienko?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/desk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).

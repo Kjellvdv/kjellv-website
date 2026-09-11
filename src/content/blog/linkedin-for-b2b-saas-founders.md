@@ -26,7 +26,7 @@ It also compounds in ways you won't see coming. I got my job at Willow because s
 
 **A clear summary.** Under 200 words. First person. What you've built, who it's for, and what kind of traction it has. Relevant to the right person. This is the one a prospect actually reads when they click through.
 
-**A sustainable posting cadence.** One post per week is enough if the posts are useful. The trap is picking a cadence you can't maintain, burning out, and going dark for six weeks. [A content engine built around two hours a week](/blog/how-to-build-a-content-engine) makes this sustainable. Your anchor articles become LinkedIn posts, your LinkedIn posts surface the next article topics.
+**A sustainable posting cadence.** One post per week is enough if the posts are useful. The trap is picking a cadence you can't maintain, burning out, and going dark for six weeks. [A content engine built around two hours a week](/blog/how-to-build-a-content-engine/) makes this sustainable. Your anchor articles become LinkedIn posts, your LinkedIn posts surface the next article topics.
 
 ## What to post
 
@@ -58,4 +58,4 @@ The pattern shows up in leads too. One Willow customer got eight qualified leads
 
 For it to compound, it has to keep going. That's the whole model.
 
-If you're thinking about how LinkedIn fits alongside founder-led outreach, [the founder-led sales playbook](/blog/founder-led-sales-from-0-to-50-customers) has the full picture of how the pieces fit together.
+If you're thinking about how LinkedIn fits alongside founder-led outreach, [the founder-led sales playbook](/blog/founder-led-sales-from-0-to-50-customers/) has the full picture of how the pieces fit together.

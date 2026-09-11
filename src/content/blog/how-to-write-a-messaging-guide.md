@@ -107,4 +107,4 @@ I run this through the GTM dashboard I built for exactly this work. ICP on one t
 
 The tool isn't the point. The discipline is. Whether you build it as a dashboard, a Notion template, or a Google Doc, the messaging guide that actually gets used has every component above, filled in with sentences rather than principles, and reviewed often enough to stay true.
 
-The guide only works if the upstream pieces are in place. If your ICP is fuzzy or your positioning hasn't been audited, the sentences you write will drift from the buyer they're supposed to move. Start with [defining the ICP](/blog/how-to-define-your-icp), then [audit the positioning](/blog/how-to-audit-your-positioning), then build the guide.
+The guide only works if the upstream pieces are in place. If your ICP is fuzzy or your positioning hasn't been audited, the sentences you write will drift from the buyer they're supposed to move. Start with [defining the ICP](/blog/how-to-define-your-icp/), then [audit the positioning](/blog/how-to-audit-your-positioning/), then build the guide.

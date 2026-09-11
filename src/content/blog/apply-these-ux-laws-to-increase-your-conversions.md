@@ -342,7 +342,7 @@ Here are some examples:
 ![](/blog/apply-these-ux-laws-to-increase-your-conversions/Screenshot-2023-12-01-at-21.35.11.png)
 ![](/blog/apply-these-ux-laws-to-increase-your-conversions/Screenshot-2023-12-01-at-21.37.35.png)
 
-Clearly, this design tip leans on [familiarity](/blog/persuasion-and-trust). Visitors have certain expectations and when you match them, you make life easier for them.
+Clearly, this design tip leans on [familiarity](/blog/persuasion-and-trust/). Visitors have certain expectations and when you match them, you make life easier for them.
 
 A more traditional way of using skeuomorphism is a call-to-action button that looks like an actual button with shiny colours and an elevation created with a drop shadow.
 
