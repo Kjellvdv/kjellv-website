@@ -8,15 +8,15 @@ status: "published"
 published_at: 2026-04-25
 ---
 
-On a Tuesday in March, Sophie at ONAH told me she wanted to move quickly but had no idea what came next. Her HR product looked promising but there was no finished website nor clear guidelines. By Wednesday afternoon, she had a positioning statement, two sticky one-liners ("the inbox no longer sets the agenda", "stop answering emails, start doing HR work"), and homepage copy good enough to ship. She was surprised it was AI-written.
+On a Tuesday in March, Sophie at ONAH told me she wanted to move quickly but had no idea what came next. Her HR inbox platform looked promising, but there was no finished website and no clear guidelines. By Wednesday afternoon, she had a positioning statement, two sticky one-liners ("the inbox no longer sets the agenda", "stop answering emails, start doing HR work"), and homepage copy good enough to ship. She was surprised it was AI-written.
 
 A few good signals were enough.
 
-If you're a first-time technical founder, three to six months past pre-seed, with a few customers from your network, this post is for you. The bar for writing a sharp **startup positioning statement** is lower than you've been told. The cost of waiting is higher.
+If you're a first-time technical founder, three to six months past pre-seed, with a few customers from your network, this post is for you. The bar for writing a sharp **startup positioning statement** is lower than you've been told, and the work starts paying off the week you ship it.
 
 ## "I don't have enough customers" is the wrong frame
 
-Nowhere in [Obviously Awesome](https://www.aprildunford.com/books) does April Dunford say you need thirty customers. The book tells you to list your best customers. For most early-stage founders that list is short.
+Positioning work starts with a list of your best customers: the ones who get the most out of what you've built. Nobody needs thirty names on that list. For most early-stage founders it's three names long, and three is enough to start.
 
 The real problem is what people do when their best customers disagree. They panic, decide the sample is too small, go off to talk to twenty more. Two months. Positioning pushed to "after the next round."
 
@@ -51,7 +51,7 @@ Adapt the [Switch Interview from Bob Moesta's Jobs to be Done framework](https:/
 3. The anxieties. What almost stopped them from buying?
 4. The competing habits. Spreadsheets, three tools, an intern, nothing?
 
-Add Dunford's two. Magic wand: if you could change anything about how you currently do this, what would it be? Dinner party: how would you describe what we do to a friend over dinner? The first surfaces the unmet need. The second surfaces your real category, in their words.
+Then add two questions from April Dunford's positioning work. The magic wand: if you could change anything about how you currently do this, what would it be? The dinner party: how would you describe what we do to a friend over dinner? The first surfaces the unmet need. The second surfaces your real category, in their words.
 
 Tip: write their phrasing down verbatim. Customers give you better copy than you'll ever write.
 
@@ -77,9 +77,9 @@ Two paths follow. Path one: focus until it works, prove the wedge, expand to adj
 
 The version that loses is "let's keep our options open and reach broadly." That's not optionality. That's the absence of a thesis.
 
-## Filling Dunford's five components at n=3
+## Three customers are enough to fill in all five parts of your positioning
 
-Here's the structural payoff. Dunford's [five-plus-one components of effective positioning](https://www.aprildunford.com/books) aren't statistical questions. They're qualitative pattern questions. Three good customers are enough to answer all of them, today.
+Positioning comes down to five components plus one optional extra. Every one of them is a pattern question you answer from conversations, so none of them needs a statistically significant sample. Three good customers are enough to answer all of them, today.
 
 **1. Competitive alternatives.** What would your customers use if you didn't exist? Spreadsheets, three Frankensteined SaaS tools, an agency, an intern, or nothing. The honest answer is rarely your obvious-looking competitor.
 
@@ -89,21 +89,21 @@ Here's the structural payoff. Dunford's [five-plus-one components of effective p
 
 **4. Target market characteristics.** Describe the customer who values your attributes most. Not all B2B tech companies. Not all HR teams. The specific shape of company, role, stage, and trigger that turns interest into urgency.
 
-**5. Market category.** What frame of reference do you want to be evaluated in? Dunford spends a chapter on this and founders still avoid it. ZYGO spent weeks debating internal terminology. "Operating system" was in the mix and got rejected: ZYGO is more than an OS, more than software. "Robotics software platform" was the only term that covered the full scope. Three words. Ended the debate. Unblocked the website, the PR, the partnerships.
+**5. Market category.** What frame of reference do you want to be evaluated in? It's the component founders avoid longest, and the one that unblocks the most once it's settled. In early March 2026, ZYGO's team was still debating what to call its software. "Operating system" was in the mix and got rejected: ZYGO is more than an OS, more than software. "Robotics software platform" was the only term that covered the full scope. Three words. Ended the debate. (I wrote more about why that call deserved the time in [how to write homepage copy](/blog/how-to-write-homepage-copy/).) Unblocked the website, the PR, the partnerships.
 
 **Plus one: relevant trends.** What macro shift makes your category urgent? AI, regulation, remote work, cost pressure, talent shortage. Pick one. Seasoning, not the meal.
 
-You can fill all six in a focused half-day if you've done the interviews. Sophie and I did it in one Wednesday.
+You can fill all six in a focused half-day if you've done the interviews. Sophie and I did it in one Wednesday, starting from her onboarding input and the research she'd already done.
 
 ## The deliverable: a sharp hypothesis, not a final answer
 
 Your output is a positioning statement, written down, in one paragraph. The goal isn't to be right forever. It's to be specific enough to test.
 
-A useful template, from Dunford:
+Here's the template I use, for clients and for my own positioning:
 
 > For [target customer] who [problem], we are a [market category] that [unique value]. Unlike [competitive alternative], we [key differentiator].
 
-[Userlist's repositioning case study](https://userlist.com/blog/positioning-overhaul/) is one of the cleanest worked examples I've seen. They moved from "email automation for SaaS" (a feature) to "customer messaging for SaaS" (a category) with the differentiator "more efficient than building it yourself, less complex than Intercom or Customer.io." That last sentence is the whole game. Not the best, the right size for a specific kind of company. Dunford calls that move Big Fish, Small Pond.
+[Userlist's repositioning case study](https://userlist.com/blog/positioning-overhaul/) is one of the cleanest worked examples I've seen. They moved from "email automation for SaaS" (a feature) to "customer messaging for SaaS" (a category) with the differentiator "more efficient than building it yourself, less complex than Intercom or Customer.io." That last sentence is the whole game. Not the best, the right size for a specific kind of company.
 
 ZYGO's "robotics software platform" works the same way. Three words that tell a specific buyer what bucket you fit.
 
@@ -124,13 +124,11 @@ Signs it's working: calls get shorter and more qualified. Cold reply rate goes u
 
 [Peep Laja built Wynter to a reported $2M ARR in two years](https://earlynode.com/newsletters/achieving-message-market-fit-with-peep-laja-founder-wynter) on the premise that product-market fit without message-market fit is dead. Position now, refine messaging continuously. The position is the stake. Messaging is what you sand against real reactions.
 
-## The cost of waiting
+## What a sharp position does for your pipeline
 
-Let's get specific about what "we'll do positioning later" actually costs.
+[Cold email benchmarks for 2025](https://levelupleads.io/blog/cold-email-benchmarks-2025-key-stats-every-marketer-should-know/) sit at 3.8 to 4.0 percent reply rates, around 306 emails per B2B lead. Generic positioning leaves you playing that volume game, and it's tempting to blame the channel and jump to a new one. (I wrote about that pattern in [the do-everything trap](/blog/do-everything-trap-multi-channel-marketing/).)
 
-[Cold email benchmarks for 2025](https://levelupleads.io/blog/cold-email-benchmarks-2025-key-stats-every-marketer-should-know/) sit at 3.8 to 4.0 percent reply rates, around 306 emails per B2B lead. With sharp positioning, those numbers improve. With generic positioning, you compete on volume and someone with a bigger SDR team wins. So you send more, get fewer replies, blame the channel, try a new one. Channel sprawl is what positioning failure looks like in your calendar. (I wrote about that in [the do-everything trap](/blog/do-everything-trap-multi-channel-marketing/). Sophie features there too, on the channel side of the same story.)
-
-Stack that against [pre-seed burn of $20-50k a month and 18-24 months of runway](https://learn.icanpitch.com/blog/burn-rate-benchmarks-by-industry-stage/). Three months of generic positioning is 60 to 150 grand. Three months you also can't test claims or generate data.
+A sharp position changes the maths. A subject line that names a category your buyer recognises and an opening line no competitor could send earn the replies that volume alone can't. And every week you run with a written position gives you real data: which claims land, which prospects select themselves, which channel deserves your next hour. A few months of that and you walk into your next fundraising conversation knowing who buys and why.
 
 ## What changes at n=10
 
@@ -142,6 +140,6 @@ At n=10, you'll see which patterns held and which were artifacts of your first t
 
 Once you've shipped the first version, audit it: pull the ICP doc, the homepage, the cold email, the sales script, check they tell the same story. (I wrote a [step-by-step audit method](/blog/how-to-audit-your-positioning/) you can run in an afternoon.) Then translate the position into the [messaging framework](/blog/how-to-write-a-messaging-guide/) that feeds the rest of GTM. And if the [ICP step](/blog/how-to-define-your-icp/) still feels mushy, do that first. The waterfall: the top fixes the bottom.
 
-The point of writing it at three isn't that you'll be right. It's that you'll be specific. Specific is testable. Generic is just expensive.
+The point of writing it at three isn't that you'll be right. It's that you'll be specific. Specific is testable, and every test sharpens the next version.
 
 Pick the wedge, write the paragraph, ship the homepage. The next thirty customers come from the position you commit to today, not the cleaner version you'll write next quarter.
