@@ -1,11 +1,11 @@
 ---
 title: "How SOFICO turned twelve industry interviews into a report its sales team sends out"
-summary: "SOFICO has its own marketing team and brings me in when the subject gets hard: a state of AI report, positioning against legacy systems, technical long-form."
+summary: "SOFICO has its own marketing team and brought me in when the subject got hard: a state of AI report, positioning against legacy systems, technical long-form."
 numbers:
   - value: "12"
     label: "industry interviews behind the state of AI report I wrote for SOFICO"
   - value: "14"
-    label: "projects since January 2024, from a partners page to positioning"
+    label: "projects between January 2024 and 2026, from a partners page to positioning"
 status: published
 published_at: 2026-09-11
 ---

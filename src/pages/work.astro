@@ -20,7 +20,7 @@ const studies = await caseStudies();
   <main>
 
     <!-- ─── HERO ─────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pt-24 pb-20">
+    <section class="max-w-6xl mx-auto px-6 pt-24 md:pt-32 pb-20 md:pb-28">
       <div class="max-w-3xl">
         <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] wonk leading-[1.05] text-text-main mb-6">
           Selected <span class="text-coral">work</span>.
@@ -32,8 +32,8 @@ const studies = await caseStudies();
     </section>
 
     <!-- ─── CASES ─────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-24">
-      <div class="flex flex-col gap-6">
+    <section class="max-w-6xl mx-auto px-6 pb-24 md:pb-32">
+      <div class="flex flex-col gap-8">
         {cases.map((c) => {
           const study = studies.get(c.slug);
           return (

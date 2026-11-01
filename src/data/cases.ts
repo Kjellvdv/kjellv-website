@@ -111,13 +111,13 @@ export const cases: ClientCase[] = [
     logoClass: 'h-7',
     sector: 'Automotive finance and leasing software',
     role: 'Contract marketing',
-    duration: 'Ongoing',
+    duration: '2024 to 2026',
     updated: '2026-08',
     what:
       'SOFICO makes contract management software for automotive finance and leasing: fleet, lease, and dealer operations on one platform. The buyers are operations and technology leaders at captive finance units and multi-market leasing companies.',
     did: [
       'Researched and wrote the state of AI report for the automotive industry',
-      'Developed the positioning narratives, then write the content off them myself',
+      'Developed the positioning narratives, then wrote the content off them myself',
       'Landing pages, blogs, newsletters and case studies',
       'Long-form technical content on migration and data quality',
     ],

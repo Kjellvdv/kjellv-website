@@ -9,21 +9,21 @@ import ContactButtons from '../components/ContactButtons.astro';
 ---
 
 <BaseLayout
-  title="Fractional marketing for B2B tech companies — Kjell Vandevyvere"
-  description="Fractional marketing for B2B tech companies. One person owns strategy and execution: website, positioning, CRM setup and whatever gets the engine running."
+  title="Fractional head of marketing for early-stage B2B tech — Kjell Vandevyvere"
+  description="Fractional head of marketing for early-stage B2B tech. One person owns strategy and execution: positioning, website, CRM setup and the content motion."
 >
   <Nav currentPath="/fractional-marketing" />
 
   <main>
 
     <!-- ─── HERO ─────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pt-24 pb-24">
+    <section class="max-w-6xl mx-auto px-6 pt-24 md:pt-32 pb-24 md:pb-28">
       <div class="max-w-3xl">
         <h1 class="font-display font-600 text-4xl sm:text-5xl lg:text-[3.25rem] wonk leading-[1.05] text-text-main mb-6">
-          <span class="text-coral">Fractional marketing</span> for B2B tech companies.
+          <span class="text-coral">Fractional head of marketing</span> for early-stage B2B tech companies.
         </h1>
         <p class="text-lg text-text-secondary font-body leading-relaxed mb-8 max-w-xl">
-          One person owns strategy and execution, whether you're looking for a new website, better positioning, CRM setup or other projects to get your marketing engine up and running.
+          One person owns strategy and execution, whether you're looking for a new website, better positioning, CRM setup or other projects to get your marketing engine up and running. Senior ownership from day one, without the cost and the wait of a full-time hire.
         </p>
         <ContactButtons label="Want to talk it through?" />
       </div>
@@ -32,16 +32,16 @@ import ContactButtons from '../components/ContactButtons.astro';
     <ClientLogos />
 
     <!-- ─── THE ENGAGEMENT ────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 py-24">
+    <section class="max-w-6xl mx-auto px-6 py-24 md:py-32">
 
       <!-- Recognition first: the reader finds their own week before the offer -->
       <div class="mb-14">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
-          Do you recognise one of these situations?
+          Do you recognise any of these situations?
         </h2>
       </div>
 
-      <div class="bg-white rounded-3xl border border-divider shadow-soft p-8 sm:p-10 mb-16">
+      <div class="bg-white rounded-3xl border border-divider shadow-soft p-8 sm:p-10">
         <ul class="space-y-4">
           {[
             'Your first marketing hire or fractional GTM just left',
@@ -59,38 +59,58 @@ import ContactButtons from '../components/ContactButtons.astro';
         </ul>
       </div>
 
-      <!-- Then the offer -->
+    </section>
+
+    <!-- ─── THE OFFER ─────────────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 pb-24 md:pb-32">
       <div class="mb-14">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           Let's build and improve your marketing foundation from end to end.
         </h2>
         <p class="mt-4 text-text-secondary font-body leading-relaxed">
-          Your current GTM has a clear problem: nobody owns marketing at a senior level. So the work happens in pieces, and the pieces don't line up. A prospect reads your website, then a LinkedIn post, then your sales deck, and gets three slightly different explanations of what you do. Every new piece gets argued out from scratch because there's no agreed version to write from, and nobody can take the work over without you checking every line.
+          Your current GTM has a clear problem: nobody owns marketing at a senior level. So the work happens in pieces, and the pieces don't line up.
+        </p>
+        <p class="mt-4 text-text-secondary font-body leading-relaxed">
+          A prospect reads your website, then a LinkedIn post, then your sales deck, and gets three slightly different explanations of what you do. Every new piece gets argued out from scratch because there's no agreed version to write from, and nobody can take the work over without you checking every line.
         </p>
       </div>
 
       <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-6">What gets built</p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
         {[
           { title: 'Positioning and messaging', body: 'ICP, value proposition, and the story your buyer needs before they engage.' },
           { title: 'A website that converts', body: 'Copy and structure built around the positioning, not a redesign exercise.' },
           { title: 'A content motion you can sustain', body: 'The channel that matches your buyer, set up or rebuilt, and running before I leave.' },
           { title: 'Tools and setup', body: 'CRM, analytics and automation for your stage, wired together so the workflows and connectors actually run.' },
         ].map((item) => (
-          <div class="bg-white rounded-3xl border border-divider shadow-soft p-7 flex flex-col">
-            <p class="font-display font-600 text-lg text-text-main leading-snug mb-2">{item.title}</p>
-            <p class="text-sm font-body text-text-secondary leading-relaxed">{item.body}</p>
+          <div class="bg-white rounded-3xl border border-divider shadow-soft p-8 sm:p-10 flex flex-col">
+            <p class="font-display font-600 text-xl text-text-main leading-snug mb-3">{item.title}</p>
+            <p class="text-base font-body text-text-secondary leading-relaxed">{item.body}</p>
           </div>
         ))}
       </div>
 
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="rounded-3xl border p-7 sm:p-8" style="background: rgba(138, 155, 118, 0.08); border-color: rgba(138, 155, 118, 0.35);">
+      <p class="text-sm font-body text-text-secondary leading-relaxed">
+        <strong class="text-text-main font-600">Scope decides the engagement.</strong> Some companies need a positioning sprint and a website. Others want the full foundation plus ongoing execution. We work that out before anything starts.
+      </p>
+
+    </section>
+
+    <!-- ─── WHO IT'S FOR ──────────────────────────────────────────── -->
+    <section class="max-w-6xl mx-auto px-6 pb-24 md:pb-32">
+      <div class="mb-14">
+        <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
+          Who this works for, and who it doesn't.
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div class="rounded-3xl border p-8 sm:p-10" style="background: rgba(138, 155, 118, 0.08); border-color: rgba(138, 155, 118, 0.35);">
           <p class="text-xs font-body font-600 uppercase tracking-wider text-sage-deep mb-4">Built for</p>
-          <ul class="space-y-3">
+          <ul class="space-y-4">
             {[
-              'B2B tech: fintech, deeptech, HRtech, SaaS and infra',
-              'A product that is live, even if revenue or customers are still early',
+              'Early-stage B2B tech: fintech, deeptech, HRtech, SaaS and infra',
+              'A product that is live, even if revenue or customers are still early, and real budget behind the marketing whether you raised or bootstrapped',
               'Something technical enough that the marketing falls apart when whoever writes it doesn\'t understand what is being sold',
             ].map((item) => (
               <li class="flex items-start gap-2.5 text-sm font-body text-text-main leading-relaxed">
@@ -100,9 +120,9 @@ import ContactButtons from '../components/ContactButtons.astro';
             ))}
           </ul>
         </div>
-        <div class="rounded-3xl border p-7 sm:p-8" style="background: rgba(215, 98, 98, 0.07); border-color: rgba(215, 98, 98, 0.3);">
+        <div class="rounded-3xl border p-8 sm:p-10" style="background: rgba(215, 98, 98, 0.07); border-color: rgba(215, 98, 98, 0.3);">
           <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-4">Not for</p>
-          <ul class="space-y-3">
+          <ul class="space-y-4">
             {[
               'Companies with a marketing lead already, since this role is the owner rather than an extra pair of hands',
               'B2C, e-commerce and agencies, where the buying decision works differently',
@@ -117,14 +137,11 @@ import ContactButtons from '../components/ContactButtons.astro';
         </div>
       </div>
 
-      <p class="mt-6 text-sm font-body text-text-secondary leading-relaxed">
-        <strong class="text-text-main font-600">Scope decides the engagement.</strong> Some companies need a positioning sprint and a website. Others want the full foundation plus ongoing execution. We work that out before anything starts.
-      </p>
 
     </section>
 
     <!-- ─── THE GTM DASHBOARD ─────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-24">
+    <section class="max-w-6xl mx-auto px-6 pb-24 md:pb-32">
       <div class="mb-14">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           The GTM dashboard keeps it all saying the same thing.
@@ -134,15 +151,15 @@ import ContactButtons from '../components/ContactButtons.astro';
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-5 mb-6">
+      <div class="flex flex-col gap-6 mb-8">
         {[
           { step: 'The layers', body: 'ICP, market and alternatives, messaging, products, voice and brand each live as their own file. Customer transcripts feed the ICP, the ICP feeds positioning, and positioning feeds messaging, so nothing downstream gets invented.' },
           { step: 'The output', body: 'Website copy, LinkedIn posts, the sales deck and email sequences all derive from those files. They tell the same story because they trace back to the same source, not because someone remembered to check.' },
           { step: 'What it changes', body: 'The next piece stops being argued out from scratch, and someone else can pick the work up without you reading every line. On-brand becomes a checkable property rather than a matter of taste.' },
         ].map((item) => (
-          <div class="bg-white rounded-3xl border border-divider shadow-soft p-7">
-            <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-3">{item.step}</p>
-            <p class="text-sm font-body text-text-secondary leading-relaxed">{item.body}</p>
+          <div class="bg-white rounded-3xl border border-divider shadow-soft p-8 sm:p-10">
+            <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-4">{item.step}</p>
+            <p class="text-base font-body text-text-secondary leading-relaxed max-w-3xl">{item.body}</p>
           </div>
         ))}
       </div>
@@ -153,7 +170,7 @@ import ContactButtons from '../components/ContactButtons.astro';
     </section>
 
     <!-- ─── HOW IT WORKS ──────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-24">
+    <section class="max-w-6xl mx-auto px-6 pb-24 md:pb-32">
       <div class="mb-14 max-w-2xl">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           Why not a strategy consultant or an agency?
@@ -163,57 +180,36 @@ import ContactButtons from '../components/ContactButtons.astro';
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-white rounded-3xl p-8 border border-divider shadow-soft">
-          <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-5">
-            Strategy consultants
-          </p>
-          <p class="font-display font-500 text-text-main text-lg leading-snug mb-3">
-            Deliver decks instead of results.
-          </p>
-          <p class="text-sm text-text-secondary font-body leading-relaxed">
-            Expensive, slow, and then the deck gets handed to a team who then has to figure out what to do with it. The translation from strategy to shipped thing is on you.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-3xl p-8 border border-divider shadow-soft">
-          <p class="text-xs font-body font-600 uppercase tracking-wider text-text-secondary mb-5">
-            Freelance operators and agencies
-          </p>
-          <p class="font-display font-500 text-text-main text-lg leading-snug mb-3">
-            Run the channel you ask for, whether or not it fits.
-          </p>
-          <p class="text-sm text-text-secondary font-body leading-relaxed">
-            Execute tactics without strategic context. Content ships, emails ship, ads ship. Nobody checks whether the positioning underneath holds up, so the signals don't compound.
-          </p>
-        </div>
-      </div>
-
-      <div>
-        <div class="rounded-3xl border p-8 sm:p-10" style="background: rgba(215, 98, 98, 0.07); border-color: rgba(215, 98, 98, 0.3);">
-          <p class="text-xs font-body font-600 uppercase tracking-wider text-coral mb-5">
-            Working with me
-          </p>
-          <p class="font-display font-500 text-text-main text-lg leading-snug mb-3">
-            One person. Strategy and execution. No handoff.
-          </p>
-          <p class="text-sm text-text-secondary font-body leading-relaxed">
-            Product marketing depth where generalists fall short. Starts with how your buyer moves from problem-aware to decision-ready. Stays hands-on through delivery: the positioning, the website, the sales deck, the content. AI-native workflow that compounds output week over week.
-          </p>
+      <div class="bg-white rounded-3xl border border-divider shadow-soft overflow-hidden">
+        <div class="grid md:grid-cols-3">
+          {[
+            { label: "Strategy consultants", headline: "Deliver decks instead of results.", body: "Expensive, slow, and then the deck gets handed to a team who then has to figure out what to do with it. The translation from strategy to shipped thing is on you.", me: false },
+            { label: "Freelance operators and agencies", headline: "Run the channel you ask for, whether or not it fits.", body: "Execute tactics without strategic context. Content ships, emails ship, ads ship. Nobody checks whether the positioning underneath holds up, so the signals don't compound.", me: false },
+            { label: "Working with me", headline: "One person. Strategy and execution. No handoff.", body: "Product marketing depth where generalists fall short. Starts with how your buyer moves from problem-aware to decision-ready. Stays hands-on through delivery: the positioning, the website, the sales deck, the content. AI-native workflow that compounds output week over week.", me: true },
+          ].map((col, i) => (
+            <div
+              class={`grid grid-rows-subgrid row-span-3 gap-y-3 p-8 sm:p-10 ${i < 2 ? 'border-b md:border-b-0 md:border-r border-divider' : ''}`}
+              style={col.me ? 'background: rgba(215, 98, 98, 0.07);' : undefined}
+            >
+              <p class={`text-xs font-body font-600 uppercase tracking-wider mb-2 ${col.me ? 'text-coral' : 'text-text-secondary'}`}>{col.label}</p>
+              <p class="font-display font-500 text-text-main text-lg leading-snug">{col.headline}</p>
+              <p class="text-sm text-text-secondary font-body leading-relaxed">{col.body}</p>
+            </div>
+          ))}
         </div>
       </div>
 
     </section>
 
     <!-- ─── FAQ ───────────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pb-24">
+    <section class="max-w-6xl mx-auto px-6 pb-24 md:pb-32">
       <div class="mb-14 max-w-2xl">
         <h2 class="font-display font-600 text-3xl sm:text-4xl text-text-main leading-snug">
           Common questions
         </h2>
       </div>
 
-      <div class="space-y-3">
+      <div class="space-y-4">
         {[
           {
             q: 'How long does an engagement last?',
