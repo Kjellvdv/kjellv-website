@@ -56,7 +56,7 @@ A sharp ICP gives you a stronger understanding of the challengers and puts you i
 
 ## How to fix your ICP without starting over
 
-The fear behind most ICP rewrites is sunk cost: months of sales pitches, website copy and other assets built on a profile that turned out to be off. I've got dood news for you: the fix is usually a subtraction, so most of that work survives.
+The fear behind most ICP rewrites is sunk cost: months of sales pitches, website copy and other assets built on a profile that turned out to be off. I've got good news for you: the fix is usually a subtraction, so most of that work survives.
 
 Here's the order I'd follow:
 
@@ -66,7 +66,7 @@ Here's the order I'd follow:
 
 3. **Write the negative ICP.** Add a short list of who you stop chasing: the company types that churned, discounted hard or needed custom work you don't offer. Having a clearly defined list of companies that you don't sell to will do more for your focus than you can imagine.
 
-4. **Rewrite the profile around the top group.** Don't be afraid to go into detail. Focus more on what they look for and what they struggle with that how they look from the outside.
+4. **Rewrite the profile around the top group.** Don't be afraid to go into detail. Focus more on what they look for and what they struggle with than how they look from the outside.
 
 5. **Sharpen your assets.** Point outreach and content at the narrower group and watch whether conversations get shorter and replies get more positive.
 
