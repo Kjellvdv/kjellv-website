@@ -136,8 +136,8 @@ export async function caseStudies(): Promise<Map<string, CaseStudy>> {
   const found = new Map<string, CaseStudy>();
 
   for (const entry of entries) {
-    const isDraftFile = entry.slug.startsWith('drafts/');
-    const slug = entry.slug.replace(/^drafts\//, '');
+    const isDraftFile = entry.id.startsWith('drafts/');
+    const slug = entry.id.replace(/^drafts\//, '');
 
     if (!cases.some((c) => c.slug === slug)) {
       throw new Error(`Case study "${entry.id}" has no matching client in src/data/cases.ts.`);

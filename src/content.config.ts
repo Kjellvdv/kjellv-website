@@ -1,7 +1,9 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const blog = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
     meta_description: z.string().max(160),
@@ -26,7 +28,8 @@ const blog = defineCollection({
 // Full client case studies, rendered at /work/<slug>. The card data they sit
 // behind lives in src/data/cases.ts. See src/content/cases/_README.md.
 const cases = defineCollection({
-  type: 'content',
+  // Files starting with _ (the README) aren't entries.
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/cases' }),
   schema: z
     .object({
       // The headline outcome, naming the client. Sentence case.

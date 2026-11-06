@@ -1,4 +1,5 @@
 ---
+import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
@@ -14,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { entry, client } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const { title, summary, numbers, quote, status, published_at } = entry.data;
 const isDraft = status !== 'published';
 

@@ -63,7 +63,7 @@ const categories = ['All', 'Marketing', 'Writing', 'Personal', 'AI'] as const;
           <div data-post-category={post.data.category} class="post-item h-full">
             <BlogCard
               title={post.data.title}
-              slug={post.slug}
+              slug={post.id}
               meta_description={post.data.meta_description}
               category={post.data.category}
               published_at={post.data.published_at}

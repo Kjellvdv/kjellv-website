@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
+import { unified } from '@astrojs/markdown-remark';
 
 export default defineConfig({
   site: 'https://kjellv.com',
@@ -51,20 +51,23 @@ export default defineConfig({
   },
 
   integrations: [
-    tailwind({ applyBaseStyles: false }),
     // Case studies are noindexed (Kjell, 2026-09-11): reachable from /work,
     // kept out of search. /work itself stays in the sitemap.
     sitemap({ filter: (page) => !/^\/work\/[^/]+\/?$/.test(new URL(page).pathname) }),
   ],
+  // Astro 7's default Markdown processor can't run rehype plugins, so the
+  // unified (remark/rehype) one stays in charge of posts and case studies.
   markdown: {
-    rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        {
-          target: '_blank',
-          rel: ['noopener', 'noreferrer'],
-        },
+    processor: unified({
+      rehypePlugins: [
+        [
+          rehypeExternalLinks,
+          {
+            target: '_blank',
+            rel: ['noopener', 'noreferrer'],
+          },
+        ],
       ],
-    ],
+    }),
   },
 });
