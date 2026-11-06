@@ -1,99 +1,128 @@
 ---
 const { currentPath = '' } = Astro.props;
+
+// `match` is a path prefix, so /work also lights up /work/zygo/.
+const links = [
+  { href: '/fractional-marketing/', label: 'Fractional marketing', match: '/fractional-marketing' },
+  { href: '/work/', label: 'Work', match: '/work' },
+  { href: '/speaking/', label: 'Speaking', match: '/speaking' },
+  { href: '/blog/', label: 'Articles', match: '/blog' },
+  { href: '/now/#background', label: 'About', match: '/now' },
+];
 ---
 
+<!--
+  One set of links, two layouts. Below `lg` the list is a dropdown panel under the
+  header that the hamburger button opens (button's aria-expanded drives it through
+  the `peer-aria-expanded` variant, so the script only has to flip that attribute).
+  From `lg` up the same list is the usual inline row and the button disappears.
+  The row needs ~900px, hence `lg` rather than `md`.
+-->
 <header class="border-b border-divider bg-bg-primary/80 backdrop-blur-md sticky top-0 z-50">
-  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+  <nav aria-label="Main" class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
     <!-- Logo -->
-    <a href="/" class="flex items-center hover:opacity-80 transition-opacity font-display font-600 text-lg text-text-main" aria-label="Kjell Vandevyvere home">
+    <a href="/" class="flex items-center whitespace-nowrap hover:opacity-80 transition-opacity font-display font-600 text-lg text-text-main" aria-label="Kjell Vandevyvere home">
       Kjell Vandevyvere
     </a>
 
-    <div class="flex items-center gap-7">
-      <a
-        href="/fractional-marketing/"
-        class={`text-sm font-body transition-colors relative ${
-          currentPath.startsWith('/fractional-marketing')
-            ? 'text-coral'
-            : 'text-text-secondary hover:text-text-main'
-        }`}
-      >
-        Fractional marketing
-        {currentPath.startsWith('/fractional-marketing') && (
-          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
-        )}
-      </a>
-      <a
-        href="/work/"
-        class={`text-sm font-body transition-colors relative ${
-          currentPath.startsWith('/work')
-            ? 'text-coral'
-            : 'text-text-secondary hover:text-text-main'
-        }`}
-      >
-        Work
-        {currentPath.startsWith('/work') && (
-          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
-        )}
-      </a>
-      <a
-        href="/speaking/"
-        class={`text-sm font-body transition-colors relative ${
-          currentPath.startsWith('/speaking')
-            ? 'text-coral'
-            : 'text-text-secondary hover:text-text-main'
-        }`}
-      >
-        Speaking
-        {currentPath.startsWith('/speaking') && (
-          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
-        )}
-      </a>
-      <a
-        href="/blog/"
-        class={`text-sm font-body transition-colors relative ${
-          currentPath.startsWith('/blog')
-            ? 'text-coral'
-            : 'text-text-secondary hover:text-text-main'
-        }`}
-      >
-        Articles
-        {currentPath.startsWith('/blog') && (
-          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
-        )}
-      </a>
-      <a
-        href="/now/#background"
-        class={`text-sm font-body transition-colors relative ${
-          currentPath.startsWith('/now')
-            ? 'text-coral'
-            : 'text-text-secondary hover:text-text-main'
-        }`}
-      >
-        About
-        {currentPath.startsWith('/now') && (
-          <span class="absolute -bottom-0.5 left-0 right-0 h-px bg-coral block"></span>
-        )}
-      </a>
-      <a
-        href="https://www.linkedin.com/in/kjellvandevyvere/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-text-secondary hover:text-coral transition-colors"
-        aria-label="Kjell Vandevyvere on LinkedIn"
-      >
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path>
-        </svg>
-      </a>
-      <a
-        href="mailto:kjell@kjellv.com"
-        class="bg-text-main text-white text-sm font-body font-600 px-5 py-2 rounded-full hover:bg-coral transition-colors"
-      >
-        Get in touch
-      </a>
-    </div>
+    <!-- Hamburger (below lg only) -->
+    <button
+      type="button"
+      id="nav-toggle"
+      class="group peer lg:hidden -mr-2.5 inline-flex h-11 w-11 items-center justify-center rounded-full text-text-main hover:text-coral transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+    >
+      <svg class="group-aria-expanded:hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+      <svg class="hidden group-aria-expanded:block" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18"></path>
+      </svg>
+    </button>
+
+    <ul
+      id="nav-menu"
+      class="hidden peer-aria-expanded:flex lg:flex flex-col lg:flex-row lg:items-center lg:gap-7 absolute lg:static top-full inset-x-0 bg-bg-primary lg:bg-transparent border-b lg:border-b-0 border-divider shadow-panel lg:shadow-none px-6 pt-1 pb-5 lg:p-0 max-lg:max-h-[calc(100dvh-4rem)] max-lg:overflow-y-auto"
+    >
+      {links.map(({ href, label, match }) => {
+        const active = currentPath.startsWith(match);
+        return (
+          <li class="border-b border-divider/60 lg:border-0">
+            <a
+              href={href}
+              aria-current={active ? 'page' : undefined}
+              class={`block py-3.5 lg:py-0 text-base lg:text-sm font-body transition-colors relative ${
+                active ? 'text-coral' : 'text-text-secondary hover:text-text-main'
+              }`}
+            >
+              {label}
+              {active && (
+                <span class="hidden lg:block absolute -bottom-0.5 left-0 right-0 h-px bg-coral"></span>
+              )}
+            </a>
+          </li>
+        );
+      })}
+      <li class="border-b border-divider/60 lg:border-0">
+        <a
+          href="https://www.linkedin.com/in/kjellvandevyvere/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2.5 py-3.5 lg:py-0 text-base lg:text-sm font-body text-text-secondary hover:text-coral transition-colors"
+          aria-label="Kjell Vandevyvere on LinkedIn"
+        >
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path>
+          </svg>
+          <span class="lg:sr-only">LinkedIn</span>
+        </a>
+      </li>
+      <li class="pt-5 lg:pt-0">
+        <a
+          href="mailto:kjell@kjellv.com"
+          class="block text-center whitespace-nowrap bg-text-main text-white text-sm font-body font-600 px-5 py-3 lg:py-2 rounded-full hover:bg-coral transition-colors"
+        >
+          Get in touch
+        </a>
+      </li>
+    </ul>
 
   </nav>
 </header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  const header = toggle?.closest('header');
+
+  if (toggle && menu && header) {
+    const isOpen = () => toggle.getAttribute('aria-expanded') === 'true';
+    const setOpen = (open: boolean) => toggle.setAttribute('aria-expanded', String(open));
+
+    toggle.addEventListener('click', () => setOpen(!isOpen()));
+
+    // Close after choosing a link. Matters for the same-page /now/#background
+    // case, where following the link doesn't reload the page.
+    menu.addEventListener('click', (e) => {
+      if ((e.target as Element).closest('a')) setOpen(false);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (isOpen() && !header.contains(e.target as Node)) setOpen(false);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen()) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    // Crossing into the desktop layout resets the panel, so shrinking the
+    // window again doesn't bring it back already open.
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', () => setOpen(false));
+  }
+</script>
