@@ -11,6 +11,6 @@ The photo section renders nothing while that array is empty, so the page is
 always safe to ship.
 
 Guidance:
-- Landscape crops work best (rendered at 4:3).
+- Crop to portrait 4:5; the page renders every photo at 4:5.
 - 1, 2, or 3 photos all lay out correctly.
 - Keep alt text descriptive of what is actually happening in the photo.

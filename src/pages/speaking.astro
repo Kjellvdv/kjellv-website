@@ -24,8 +24,12 @@ const formats = [
 // Drop the files in `public/speaking/` and uncomment an entry per photo.
 // The section below renders nothing while this array is empty, so the page
 // stays shippable until real photos exist.
+// Portrait 4:5 (Kjell, 2026-11-19): from a client workday, cropped to Kjell
+// only, so no other people and no client branding are in frame.
 const photos = [
-  // { src: '/speaking/example.jpg', alt: 'Kjell presenting to a client team' },
+  { src: '/speaking/kjell-explaining.jpg', alt: 'Kjell explaining a point to a team, gesturing with both hands' },
+  { src: '/speaking/kjell-pointing-at-slide.jpg', alt: 'Kjell smiling and pointing at a slide during a workshop' },
+  { src: '/speaking/kjell-listening.jpg', alt: 'Kjell standing at the front of a meeting room, listening to a question' },
 ];
 
 const photoGrid = {
@@ -82,7 +86,7 @@ const topics = [
             <img
               src={photo.src}
               alt={photo.alt}
-              class="w-full aspect-[4/3] object-cover rounded-3xl"
+              class="w-full aspect-[4/5] object-cover rounded-3xl"
               loading="lazy"
             />
           ))}
