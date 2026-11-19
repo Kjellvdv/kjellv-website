@@ -11,6 +11,11 @@ The photo section renders nothing while that array is empty, so the page is
 always safe to ship.
 
 Guidance:
-- Crop to portrait 4:5; the page renders every photo at 4:5.
-- 1, 2, or 3 photos all lay out correctly.
-- Keep alt text descriptive of what is actually happening in the photo.
+- Give each photo a `shape`: 'portrait' renders at 4:5, 'wide' at 3:2.
+- A portrait next to a wide photo lines up at the same height on its own.
+  Other combinations of 1, 2 or 3 photos use equal columns.
+- Export at web size (about 1200px wide for a portrait, 1600px for a wide one).
+- The Willow logo may show, but never one of Willow's blue cover slides, and
+  participants stay out of frame (Kjell, 2026-11-19).
+- Keep alt text descriptive of what is actually happening in the photo, and
+  don't name an event or a client.
